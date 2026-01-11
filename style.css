@@ -25,9 +25,8 @@ h1, h2, h3 {
 }
 
 
-/* ---------------- TOP BAR ---------------- */
 .top-bar {
-  background: #f5c3c7; /* pink or desired color */
+  background: #f5c3c7; /* or pink if you prefer */
   height: 36px;
   color: #ffffff;
   font-size: 10px;
@@ -55,6 +54,16 @@ h1, h2, h3 {
   justify-content: flex-end;
 }
 
+.material-symbols-outlined {
+  font-size: 7px; /* icon size */
+  line-height: 1;
+  font-variation-settings:
+    'FILL' 0,
+    'wght' 100,
+    'GRAD' 0,
+    'opsz' 15;
+}
+
 .top-center {
   overflow: hidden;
   height: 14px;
@@ -75,45 +84,35 @@ h1, h2, h3 {
 @keyframes slideUp {
   0%   { transform: translateY(0); }
   30%  { transform: translateY(0); }
+
   33%  { transform: translateY(-14px); }
   63%  { transform: translateY(-14px); }
+
   66%  { transform: translateY(-28px); }
   96%  { transform: translateY(-28px); }
+
   100% { transform: translateY(0); }
 }
 
-/* Material icons */
-.material-symbols-outlined {
-  font-size: 7px; /* icon size */
-  line-height: 1;
-  font-variation-settings:
-    'FILL' 0,
-    'wght' 100,
-    'GRAD' 0,
-    'opsz' 15;
+
+
+/* ---------------- HEADER / CANOPY ---------------- */
+.site-header {
+  position: relative;
 }
 
-/* ---------------- CANOPY / AWNING ---------------- */
 .canopy {
   position: relative;
   background: #436b65; /* same as hero */
-  overflow: hidden; /* crop extra waves if needed */
 }
+
 
 .canopy svg {
   display: block;
   width: 100%;
-  height: 70px; /* adjust to match hero */
-  max-height: 70px;
-  overflow: hidden;
+  height: 70px; /* match hero if needed */
 }
 
-/* Optional: reduce waves in SVG path itself to max 10 waves */
-
-/* ---------------- HEADER ---------------- */
-.site-header {
-  position: relative;
-}
 
 .header-inner {
   max-width: 100%;
@@ -134,51 +133,9 @@ nav a {
   text-decoration: none;
   font-weight: 600;
   color: #2e2e2e;
-}
-
-/* ---------------- MOBILE ADJUSTMENTS ---------------- */
-@media (max-width: 768px) {
-  /* Top bar */
-  .top-left span,
-  .top-right span {
-    display: none; /* hide text, show icons only */
-  }
-
-  .top-left,
-  .top-right {
-    gap: 4px; /* tighter spacing for mobile */
-  }
-
-  .top-center {
-    display: none; /* hide scrolling text on mobile */
-  }
-
-  .material-symbols-outlined {
-    font-size: 10px; /* larger icons on mobile */
-  }
-
-  .top-bar {
-    height: 36px;
-  }
-
-  /* Canopy */
-  .canopy svg {
-    height: 50px; /* slightly smaller for mobile */
-  }
-
-  /* Header logo */
-  .logo {
-    font-size: 1rem;
-  }
-
-  nav {
-    display: none; /* hide nav links on mobile */
-  }
-}
-
+} 
 
 /* ---------------- HERO ---------------- */
-can u send me the full block instead of this: /* ---------------- HERO ---------------- */
 .hero-logo {
   width: 200px;
   max-width: 80%;
@@ -210,6 +167,54 @@ can u send me the full block instead of this: /* ---------------- HERO ---------
     width: 160px;
   }
 }
+
+/* ---------------- MOBILE FIXES ---------------- */
+@media (max-width: 768px) {
+
+  /* Top bar: hide text, keep icons */
+  .top-left span,
+  .top-right span {
+    display: none; /* hide text */
+  }
+
+  .top-left,
+  .top-right {
+    gap: 4px; /* tighter spacing for mobile */
+  }
+
+  .top-center {
+    display: none; /* hide scrolling text */
+  }
+
+  .material-symbols-outlined {
+    font-size: 10px; /* slightly bigger for visibility */
+  }
+
+  /* Header logo */
+  .logo {
+    font-size: 1rem;
+  }
+
+  /* Hide nav links */
+  nav {
+    display: none;
+  }
+
+  /* Canopy / awning adjustments */
+  .canopy svg {
+    height: 50px; /* slightly smaller for mobile */
+    overflow: hidden;
+  }
+
+  /* Optional: reduce waves using transform/scale */
+  /* This visually compresses waves without editing the SVG path */
+  .canopy svg path {
+    transform: scaleY(0.6); /* reduce vertical amplitude */
+    transform-origin: bottom;
+  }
+}
+
+
 
 .hero {
   background: #436b65; /* green under canopy */
