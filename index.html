@@ -217,40 +217,37 @@
       });
     });
     
-   // Sticky bar
-const stickyBuy = document.getElementById("buy");
+  const stickyBuy = document.getElementById("buy");
 const charactersSection = document.querySelector("section.container h2");
-const footer = document.querySelector("footer"); // make sure your footer exists
+const footer = document.querySelector("footer");
 
 window.addEventListener("scroll", () => {
   if (!stickyBuy || !charactersSection || !footer) return;
 
-  const sectionTop = charactersSection.getBoundingClientRect().top;
-  const offset = 100; // trigger a little before the section reaches top
-  const stickyHeight = stickyBuy.offsetHeight;
+  const triggerPoint = charactersSection.getBoundingClientRect().top;
+  const offset = 100;
 
-  // Activate sticky bar after section
-  if (sectionTop < offset) {
+  // Show / hide sticky bar
+  if (triggerPoint < offset) {
     stickyBuy.classList.add("active");
   } else {
     stickyBuy.classList.remove("active");
-    stickyBuy.style.transform = "translateY(100%)"; // reset transform
+    stickyBuy.style.bottom = "0";
+    return;
   }
 
-  // Stop sticky bar at footer
-  if (stickyBuy.classList.contains("active")) {
-    const footerTop = footer.getBoundingClientRect().top + window.scrollY;
-    const scrollBottom = window.scrollY + window.innerHeight;
+  // Stop at footer
+  const footerTop = footer.getBoundingClientRect().top;
+  const windowHeight = window.innerHeight;
+  const stickyHeight = stickyBuy.offsetHeight;
 
-    if (scrollBottom >= footerTop) {
-      const overlap = scrollBottom - footerTop;
-      stickyBuy.style.transform = `translateY(${overlap}px)`;
-    } else {
-      stickyBuy.style.transform = `translateY(0)`; // normal active
-    }
+  if (footerTop < windowHeight) {
+    const overlap = windowHeight - footerTop;
+    stickyBuy.style.bottom = `${overlap}px`;
+  } else {
+    stickyBuy.style.bottom = "0";
   }
 });
-
 
   </script>
   
