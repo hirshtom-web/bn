@@ -279,8 +279,8 @@ can u send me the full block instead of this: /* ---------------- HERO ---------
 
 /* Slider card size */
 .slide.x-large {
-  width: 300px;
-  height: 400px;
+  width: 420px;
+  height: 420px;
   border-radius: 16px;
   overflow: hidden;
   flex: 0 0 auto;
