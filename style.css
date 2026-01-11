@@ -26,6 +26,7 @@ h1, h2, h3 {
 
 .top-bar {
   background: var(--bg); /* beige */
+  height: 56px;
   color: var(--text);
   font-weight: 600;
   padding: 8px 24px;
@@ -33,6 +34,7 @@ h1, h2, h3 {
 }
 
 .top-bar-inner {
+  height: 100%;
   max-width: 1100px;
   margin: auto;
   display: flex;
