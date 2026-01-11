@@ -270,6 +270,13 @@ can u send me the full block instead of this: /* ---------------- HERO ---------
   background: var(--accent);
 }
 
+/* X Large cards slider */
+.slide.x-large {
+  width: 350px;
+  height: 350px;
+  background: var(--accent);
+}
+
 /* ---------------- FAQ ---------------- */
 .faq-item {
   background: var(--card);
