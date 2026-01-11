@@ -272,8 +272,8 @@ can u send me the full block instead of this: /* ---------------- HERO ---------
 
 /* X Large cards slider */
 .slide.x-large {
-  width: 350px;
-  height: 350px;
+  width: 420px;
+  height: 420px;
   background: var(--accent);
 }
 
