@@ -99,7 +99,14 @@ nav a {
   max-width: 80%;
   margin: 8px auto 16px;
   display: block;
+
+  /* IMPORTANT: kill any background/bubble */
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+  padding: 0 !important;
 }
+
 
 .hero-bubble {
   display: inline-block;
