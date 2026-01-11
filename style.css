@@ -279,19 +279,17 @@ can u send me the full block instead of this: /* ---------------- HERO ---------
   scroll-snap-align: start;
   display: flex;
   flex-direction: column;
-  background: #ffffff; /* default background, can override per card */
+  background: #ffffff; /* default background */
 }
 
-/* Top 20% for title */
+/* Top 18% for title / white background */
 .slide-top {
-  height: 20%;
+  height: 18%;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 8px 0;
-  gap: 4px;
-  background: #ffffff; /* optional: different per card */
+  background: #ffffff;
+  padding: 8px;
 }
 
 /* Title text */
@@ -302,10 +300,10 @@ can u send me the full block instead of this: /* ---------------- HERO ---------
   text-align: center;
 }
 
-/* Divider line - full width, 4px height */
+/* Divider line - 2% height, full width */
 .slide-divider {
   width: 100%;
-  height: 4px;
+  height: 2%;
   background: #ffd166; /* default color, can override per card */
 }
 
@@ -328,18 +326,14 @@ can u send me the full block instead of this: /* ---------------- HERO ---------
     width: 300px;
     height: 300px;
   }
-
-  .slide-divider {
-    height: 4px; /* keeps same thickness on mobile */
-  }
 }
 
 /* ---------------- EXAMPLES: different colors per card ---------------- */
-.slide.x-large:nth-child(1) { background: #ffd166; } /* yellow */
-.slide.x-large:nth-child(2) { background: #ff8a5b; } /* orange */
-.slide.x-large:nth-child(3) { background: #6ec1b6; } /* teal */
-.slide.x-large:nth-child(4) { background: #436b65; } /* green */
-.slide.x-large:nth-child(5) { background: #d16f9a; } /* pink */
+.slide.x-large:nth-child(1) .slide-divider { background: #ffd166; } /* yellow */
+.slide.x-large:nth-child(2) .slide-divider { background: #ff8a5b; } /* orange */
+.slide.x-large:nth-child(3) .slide-divider { background: #6ec1b6; } /* teal */
+.slide.x-large:nth-child(4) .slide-divider { background: #436b65; } /* green */
+.slide.x-large:nth-child(5) .slide-divider { background: #d16f9a; } /* pink */
 
 
 
