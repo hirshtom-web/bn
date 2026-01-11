@@ -7,6 +7,7 @@
 
   <!-- External CSS -->
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="footer.css" />
 
   <!-- Google Material Symbols (line icons) -->
   <link
@@ -144,6 +145,9 @@
   <a class="btn" href="https://stripe.com">Buy Now</a>
 </div>
 
+   <!-- FOOTER -->
+  <div id="footer-placeholder"></div>
+  
 
   <!-- SCRIPT FOR FAQ TOGGLE -->
   <script>
@@ -170,6 +174,37 @@ window.addEventListener("scroll", () => {
 });
 
   </script>
+  
 
-</body>
+  <!-- Scripts -->
+<script src="header.js"></script>
+
+<script>
+  // Load header
+  fetch("header.html")
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById("header-placeholder").innerHTML = html;
+      initHeader();
+      initProductsPage();
+    })
+    .catch(err => console.error("Header load failed:", err));
+
+  // Load footer
+  fetch("footer.html")
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById("footer-placeholder").innerHTML = html;
+
+      // ✅ IMPORTANT: init footer AFTER injection
+      initFooter();
+    })
+    .catch(err => console.error("Footer load failed:", err));
+</script>
+
+
+  <script src="footer.js"></script>
+
+
+  </body>
 </html>
