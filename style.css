@@ -25,7 +25,7 @@ h1, h2, h3 {
 }
 
 .top-bar {
-  background: var(--bg); /* beige */
+  background: #f5c3c7;
   height: 56px;
   color: var(--text);
   font-weight: 600;
