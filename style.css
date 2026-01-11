@@ -450,3 +450,59 @@ nav a {
   border: none !important;
   padding: 0 !important;
 }
+
+
+@media (max-width: 768px) {
+
+  /* Top bar: only icons */
+  .top-left span,
+  .top-right span {
+    display: none;
+  }
+
+  .top-left, .top-right {
+    gap: 4px;
+  }
+
+  .top-center {
+    display: none;
+  }
+
+  .material-symbols-outlined {
+    font-size: 10px;
+  }
+
+  .logo {
+    font-size: 1rem;
+  }
+
+  nav {
+    display: none;
+  }
+
+  /* Canopy waves reduced */
+  .canopy svg {
+    height: 50px;
+    overflow: hidden;
+  }
+
+  .canopy svg path {
+    transform: scaleY(0.6);
+    transform-origin: bottom;
+  }
+
+  /* Hero responsive */
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  /* Slider cards responsive */
+  .slide.x-large {
+    width: 300px;
+    height: 300px;
+  }
+
+  .slide-divider {
+    height: 4px; /* fixed px, visible on mobile */
+  }
+}
