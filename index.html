@@ -79,24 +79,28 @@ nav a {
   color: #2e2e2e;
 }
 
+.hero {
+  background: #2f6c44; /* green under the pink canopy */
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: center;
+  padding: 80px 24px 120px;
+}
 
-/* ---------- HERO ---------- */
+.hero img {
+  width: 100%;
+  border-radius: 20px;
+  background: #eee;
+}
 
 .hero-content {
   max-width: 700px;
   margin: auto;
 }
 
-.hero h1 {
-  font-size: clamp(2rem, 5vw, 3rem);
-  margin-bottom: 12px;
-}
-
-.hero p {
-  font-size: 1.1rem;
-  opacity: 0.95;
-}
-
+  
 /* ---------- BUTTON ---------- */
 .btn {
   display: inline-block;
@@ -333,20 +337,16 @@ nav a {
   </div>
 </header>
 
-
-
-  
-<section class="hero container">
-  <div>
-    <h1>Magic Puppet</h1>
-    <p>
-      A soft, playful puppet designed to spark imagination, storytelling,
-      and joyful moments between kids and parents.
-    </p>
+  <section class="hero">
+  <div class="hero-content">
+    <h1>Meet Bubunany</h1>
+    <p>A soft puppet friend for imagination, stories, and cozy moments.</p>
     <a href="#buy" class="btn">Buy Now</a>
   </div>
   <img src="https://static.wixstatic.com/media/1799ca_87eac17b6116421e9475d09b745f9a95~mv2.png" alt="Puppet">
 </section>
+
+
 
 <!-- SMALL SLIDER -->
 <section class="container">
