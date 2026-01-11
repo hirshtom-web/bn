@@ -118,11 +118,11 @@
     </div>
   </section>
 
-  <!-- STICKY BUY BAR -->
-  <div class="sticky-buy" id="buy">
-    <span>$39 – Magic Puppet</span>
-    <a class="btn" href="https://stripe.com">Buy Now</a>
-  </div>
+<div class="sticky-buy" id="buy">
+  <span>$39 – Magic Puppet</span>
+  <a class="btn" href="https://stripe.com">Buy Now</a>
+</div>
+
 
   <!-- SCRIPT FOR FAQ TOGGLE -->
   <script>
@@ -132,6 +132,22 @@
         answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
       });
     });
+    
+    // Show sticky bar after "Meet the Characters"
+const stickyBuy = document.getElementById("buy");
+const charactersSection = document.querySelector("section.container h2");
+
+window.addEventListener("scroll", () => {
+  const sectionTop = charactersSection.getBoundingClientRect().top;
+  const offset = 100; // trigger a little before the section reaches top
+
+  if (sectionTop < offset) {
+    stickyBuy.classList.add("active");
+  } else {
+    stickyBuy.classList.remove("active");
+  }
+});
+
   </script>
 
 </body>
