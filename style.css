@@ -104,7 +104,7 @@ h1, h2, h3 {
 
 .canopy {
   position: relative;
-  background: #2f6c44; /* same as hero */
+  background: #436b65; /* same as hero */
 }
 
 
@@ -170,7 +170,7 @@ nav a {
 }
 
 .hero {
-  background: #2f6c44; /* green under canopy */
+  background: #436b65; /* green under canopy */
   color: white;
   display: grid;
   grid-template-columns: 1fr 1fr;
