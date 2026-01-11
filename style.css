@@ -137,20 +137,39 @@ nav a {
 }
 
 /* ---------------- HERO ---------------- */
-.hero-logo {
-  width: 200px;
-  max-width: 80%;
-  margin: 8px auto 16px;
-  display: block;
+/* ---------------- HERO ---------------- */
+.hero-image {
+  position: relative;
+  min-height: 520px;
+  background-image: url("https://static.wixstatic.com/media/1799ca_c556a5d5a4524f40b5fdd08ae334a176~mv2.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
-  /* IMPORTANT: kill any background/bubble */
-  background: transparent !important;
-  box-shadow: none !important;
-  border: none !important;
-  padding: 0 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: -32px; /* tuck under canopy */
+  color: white;
 }
 
+/* Floating green card for text and logo */
+.hero-overlay-card {
+  background: #436b65;
+  color: white;
+  border-radius: 24px;
+  padding: 32px 36px;
+  max-width: 420px;
+  text-align: center;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
 
+/* Bubble above logo */
 .hero-bubble {
   display: inline-block;
   font-size: 10px;
@@ -159,56 +178,52 @@ nav a {
   background: rgba(255, 255, 255, 0.15);
   padding: 6px 12px;
   border-radius: 999px;
-  margin-bottom: 8px;
   color: #ffffff;
+  margin-bottom: 8px;
 }
 
+/* Logo inside card */
+.hero-logo {
+  width: 200px;
+  max-width: 80%;
+  display: block;
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+  padding: 0 !important;
+  margin-bottom: 8px;
+}
+
+/* Description text */
+.hero-overlay-card p {
+  margin: 8px 0 16px;
+  font-size: 1.1rem;
+  line-height: 1.4;
+  opacity: 0.95;
+}
+
+/* Button inside card */
+.hero-overlay-card .btn {
+  margin-top: 8px;
+  padding: 12px 28px;
+}
+
+/* Responsive adjustments */
 @media (max-width: 768px) {
+  .hero-image {
+    min-height: 420px;
+    padding: 16px;
+  }
+
+  .hero-overlay-card {
+    width: 100%;
+    padding: 24px;
+    border-radius: 20px;
+  }
+
   .hero-logo {
     width: 160px;
   }
-}
-
-.hero {
-  background: #436b65; /* green under canopy */
-  color: white;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 32px;
-  align-items: center;
-  padding: 0 24px 120px;
-  text-align: center;
-}
-
-.hero {
-  margin-top: -40px;
-  padding: 16px 24px 120px;
-}
-
-.canopy svg {
-  height: 50px;
-}
-
-.hero img {
-  margin-top: 80px;
-  width: 100%;
-  border-radius: 20px;
-  background: #eee;
-}
-
-.hero-content {
-  max-width: 700px;
-  margin: auto;
-}
-
-.hero h1 {
-  font-size: clamp(2rem, 5vw, 3rem);
-  margin-bottom: 12px;
-}
-
-.hero p {
-  font-size: 1.1rem;
-  opacity: 0.95;
 }
 
 /* ---------------- BUTTON ---------------- */
