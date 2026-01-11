@@ -384,3 +384,10 @@ can u send me the full block instead of this: /* ---------------- HERO ---------
     grid-template-columns: 1fr;
   }
 }
+
+ /* IMPORTANT: kill any background/bubble */
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+  padding: 0 !important;
+}
