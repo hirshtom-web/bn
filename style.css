@@ -184,11 +184,15 @@ nav a {
   justify-content: space-between;
   align-items: center;
   z-index: 1000;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
 }
 
-.sticky-buy span {
-  font-weight: 600;
+/* Show when active */
+.sticky-buy.active {
+  transform: translateY(0);
 }
+
 
 /* ---------------- RESPONSIVE ---------------- */
 @media (max-width: 768px) {
