@@ -176,12 +176,13 @@ nav a {
   grid-template-columns: 1fr 1fr;
   gap: 32px;
   align-items: center;
-  padding: 80px 24px 120px;
+  padding: 0 24px 120px;
   text-align: center;
 }
+
 .hero {
-  margin-top: 0;
-  padding-top: 0; /* or adjust */
+  margin-top: -40px;
+  padding: 16px 24px 120px;
 }
 
 
