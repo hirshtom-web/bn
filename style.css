@@ -185,6 +185,9 @@ nav a {
   padding: 16px 24px 120px;
 }
 
+.canopy svg {
+  height: 50px;
+}
 
 .hero img {
   margin-top: 80px;
