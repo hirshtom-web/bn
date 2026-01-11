@@ -1,0 +1,283 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Magic Puppet – Play, Imagine, Create</title>
+
+<style>
+:root {
+  --bg: #FFF8F2;
+  --primary: #FF8A5B;
+  --secondary: #6EC1B6;
+  --accent: #FFD166;
+  --text: #2E2E2E;
+  --card: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+h1, h2, h3 {
+  margin-top: 0;
+}
+/* ---------- HEADER / CANOPY ---------- */
+.site-header {
+  position: relative;
+}
+
+.canopy {
+  position: relative;
+  background: transparent; /* no pink block behind */
+}
+
+.canopy svg {
+  width: 100%;
+  height: 80px; /* see scallops */
+  display: block;
+}
+
+.hero {
+  background: #2f6c44; /* green under awning */
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: center;
+  padding: 80px 24px 120px;
+}
+
+
+
+.header-inner {
+  max-width: 1100px;
+  margin: auto;
+  padding: 18px 24px 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+nav a {
+  margin-left: 16px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #2e2e2e;
+}
+
+.hero {
+  background: #2f6c44; /* green under the pink canopy */
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: center;
+  padding: 80px 24px 120px;
+}
+
+.hero img {
+  width: 100%;
+  border-radius: 20px;
+  background: #eee;
+}
+
+.hero-content {
+  max-width: 700px;
+  margin: auto;
+}
+
+  
+/* ---------- BUTTON ---------- */
+.btn {
+  display: inline-block;
+  margin-top: 24px;
+  background: #ffd166;
+  color: #2e2e2e;
+  padding: 14px 28px;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* ---------- MOBILE ---------- */
+@media (max-width: 768px) {
+  nav {
+    display: none;
+  }
+}
+
+
+/* ---------- HERO ---------- */
+.hero {
+  background: #2f6c44;
+  color: white;
+  padding: 80px 24px 120px;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 700px;
+  margin: auto;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 12px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  opacity: 0.95;
+}
+
+/* ---------- BUTTON ---------- */
+.btn {
+  display: inline-block;
+  margin-top: 24px;
+  background: #ffd166;
+  color: #2e2e2e;
+  padding: 14px 28px;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* ---------- MOBILE ---------- */
+@media (max-width: 768px) {
+  nav {
+    display: none;
+  }
+}
+
+.container {
+  max-width: 100%;
+  margin: auto;
+  padding: 24px;
+}
+
+/* ---------- HERO ---------- */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: center;
+  padding: 40px 24px;
+}
+
+.hero img {
+  width: 100%;
+  border-radius: 20px;
+  background: #eee;
+}
+
+.hero p {
+  font-size: 1.1rem;
+}
+
+/* ---------- BUTTON ---------- */
+.btn {
+  display: inline-block;
+  background: var(--primary);
+  color: white;
+  padding: 14px 24px;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+  margin-top: 16px;
+}
+
+/* ---------- SLIDERS ---------- */
+.slider {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 12px;
+}
+
+.slider::-webkit-scrollbar {
+  display: none;
+}
+
+.slide {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  background: var(--card);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+/* Small squares slider */
+.slide.small {
+  width: 150px;
+  height: 150px;
+  background: var(--secondary);
+  color: white;
+}
+
+/* Large cards slider */
+.slide.large {
+  width: 300px;
+  height: 300px;
+  background: var(--accent);
+}
+
+/* ---------- FAQ ---------- */
+.faq-item {
+  background: var(--card);
+  border-radius: 14px;
+  margin-bottom: 12px;
+  padding: 16px;
+}
+
+.faq-question {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.faq-answer {
+  display: none;
+  margin-top: 8px;
+  font-size: 0.95rem;
+}
+
+/* ---------- STICKY BUY ---------- */
+.sticky-buy {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  border-top: 1px solid #eee;
+  padding: 12px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+.sticky-buy span {
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+}
