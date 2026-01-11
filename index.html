@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Magic Puppet – Play, Imagine, Create</title>
+
+<style>
+:root {
+  --bg: #FFF8F2;
+  --primary: #FF8A5B;
+  --secondary: #6EC1B6;
+  --accent: #FFD166;
+  --text: #2E2E2E;
+  --card: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+h1, h2, h3 {
+  margin-top: 0;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 24px;
+}
+
+/* ---------- HERO ---------- */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: center;
+  padding: 40px 24px;
+}
+
+.hero img {
+  width: 100%;
+  border-radius: 20px;
+  background: #eee;
+}
+
+.hero p {
+  font-size: 1.1rem;
+}
+
+/* ---------- BUTTON ---------- */
+.btn {
+  display: inline-block;
+  background: var(--primary);
+  color: white;
+  padding: 14px 24px;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+  margin-top: 16px;
+}
+
+/* ---------- SLIDERS ---------- */
+.slider {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 12px;
+}
+
+.slider::-webkit-scrollbar {
+  display: none;
+}
+
+.slide {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  background: var(--card);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+/* Small squares slider */
+.slide.small {
+  width: 150px;
+  height: 150px;
+  background: var(--secondary);
+  color: white;
+}
+
+/* Large cards slider */
+.slide.large {
+  width: 300px;
+  height: 300px;
+  background: var(--accent);
+}
+
+/* ---------- FAQ ---------- */
+.faq-item {
+  background: var(--card);
+  border-radius: 14px;
+  margin-bottom: 12px;
+  padding: 16px;
+}
+
+.faq-question {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.faq-answer {
+  display: none;
+  margin-top: 8px;
+  font-size: 0.95rem;
+}
+
+/* ---------- STICKY BUY ---------- */
+.sticky-buy {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  border-top: 1px solid #eee;
+  padding: 12px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+.sticky-buy span {
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero container">
+  <div>
+    <h1>Magic Puppet</h1>
+    <p>
+      A soft, playful puppet designed to spark imagination, storytelling,
+      and joyful moments between kids and parents.
+    </p>
+    <a href="#buy" class="btn">Buy Now</a>
+  </div>
+  <img src="https://via.placeholder.com/600x600?text=Puppet+Hero" alt="Puppet">
+</section>
+
+<!-- SMALL SLIDER -->
+<section class="container">
+  <h2>Meet the Characters</h2>
+  <div class="slider">
+    <!-- 10 small items -->
+    <div class="slide small">1</div>
+    <div class="slide small">2</div>
+    <div class="slide small">3</div>
+    <div class="slide small">4</div>
+    <div class="slide small">5</div>
+    <div class="slide small">6</div>
+    <div class="slide small">7</div>
+    <div class="slide small">8</div>
+    <div class="slide small">9</div>
+    <div class="slide small">10</div>
+  </div>
+</section>
+
+<!-- LARGE SLIDER -->
+<section class="container">
+  <h2>How Kids Play With It</h2>
+  <div class="slider">
+    <div class="slide large">Story Time</div>
+    <div class="slide large">Bedtime</div>
+    <div class="slide large">Role Play</div>
+    <div class="slide large">Travel</div>
+    <div class="slide large">Gift</div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="container">
+  <h2>Questions & Answers</h2>
+
+  <div class="faq-item">
+    <div class="faq-question">What age is it for?</div>
+    <div class="faq-answer">Recommended for ages 3–8, but loved by all.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">Is it safe?</div>
+    <div class="faq-answer">Yes. Made with child-safe, soft materials.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">Is it washable?</div>
+    <div class="faq-answer">Hand wash recommended.</div>
+  </div>
+</section>
+
+<!-- STICKY BUY BAR -->
+<div class="sticky-buy" id="buy">
+  <span>$39 – Magic Puppet</span>
+  <a class="btn" href="https://stripe.com">Buy Now</a>
+</div>
+
+<script>
+// FAQ toggle
+document.querySelectorAll('.faq-question').forEach(q => {
+  q.addEventListener('click', () => {
+    const answer = q.nextElementSibling;
+    answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+  });
+});
+</script>
+
+</body>
+</html>
