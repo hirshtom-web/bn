@@ -24,6 +24,14 @@ h1, h2, h3 {
   margin-top: 0;
 }
 
+.very-top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  background: #000; /* change color if needed */
+}
 
 .top-bar {
   background: #f5c3c7; /* or pink if you prefer */
