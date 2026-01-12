@@ -57,10 +57,12 @@
 
 
 /* ================= MAIN HEADER (PINK – STATIC) ================= */
+/* ================= MAIN HEADER (PINK – STATIC) ================= */
 .site-header .main-header {
   height: 40px;
   background: var(--pink);
   color: #fff;
+  padding: 0 20px; /* 20px margin from the edges */
 }
 
 .site-header .header-inner {
@@ -76,36 +78,29 @@
 .site-header .header-right {
   display: flex;
   align-items: center;       /* vertically center text/icons */
-  white-space: nowrap;       /* prevents text wrapping */
-  overflow: hidden;          /* prevent text overflow over icons */
-}
-
-/* Keep original font size */
-.site-header .header-left,
-.site-header .header-center,
-.site-header .header-right {
-  font-size: 12px;
+  gap: 10px;                 /* 10px between items */
+  white-space: nowrap;       /* prevent text wrapping */
+  overflow: hidden;          /* prevent text overflow */
+  font-size: 12px;           /* keep original text size */
 }
 
 /* Center area stays perfectly centered */
 .site-header .header-center {
   justify-content: center;
   text-align: center;
-  padding: 0 8px; /* optional: small padding to avoid collision */
 }
 
 /* Right side stays right-aligned */
 .site-header .header-right {
   justify-content: flex-end;
-  padding: 0 8px; /* optional: small padding to avoid collision */
 }
 
 /* ================= ICONS ================= */
 .site-header .material-symbols-outlined {
   font-size: 16px;
   line-height: 1;
-  margin-left: 4px;   /* small spacing so text doesn't collide */
   vertical-align: middle;
+  margin-left: 5px; /* 5px between text and icon */
 }
 
 
