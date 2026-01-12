@@ -26,17 +26,16 @@ h1, h2, h3 {
 
 
 /* ---------------- HERO ---------------- */
-.hero-logo {
-  width: 200px;
-  max-width: 80%;
-  margin: 8px auto 16px;
-  display: block;
-
-  /* IMPORTANT: kill any background/bubble */
-  background: transparent !important;
-  box-shadow: none !important;
-  border: none !important;
-  padding: 0 !important;
+.hero {
+  background: #436b65; /* green under canopy */
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: center;
+  padding: 0 24px 120px;
+  text-align: center;
+  margin-top: -40px;
 }
 
 .hero-content {
@@ -45,11 +44,14 @@ h1, h2, h3 {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  margin-top: 0;
+  max-width: 700px;
+  margin: auto;
 }
 
 .hero-bubble {
   position: absolute;
-  top: -18px;        /* move bubble higher above logo */
+  top: -100px;
   left: 50%;
   transform: translateX(-50%);
   font-size: 10px;
@@ -65,76 +67,8 @@ h1, h2, h3 {
 .hero-logo {
   width: 200px;
   max-width: 80%;
-  margin: 0 auto;      /* removed top/bottom margins */
+  margin: 0 auto;
   display: block;
-}
-
-/* ---------------- MOBILE FIXES ---------------- */
-@media (max-width: 768px) {
-
-  /* Top bar: hide text, keep icons */
-  .top-left span,
-  .top-right span {
-    display: none; /* hide text */
-  }
-
-  .top-left,
-  .top-right {
-    gap: 4px; /* tighter spacing for mobile */
-  }
-
-  .top-center {
-    display: none; /* hide scrolling text */
-  }
-
-  .material-symbols-outlined {
-    font-size: 10px; /* slightly bigger for visibility */
-  }
-
-  /* Header logo */
-  .logo {
-    font-size: 1rem;
-  }
-
-  /* Hide nav links */
-  nav {
-    display: none;
-  }
-
-  /* Canopy / awning adjustments */
-  .canopy svg {
-    height: 50px; /* slightly smaller for mobile */
-    overflow: hidden;
-  }
-
-  /* Optional: reduce waves using transform/scale */
-  /* This visually compresses waves without editing the SVG path */
-  .canopy svg path {
-    transform: scaleY(0.6); /* reduce vertical amplitude */
-    transform-origin: bottom;
-  }
-}
-
-
-
-.hero {
-  background: #436b65; /* green under canopy */
-  color: white;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 32px;
-  align-items: center;
-  padding: 0 24px 120px;
-  text-align: center;
-}
-
-.hero {
-  margin-top: -40px;
-  padding: 16px 24px 120px;
-}
-
-.canopy svg {
-  height: 50px;
 }
 
 .hero img {
@@ -143,19 +77,21 @@ h1, h2, h3 {
   border-radius: 20px;
 }
 
-.hero-content {
-  max-width: 700px;
-  margin: auto;
-}
+/* Optional: mobile adjustments */
+@media (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
 
-.hero h1 {
-  font-size: clamp(2rem, 5vw, 3rem);
-  margin-bottom: 12px;
-}
+  .hero-bubble {
+    top: -60px; /* bubble a bit closer on smaller screens */
+    font-size: 9px;
+    padding: 4px 10px;
+  }
 
-.hero p {
-  font-size: 1.1rem;
-  opacity: 0.95;
+  .hero-logo {
+    width: 160px;
+  }
 }
 
 /* ---------------- BUTTON ---------------- */
@@ -334,77 +270,3 @@ h1, h2, h3 {
 }
 
 
-
-/* ---------------- RESPONSIVE ---------------- */
-@media (max-width: 768px) {
-  nav {
-    display: none;
-  }
-
-  .hero {
-    grid-template-columns: 1fr;
-  }
-}
-
- /* IMPORTANT: kill any background/bubble */
-  background: transparent !important;
-  box-shadow: none !important;
-  border: none !important;
-  padding: 0 !important;
-}
-
-
-@media (max-width: 768px) {
-
-  /* Top bar: only icons */
-  .top-left span,
-  .top-right span {
-    display: none;
-  }
-
-  .top-left, .top-right {
-    gap: 4px;
-  }
-
-  .top-center {
-    display: none;
-  }
-
-  .material-symbols-outlined {
-    font-size: 10px;
-  }
-
-  .logo {
-    font-size: 1rem;
-  }
-
-  nav {
-    display: none;
-  }
-
-  /* Canopy waves reduced */
-  .canopy svg {
-    height: 50px;
-    overflow: hidden;
-  }
-
-  .canopy svg path {
-    transform: scaleY(0.6);
-    transform-origin: bottom;
-  }
-
-  /* Hero responsive */
-  .hero {
-    grid-template-columns: 1fr;
-  }
-
-  /* Slider cards responsive */
-  .slide.x-large {
-    width: 300px;
-    height: 300px;
-  }
-
-  .slide-divider {
-    height: 4px; /* fixed px, visible on mobile */
-  }
-}
