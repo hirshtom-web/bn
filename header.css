@@ -1,30 +1,27 @@
-/* ================= COLORS ================= */
-:root {
+/* ================= HEADER SCOPE ================= */
+.site-header {
   --beige: #f6f1e8;
   --pink: #f5c3c7;
   --green: #1f4d3a;
-}
 
-/* ================= RESET ================= */
-body {
-  margin: 0;
   font-family: Arial, sans-serif;
 }
 
 /* ================= SLIDER ================= */
-.slider {
+.site-header .slider {
   display: flex;
   flex-direction: column;
-  animation: slide 9s infinite;
+  animation: header-slide 9s infinite;
 }
 
-.slider span {
+.site-header .slider span {
   height: 20px;
   line-height: 20px;
   white-space: nowrap;
 }
 
-@keyframes slide {
+/* ================= ANIMATION ================= */
+@keyframes header-slide {
   0%, 30%   { transform: translateY(0); }
   33%, 63%  { transform: translateY(-20px); }
   66%, 96%  { transform: translateY(-40px); }
@@ -32,13 +29,13 @@ body {
 }
 
 /* ================= TOP BAR ================= */
-.top-bar {
+.site-header .top-bar {
   background: var(--beige);
   color: var(--green);
   height: 28px;
 }
 
-.top-bar-inner {
+.site-header .top-bar-inner {
   height: 100%;
   display: flex;
   justify-content: center;
@@ -48,13 +45,13 @@ body {
 }
 
 /* ================= HEADER ================= */
-.main-header {
+.site-header .main-header {
   background: var(--pink);
   color: #fff;
   height: 44px;
 }
 
-.header-inner {
+.site-header .header-inner {
   height: 100%;
   padding: 0 16px;
   display: grid;
@@ -62,33 +59,33 @@ body {
   align-items: center;
 }
 
-.header-left,
-.header-right {
+.site-header .header-left,
+.site-header .header-right {
   display: flex;
   align-items: center;
   gap: 8px;
   font-size: 12px;
 }
 
-.header-right {
+.site-header .header-right {
   justify-content: flex-end;
 }
 
-.header-center {
+.site-header .header-center {
   height: 20px;
   overflow: hidden;
-  font-size: 12px;
   text-align: center;
+  font-size: 12px;
 }
 
 /* ================= ICONS ================= */
-.material-symbols-outlined {
+.site-header .material-symbols-outlined {
   font-size: 16px;
   line-height: 1;
 }
 
 /* ================= AWNING ================= */
-.awning-bar {
+.site-header .awning-bar {
   background: var(--pink);
   color: var(--green);
   height: 32px;
