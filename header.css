@@ -1,13 +1,14 @@
-/* ================= HEADER SCOPE ================= */
+/* ================= SITE HEADER SCOPE ================= */
 .site-header {
   --beige: #f6f1e8;
   --pink: #f5c3c7;
   --green: #1f4d3a;
 
   font-family: Arial, sans-serif;
+  position: relative; /* for canopy text overlay if needed */
 }
 
-/* ================= SLIDER ================= */
+/* ================= SLIDERS ================= */
 .site-header .slider {
   display: flex;
   flex-direction: column;
@@ -44,7 +45,7 @@
   font-size: 11px;
 }
 
-/* ================= HEADER ================= */
+/* ================= MAIN HEADER ================= */
 .site-header .main-header {
   background: var(--pink);
   color: #fff;
@@ -84,14 +85,28 @@
   line-height: 1;
 }
 
-/* ================= AWNING ================= */
-.site-header .awning-bar {
-  background: var(--pink);
+/* ================= CANOPY / AWNING ================= */
+.site-header .awning {
+  width: 100%;
+  line-height: 0; /* removes unwanted SVG spacing */
+  box-shadow: 0 6px 0 var(--green); /* subtle trim effect */
+  position: relative; /* for overlay text if needed */
+}
+
+.site-header .awning svg {
+  display: block;
+  width: 100%;
+  height: 80px;
+}
+
+/* ================= OPTIONAL CANOPY TEXT ================= */
+.site-header .awning-text {
+  position: absolute;
+  top: 10px; /* adjust vertical placement */
+  width: 100%;
+  text-align: center;
   color: var(--green);
-  height: 32px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 12px;
   font-weight: 500;
+  font-size: 14px;
+  pointer-events: none;
 }
