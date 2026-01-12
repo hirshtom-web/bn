@@ -58,6 +58,7 @@
 
 
 /* ================= MAIN HEADER (PINK – STATIC) ================= */
+/* ================= MAIN HEADER (PINK – STATIC) ================= */
 .site-header .main-header {
   height: 40px;
   background: var(--pink);
@@ -71,21 +72,32 @@
   align-items: center;
 }
 
-/* Normalize all header text */
+/* Normalize all header text vertically without changing font size or spacing */
 .site-header .header-left,
 .site-header .header-center,
 .site-header .header-right {
   display: flex;
-  align-items: center;
-  line-height: 1;
+  align-items: center;      /* center vertically */
+  justify-content: flex-start; /* left stays left, center stays center, right stays right */
 }
 
+/* Center overrides justify-content for proper horizontal alignment */
+.site-header .header-center {
+  justify-content: center;
+}
+
+/* Right overrides justify-content to stay on the end */
+.site-header .header-right {
+  justify-content: flex-end;
+}
 
 /* ================= ICONS ================= */
 .site-header .material-symbols-outlined {
   font-size: 16px;
   line-height: 1;
+  vertical-align: middle;   /* ensures perfect alignment with text */
 }
+
 
 /* ================= OWNING / AWNING HEADER (GREEN – STATIC) ================= */
 .site-header .awning {
