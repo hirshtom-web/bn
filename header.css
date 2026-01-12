@@ -5,7 +5,7 @@
   --green: #1f4d3a;
 
   font-family: Arial, sans-serif;
-  position: relative; /* for canopy text overlay if needed */
+  position: relative;
 }
 
 /* ================= SLIDERS ================= */
@@ -29,13 +29,12 @@
   100%      { transform: translateY(0); }
 }
 
-/* ================= TOP BAR ================= */
+/* ================= TOP BAR (BEIGE) ================= */
 .site-header .top-bar {
   background: var(--beige);
   color: var(--green);
-  height: 40px;
+  height: 48px; /* increased */
 }
-
 
 .site-header .top-bar-inner {
   height: 100%;
@@ -46,11 +45,11 @@
   font-size: 11px;
 }
 
-/* ================= MAIN HEADER ================= */
+/* ================= MAIN HEADER (PINK) ================= */
 .site-header .main-header {
   background: var(--pink);
   color: #fff;
-  height: 44px;
+  height: 44px; /* unchanged */
 }
 
 .site-header .header-inner {
@@ -89,21 +88,30 @@
 /* ================= CANOPY / AWNING ================= */
 .site-header .awning {
   width: 100%;
-  line-height: 0; /* removes unwanted SVG spacing */
-  box-shadow: 0 6px 0 var(--green); /* subtle trim effect */
-  position: relative; /* for overlay text if needed */
+  line-height: 0; /* removes SVG whitespace */
+  position: relative;
+  background: var(--pink);
 }
 
+/* ↓ SHORTER AWNING */
 .site-header .awning svg {
   display: block;
   width: 100%;
-  height: 80px;
+  height: 60px; /* reduced from 80px */
 }
+
+/* ❌ REMOVED hard green line */
+/* If you want a SOFT divider instead, use this: */
+/*
+.site-header .awning {
+  box-shadow: inset 0 -2px 0 rgba(31, 77, 58, 0.25);
+}
+*/
 
 /* ================= OPTIONAL CANOPY TEXT ================= */
 .site-header .awning-text {
   position: absolute;
-  top: 10px; /* adjust vertical placement */
+  top: 8px;
   width: 100%;
   text-align: center;
   color: var(--green);
