@@ -8,79 +8,78 @@
 }
 
 /* ================= TOP BAR (BEIGE – SLIDER ONLY) ================= */
+/* ================= TOP BAR SLIDER – FIXED POSITION ================= */
 .site-header .top-bar {
+  height: 40px;
   background: var(--beige);
   color: var(--green);
-  height: 40px;
 }
 
 .site-header .top-bar-inner {
   height: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;     /* ← true vertical centering */
-  overflow: hidden;       /* ← nothing leaks */
+  align-items: center;
+  position: relative;
+  overflow: hidden;
   font-size: 11px;
 }
 
-/* Slider column */
+/* Stack all slides on top of each other */
 .site-header .top-bar .slider {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  will-change: transform;
-  animation: header-slide 9s infinite;
+  position: relative;
+  width: 100%;
+  height: 40px;
 }
 
-/* Each slide */
 .site-header .top-bar .slider span {
-  height: 40px;            /* ← match bar height */
+  position: absolute;
+  inset: 0;
   display: flex;
-  align-items: center;     /* ← center text inside row */
+  justify-content: center;
+  align-items: center;
   white-space: nowrap;
+  opacity: 0;
+  animation: fade-slide 9s infinite;
 }
 
+/* Stagger each slide */
+.site-header .top-bar .slider span:nth-child(1) { animation-delay: 0s; }
+.site-header .top-bar .slider span:nth-child(2) { animation-delay: 3s; }
+.site-header .top-bar .slider span:nth-child(3) { animation-delay: 6s; }
 
-/* ================= SLIDER ANIMATION ================= */
-@keyframes header-slide {
-  0%, 30%   { transform: translateY(0); }
-  33%, 63%  { transform: translateY(-40px); }
-  66%, 96%  { transform: translateY(-80px); }
-  100%      { transform: translateY(0); }
+@keyframes fade-slide {
+  0%   { opacity: 0; }
+  10%  { opacity: 1; }
+  30%  { opacity: 1; }
+  40%  { opacity: 0; }
+  100% { opacity: 0; }
 }
 
 
 /* ================= MAIN HEADER (PINK – STATIC) ================= */
 .site-header .main-header {
+  height: 40px;
   background: var(--pink);
   color: #fff;
-  height: 40px;
 }
 
 .site-header .header-inner {
   height: 100%;
-  padding: 0 16px;
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
 }
 
+/* Normalize all header text */
 .site-header .header-left,
+.site-header .header-center,
 .site-header .header-right {
   display: flex;
   align-items: center;
-  gap: 8px;
-  font-size: 12px;
+  line-height: 1;
 }
 
-.site-header .header-right {
-  justify-content: flex-end;
-}
-
-.site-header .header-center {
-  text-align: center;
-  font-size: 12px;
-}
 
 /* ================= ICONS ================= */
 .site-header .material-symbols-outlined {
