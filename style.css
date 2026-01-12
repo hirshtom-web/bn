@@ -39,15 +39,19 @@ h1, h2, h3 {
   padding: 0 !important;
 }
 
-.hero-svg-wrapper {
-  position: relative; /* make bubble relative to SVG */
-  display: inline-block;
+.hero-content {
+  position: relative; /* so bubble can be absolute relative to content */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* center all items */
+  text-align: center;
 }
 
 .hero-bubble {
   position: absolute;
-  top: 10px;    /* distance from top of SVG */
-  left: 10px;   /* distance from left of SVG */
+  top: -10px;   /* move above the logo */
+  left: 50%;    /* center horizontally */
+  transform: translateX(-50%); /* exact horizontal centering */
   font-size: 10px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -55,6 +59,7 @@ h1, h2, h3 {
   padding: 6px 12px;
   border-radius: 999px;
   color: #ffffff;
+  z-index: 2;
 }
 
 
