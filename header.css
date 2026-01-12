@@ -18,31 +18,37 @@
   height: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
-  overflow: hidden; /* shows ONE slide only */
+  align-items: center;     /* ← true vertical centering */
+  overflow: hidden;       /* ← nothing leaks */
   font-size: 11px;
 }
 
-/* Slider ONLY for beige bar */
+/* Slider column */
 .site-header .top-bar .slider {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  will-change: transform;
   animation: header-slide 9s infinite;
 }
 
+/* Each slide */
 .site-header .top-bar .slider span {
-  height: 20px;
-  line-height: 20px;
+  height: 40px;            /* ← match bar height */
+  display: flex;
+  align-items: center;     /* ← center text inside row */
   white-space: nowrap;
 }
+
 
 /* ================= SLIDER ANIMATION ================= */
 @keyframes header-slide {
   0%, 30%   { transform: translateY(0); }
-  33%, 63%  { transform: translateY(-20px); }
-  66%, 96%  { transform: translateY(-40px); }
+  33%, 63%  { transform: translateY(-40px); }
+  66%, 96%  { transform: translateY(-80px); }
   100%      { transform: translateY(0); }
 }
+
 
 /* ================= MAIN HEADER (PINK – STATIC) ================= */
 .site-header .main-header {
