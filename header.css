@@ -68,31 +68,36 @@
   height: 100%;
   display: grid;
   grid-template-columns: 1fr auto 1fr;
-  align-items: center;
+  align-items: center; /* grid centers items vertically */
 }
 
 /* ================= LEFT / CENTER / RIGHT ================= */
-.site-header .header-left,
-.site-header .header-right {
+
+/* Left section */
+.site-header .header-left {
   display: flex;
-  align-items: center;       /* vertically center icons/text */
-  gap: 10px;                 /* spacing between items */
+  align-items: center;
+  gap: 10px;       /* space between items */
   white-space: nowrap;
-  overflow: hidden;
   font-size: 12px;
 }
 
+/* Center section */
 .site-header .header-center {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  white-space: nowrap;
-  overflow: hidden;
+  align-items: center;  /* vertical alignment */
+  justify-content: center; /* horizontal center */
+  gap: 5px;             /* if you have icon + text in center */
   font-size: 12px;
+}
 
-  /* nudge down for visual alignment with left/right icons */
-  position: relative;
-  top: 2px;  /* slightly more than before */
+/* Right section */
+.site-header .header-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* keep right-aligned */
+  gap: 10px;
+  font-size: 12px;
 }
 
 /* ================= ICONS ================= */
