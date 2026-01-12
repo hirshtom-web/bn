@@ -57,12 +57,11 @@
 
 
 /* ================= MAIN HEADER (PINK – STATIC) ================= */
-/* ================= MAIN HEADER (PINK – STATIC) ================= */
 .site-header .main-header {
   height: 40px;
   background: var(--pink);
   color: #fff;
-  padding: 0 20px; /* 20px margin from edges */
+  padding: 0 20px; /* 20px from edges */
 }
 
 .site-header .header-inner {
@@ -74,27 +73,26 @@
 
 /* ================= LEFT / CENTER / RIGHT ================= */
 .site-header .header-left,
-.site-header .header-center,
 .site-header .header-right {
   display: flex;
   align-items: center;       /* vertically center icons/text */
   gap: 10px;                 /* spacing between items */
   white-space: nowrap;
   overflow: hidden;
-  font-size: 12px;           /* keep original size */
+  font-size: 12px;
 }
 
-/* Center area stays centered, slightly nudged down for visual balance */
 .site-header .header-center {
+  display: flex;
   justify-content: center;
-  text-align: center;
-  position: relative;
-  top: 1px;  /* move text down 1px to align visually with icons */
-}
+  align-items: center;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 12px;
 
-/* Right side stays right-aligned */
-.site-header .header-right {
-  justify-content: flex-end;
+  /* nudge down for visual alignment with left/right icons */
+  position: relative;
+  top: 2px;  /* slightly more than before */
 }
 
 /* ================= ICONS ================= */
@@ -104,8 +102,6 @@
   vertical-align: middle;
   margin-left: 5px;  /* space between text and icon */
 }
-
-
 
 /* ================= OWNING / AWNING HEADER (GREEN – STATIC) ================= */
 .site-header .awning {
