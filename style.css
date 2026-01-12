@@ -39,18 +39,24 @@ h1, h2, h3 {
   padding: 0 !important;
 }
 
+.hero-svg-wrapper {
+  position: relative; /* make bubble relative to SVG */
+  display: inline-block;
+}
 
 .hero-bubble {
-  display: inline-block;
+  position: absolute;
+  top: 10px;    /* distance from top of SVG */
+  left: 10px;   /* distance from left of SVG */
   font-size: 10px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   background: rgba(255, 255, 255, 0.15);
   padding: 6px 12px;
   border-radius: 999px;
-  margin-bottom: 8px;
   color: #ffffff;
 }
+
 
 @media (max-width: 768px) {
   .hero-logo {
