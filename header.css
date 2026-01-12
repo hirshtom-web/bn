@@ -5,35 +5,13 @@
   --green: #1f4d3a;
 
   font-family: Arial, sans-serif;
-  position: relative;
 }
 
-/* ================= SLIDERS ================= */
-.site-header .slider {
-  display: flex;
-  flex-direction: column;
-  animation: header-slide 9s infinite;
-}
-
-.site-header .slider span {
-  height: 20px;
-  line-height: 20px;
-  white-space: nowrap;
-}
-
-/* ================= ANIMATION ================= */
-@keyframes header-slide {
-  0%, 30%   { transform: translateY(0); }
-  33%, 63%  { transform: translateY(-20px); }
-  66%, 96%  { transform: translateY(-40px); }
-  100%      { transform: translateY(0); }
-}
-
-/* ================= TOP BAR (BEIGE) ================= */
+/* ================= TOP BAR (BEIGE – SLIDER ONLY) ================= */
 .site-header .top-bar {
   background: var(--beige);
   color: var(--green);
-  height: 48px; /* increased */
+  height: 40px;
 }
 
 .site-header .top-bar-inner {
@@ -41,15 +19,36 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
+  overflow: hidden; /* shows ONE slide only */
   font-size: 11px;
 }
 
-/* ================= MAIN HEADER (PINK) ================= */
+/* Slider ONLY for beige bar */
+.site-header .top-bar .slider {
+  display: flex;
+  flex-direction: column;
+  animation: header-slide 9s infinite;
+}
+
+.site-header .top-bar .slider span {
+  height: 20px;
+  line-height: 20px;
+  white-space: nowrap;
+}
+
+/* ================= SLIDER ANIMATION ================= */
+@keyframes header-slide {
+  0%, 30%   { transform: translateY(0); }
+  33%, 63%  { transform: translateY(-20px); }
+  66%, 96%  { transform: translateY(-40px); }
+  100%      { transform: translateY(0); }
+}
+
+/* ================= MAIN HEADER (PINK – STATIC) ================= */
 .site-header .main-header {
   background: var(--pink);
   color: #fff;
-  height: 44px; /* unchanged */
+  height: 40px;
 }
 
 .site-header .header-inner {
@@ -73,8 +72,6 @@
 }
 
 .site-header .header-center {
-  height: 20px;
-  overflow: hidden;
   text-align: center;
   font-size: 12px;
 }
@@ -85,37 +82,20 @@
   line-height: 1;
 }
 
-/* ================= CANOPY / AWNING ================= */
+/* ================= OWNING / AWNING HEADER (GREEN – STATIC) ================= */
 .site-header .awning {
-  width: 100%;
-  line-height: 0; /* removes SVG whitespace */
-  position: relative;
-  background: var(--pink);
+  background: var(--green);
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 12px;
 }
 
-/* ↓ SHORTER AWNING */
+/* Remove SVG height influence if present */
 .site-header .awning svg {
+  height: 40px;
+  width: 100%;
   display: block;
-  width: 100%;
-  height: 60px; /* reduced from 80px */
-}
-
-/* ❌ REMOVED hard green line */
-/* If you want a SOFT divider instead, use this: */
-/*
-.site-header .awning {
-  box-shadow: inset 0 -2px 0 rgba(31, 77, 58, 0.25);
-}
-*/
-
-/* ================= OPTIONAL CANOPY TEXT ================= */
-.site-header .awning-text {
-  position: absolute;
-  top: 8px;
-  width: 100%;
-  text-align: center;
-  color: var(--green);
-  font-weight: 500;
-  font-size: 14px;
-  pointer-events: none;
 }
