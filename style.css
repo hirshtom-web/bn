@@ -25,62 +25,48 @@ h1, h2, h3 {
 }
 
 /* ===============================
-   BAR HEIGHT VARIABLES
-================================ */
-:root {
-  --very-top-bar-height: 24px;
-  --top-bar-height: 36px;
-}
-
-/* ===============================
-   VERY TOP BAR
+   VERY TOP BAR (NOT STICKY)
 ================================ */
 .very-top-bar {
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: var(--very-top-bar-height);
-  z-index: 10000;
   background: #000;
   color: #fff;
+  font-size: 11px;
 }
 
 .very-top-bar-inner {
-  height: 100%;
+  height: 28px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 /* ===============================
-   TOP HEADER BAR
+   TOP HEADER BAR (STICKY)
 ================================ */
 .top-bar {
   position: fixed;
-  top: var(--very-top-bar-height);
+  top: 28px; /* height of very top bar */
   left: 0;
   width: 100%;
-  height: var(--top-bar-height);
+  height: 36px;
   z-index: 9999;
   background: #f5c3c7;
   color: #ffffff;
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 400;
 }
 
 .top-bar-inner {
-  max-width: 100%;
   height: 100%;
   padding: 0 16px;
-  margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
 }
 
 /* ===============================
-   LEFT / CENTER / RIGHT
+   LEFT / RIGHT
 ================================ */
 .top-left,
 .top-right {
@@ -97,20 +83,15 @@ h1, h2, h3 {
    ICONS
 ================================ */
 .material-symbols-outlined {
-  font-size: 7px;
+  font-size: 10px;
   line-height: 1;
-  font-variation-settings:
-    'FILL' 0,
-    'wght' 100,
-    'GRAD' 0,
-    'opsz' 15;
 }
 
 /* ===============================
-   TEXT SLIDER
+   CENTER TEXT SLIDER
 ================================ */
 .top-center {
-  height: 14px;
+  height: 18px;
   overflow: hidden;
   text-align: center;
 }
@@ -122,8 +103,8 @@ h1, h2, h3 {
 }
 
 .text-slider span {
-  height: 14px;
-  line-height: 14px;
+  height: 18px;
+  line-height: 18px;
   white-space: nowrap;
 }
 
@@ -132,8 +113,8 @@ h1, h2, h3 {
 ================================ */
 @keyframes slideUp {
   0%, 30%   { transform: translateY(0); }
-  33%, 63%  { transform: translateY(-14px); }
-  66%, 96%  { transform: translateY(-28px); }
+  33%, 63%  { transform: translateY(-18px); }
+  66%, 96%  { transform: translateY(-36px); }
   100%      { transform: translateY(0); }
 }
 
@@ -141,9 +122,7 @@ h1, h2, h3 {
    PAGE OFFSET
 ================================ */
 body {
-  padding-top: calc(
-    var(--very-top-bar-height) + var(--top-bar-height)
-  );
+  padding-top: 36px; /* only account for sticky bar */
 }
 
 
