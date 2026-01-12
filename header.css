@@ -62,7 +62,7 @@
   height: 40px;
   background: var(--pink);
   color: #fff;
-  padding: 0 20px; /* 20px margin from the edges */
+  padding: 0 20px; /* 20px margin from edges */
 }
 
 .site-header .header-inner {
@@ -77,17 +77,19 @@
 .site-header .header-center,
 .site-header .header-right {
   display: flex;
-  align-items: center;       /* vertically center text/icons */
-  gap: 10px;                 /* 10px between items */
-  white-space: nowrap;       /* prevent text wrapping */
-  overflow: hidden;          /* prevent text overflow */
-  font-size: 12px;           /* keep original text size */
+  align-items: center;       /* vertically center icons/text */
+  gap: 10px;                 /* spacing between items */
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 12px;           /* keep original size */
 }
 
-/* Center area stays perfectly centered */
+/* Center area stays centered, slightly nudged down for visual balance */
 .site-header .header-center {
   justify-content: center;
   text-align: center;
+  position: relative;
+  top: 1px;  /* move text down 1px to align visually with icons */
 }
 
 /* Right side stays right-aligned */
@@ -100,8 +102,9 @@
   font-size: 16px;
   line-height: 1;
   vertical-align: middle;
-  margin-left: 5px; /* 5px between text and icon */
+  margin-left: 5px;  /* space between text and icon */
 }
+
 
 
 /* ================= OWNING / AWNING HEADER (GREEN – STATIC) ================= */
