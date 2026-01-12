@@ -16,7 +16,11 @@
   />
 </head>
 
+  
 <body>
+  
+  <!-- HEADER -->
+<div id="header-placeholder"></div>
   
 <!-- VERY TOP BAR -->
 <div class="very-top-bar">
@@ -271,9 +275,14 @@ document.addEventListener("DOMContentLoaded", () => {
   fetch("header.html")
     .then(res => res.text())
     .then(html => {
-      document.getElementById("header-placeholder").innerHTML = html;
-      initHeader();
-      initProductsPage();
+      const headerEl = document.getElementById("header-placeholder");
+      if (!headerEl) return;
+
+      headerEl.innerHTML = html;
+
+      // Init only if functions exist
+      if (typeof initHeader === "function") initHeader();
+      if (typeof initProductsPage === "function") initProductsPage();
     })
     .catch(err => console.error("Header load failed:", err));
 
@@ -281,13 +290,17 @@ document.addEventListener("DOMContentLoaded", () => {
   fetch("footer.html")
     .then(res => res.text())
     .then(html => {
-      document.getElementById("footer-placeholder").innerHTML = html;
+      const footerEl = document.getElementById("footer-placeholder");
+      if (!footerEl) return;
 
-      // ✅ IMPORTANT: init footer AFTER injection
-      initFooter();
+      footerEl.innerHTML = html;
+
+      // Init only if function exists
+      if (typeof initFooter === "function") initFooter();
     })
     .catch(err => console.error("Footer load failed:", err));
 </script>
+
 
 
   <script src="footer.js"></script>
