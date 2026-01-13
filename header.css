@@ -134,23 +134,26 @@
 /* ================= MOBILE: ICONS ONLY ================= */
 @media (max-width: 768px) {
 
-  /* Hide text in header sections, keep icons */
-  .site-header .header-left span,
-  .site-header .header-center span,
-  .site-header .header-right span {
+  /* Hide text spans (keep material icons) */
+  .site-header .header-left span:not(.material-symbols-outlined),
+  .site-header .header-right span:not(.material-symbols-outlined) {
     display: none;
   }
 
-  /* Tighten spacing now that text is gone */
-  .site-header .header-left,
-  .site-header .header-center,
-  .site-header .header-right {
-    gap: 0;
+  /* Optional: hide center text slider entirely on mobile */
+  .site-header .header-center {
+    display: none;
   }
 
-  /* Remove icon left margin (was for text) */
+  /* Tighten spacing since text is gone */
+  .site-header .header-left,
+  .site-header .header-right {
+    gap: 12px;
+  }
+
+  /* Make icons slightly larger for touch */
   .site-header .material-symbols-outlined {
+    font-size: 18px;
     margin-left: 0;
   }
 }
-
