@@ -163,7 +163,7 @@
 
 .reviews-text {
   font-size: 12px;
-  color: #436b65;
+  color: #fff;
   white-space: nowrap;
 }
 
@@ -194,7 +194,7 @@
   padding-left: 28px;
   margin-bottom: 12px;
   font-size: 14px;
-  color: #2e2e2e;
+  color: #fff;
 }
 
 /* Green checkmark */
