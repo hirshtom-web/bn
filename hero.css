@@ -17,10 +17,10 @@
   align-items: center;
   justify-content: space-between;
   padding: 40px;
-  height: 500px; /* control overall height here */
+  height: 500px;
 }
 
-* Left column */
+/* Left column */
 .feature-left {
   width: 50%;
   height: 90%;
