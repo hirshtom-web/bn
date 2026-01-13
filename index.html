@@ -7,6 +7,7 @@
 
   <!-- External CSS -->
   <link rel="stylesheet" href="header.css" />
+  <link rel="stylesheet" href="hero.css" />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="footer.css" />
 
@@ -22,6 +23,9 @@
   
   <!-- HEADER -->
 <div id="header-placeholder"></div>
+
+    <!-- HEADER -->
+<div id="hero-placeholder"></div>
   
 
   <!-- HERO / MAIN SECTION -->
@@ -224,6 +228,20 @@ document.addEventListener("DOMContentLoaded", () => {
       if (typeof initProductsPage === "function") initProductsPage();
     })
     .catch(err => console.error("Header load failed:", err));
+  
+// Load hero
+fetch("hero.html")
+  .then(res => res.text())
+  .then(html => {
+    const heroEl = document.getElementById("hero-placeholder");
+    if (!heroEl) return;
+
+    heroEl.innerHTML = html;
+
+    // Init only if functions exist
+    if (typeof initHero === "function") initHero();
+  })
+  .catch(err => console.error("Hero load failed:", err));
 
   // Load footer
   fetch("footer.html")
