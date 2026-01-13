@@ -129,3 +129,28 @@
   width: 100%;
   display: block;
 }
+
+
+/* ================= MOBILE: ICONS ONLY ================= */
+@media (max-width: 768px) {
+
+  /* Hide text in header sections, keep icons */
+  .site-header .header-left span,
+  .site-header .header-center span,
+  .site-header .header-right span {
+    display: none;
+  }
+
+  /* Tighten spacing now that text is gone */
+  .site-header .header-left,
+  .site-header .header-center,
+  .site-header .header-right {
+    gap: 0;
+  }
+
+  /* Remove icon left margin (was for text) */
+  .site-header .material-symbols-outlined {
+    margin-left: 0;
+  }
+}
+
