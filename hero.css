@@ -1,7 +1,7 @@
 /* FULL WIDTH DARK SECTION */
 .feature-section {
   width: 100%;
-  background: #436b65; /* dark green */
+  background: #436b65;
   display: flex;
   justify-content: center;
   padding: 80px 0;
@@ -11,51 +11,47 @@
 .feature-container {
   width: 90%;
   max-width: 1400px;
-  background: #f6f1e8; /* light beige */
+  background: #f6f1e8;
   border-radius: 32px;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  gap: 40px;
   padding: 40px;
-  height: 500px;
+  height: 520px;
 }
 
-/* Left column */
+/* LEFT SIDE */
 .feature-left {
   width: 50%;
-  height: 90%;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  gap: 24px;
 }
 
-/* Shared box style */
+/* LEFT BOXES */
 .feature-box {
-  width: 90%;
-  height: 48%;
-  background: white;
+  flex: 1;
+  background: #ffffff;
   border-radius: 24px;
   padding: 32px;
   display: flex;
   align-items: center;
-  justify-content: center;
 }
 
-/* HERO BOX override */
+/* HERO BOX */
 .feature-box-hero {
   align-items: flex-start;
 }
 
-/* Hero content fixes */
+/* HERO CONTENT */
 .hero-content {
   position: relative;
-  text-align: left;
   width: 100%;
 }
 
 .hero-bubble {
   position: absolute;
-  top: -32px;
+  top: -28px;
   left: 0;
   font-size: 10px;
   letter-spacing: 0.08em;
@@ -73,19 +69,39 @@
 
 .hero-content p {
   margin: 0 0 16px;
+  color: #2e2e2e;
 }
 
-/* Right image */
+/* RIGHT SIDE */
 .feature-right {
   width: 50%;
-  height: 90%;
+  height: 100%;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  gap: 24px;
 }
 
-.feature-right img {
+/* IMAGE BOXES */
+.feature-image {
+  flex: 1;
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.feature-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 24px;
+  display: block;
+}
+
+/* BUTTON (reuse yours if already defined) */
+.btn {
+  display: inline-block;
+  background: #ffd166;
+  color: #2e2e2e;
+  padding: 12px 24px;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
 }
