@@ -265,3 +265,14 @@
     margin-top: 12px;
   }
 }
+
+@media (max-width: 768px) {
+
+  .hero-logo {
+    max-width: 280px;
+    width: 100%;
+    margin: 16px auto 0; /* center horizontally */
+    display: block;
+  }
+
+}
