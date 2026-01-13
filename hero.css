@@ -204,3 +204,64 @@
   color: #6ec1b6;
   font-weight: 700;
 }
+
+
+
+/* ================= MOBILE HERO STACK ================= */
+@media (max-width: 768px) {
+
+  /* Outer container padding */
+  .feature-section {
+    padding: 40px 0;
+  }
+
+  /* Stack left + right vertically */
+  .feature-container {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  /* Left + right take full width */
+  .feature-left,
+  .feature-right {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Left boxes stack nicely */
+  .feature-left {
+    gap: 16px;
+  }
+
+  .feature-box {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Slider height for mobile */
+  .feature-slider {
+    height: 320px;
+  }
+
+  /* Center hero content */
+  .hero-content {
+    text-align: center;
+  }
+
+  .hero-bubble {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /* Reviews row stacks cleanly */
+  .reviews-row {
+    justify-content: center;
+  }
+
+  .btn-small {
+    margin-left: 0;
+    margin-top: 12px;
+  }
+}
