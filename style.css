@@ -216,3 +216,71 @@ h1, h2, h3 {
   object-fit: cover;
   display: block;
 }
+
+
+
+/* ================= CTA SECTION ================= */
+.cta-section {
+  width: 100%;
+  background: #f5c3c7; /* soft pink */
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.cta-inner {
+  max-width: 800px;
+  text-align: center;
+  color: #436b65;
+}
+
+/* Title */
+.cta-inner h2 {
+  font-size: 42px;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+/* Subtitle */
+.cta-inner p {
+  font-size: 16px;
+  margin-bottom: 28px;
+  line-height: 1.5;
+}
+
+/* Button */
+.cta-btn {
+  display: inline-block;
+  background: #436b65;
+  color: #ffffff;
+  padding: 14px 32px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+  .cta-section {
+    padding: 60px 20px;
+  }
+
+  .cta-inner h2 {
+    font-size: 30px;
+  }
+
+  .cta-inner p {
+    font-size: 15px;
+  }
+
+  .cta-btn {
+    padding: 12px 26px;
+    font-size: 14px;
+  }
+}
