@@ -328,3 +328,78 @@ h1, h2, h3 {
   }
 }
 
+/* Product Card */
+.product-card {
+  position: relative;
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  text-align: center;
+}
+
+/* Image */
+.product-card img {
+  width: 100%;
+  display: block;
+}
+
+/* Badge Bubble */
+.badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  padding: 6px 14px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #fff;
+  border-radius: 20px;
+  z-index: 2;
+}
+
+.badge.sale { background: #e63946; }
+.badge.bestseller { background: #ff9f1c; }
+.badge.new { background: #2a9d8f; }
+
+/* Product Info */
+.product-info {
+  padding: 14px;
+}
+
+.product-name {
+  font-size: 16px;
+  margin: 6px 0 4px;
+}
+
+.product-price {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+/* Color Dots */
+.color-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+}
+
+.dot.red { background: #e63946; }
+.dot.blue { background: #457b9d; }
+.dot.yellow { background: #f4d35e; }
+.dot.green { background: #2a9d8f; }
+.dot.purple { background: #7b2cbf; }
+.dot.pink { background: #ffafcc; }
+.dot.orange { background: #f77f00; }
+
+/* Optional hover */
+.product-card:hover {
+  transform: translateY(-4px);
+  transition: 0.3s ease;
+}
