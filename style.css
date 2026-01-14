@@ -284,3 +284,63 @@ h1, h2, h3 {
     font-size: 14px;
   }
 }
+
+
+
+.slide.large {
+  width: 300px;
+  height: 300px;
+  border-radius: 16px;
+  display: flex;
+  align-items: flex-end;
+  padding: 20px;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Dark overlay for text readability */
+.slide.large::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.5),
+    rgba(0,0,0,0)
+  );
+}
+
+/* Text above overlay */
+.slide.large {
+  z-index: 1;
+}
+.slide.large span,
+.slide.large {
+  position: relative;
+}
+
+/* Background images */
+.bg-story {
+  background-image: url("https://static.wixstatic.com/media/1799ca_9067b2fbb886418793ca0ea7838a02aa~mv2.png");
+}
+
+.bg-bedtime {
+  background-image: url("https://static.wixstatic.com/media/1799ca_8bee5709c7354832a07b52919827c483~mv2.png");
+}
+
+.bg-roleplay {
+  background-image: url("https://static.wixstatic.com/media/1799ca_c3e60cb8e81a454a84785f0cd2b4ec84~mv2.png");
+}
+
+.bg-travel {
+  background-image: url("https://static.wixstatic.com/media/1799ca_ef110c6b17f9453f99958aea44521af3~mv2.png");
+}
+
+.bg-gift {
+  background-image: url("https://static.wixstatic.com/media/1799ca_369ad8102b204a7ba9b895859212a719~mv2.png");
+}
