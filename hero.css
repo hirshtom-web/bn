@@ -48,8 +48,7 @@
 .hero-bubble {
   position: absolute;
   top: -28px;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
   font-size: 10px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -58,7 +57,6 @@
   border-radius: 999px;
   color: #fff;
 }
-
 
 .hero-logo {
   width: 550px;
@@ -147,26 +145,25 @@
 
 
 
-/* REVIEWS ROW */
 .reviews-row {
   display: flex;
-  flex-direction: column;   /* 👈 button goes UNDER reviews */
   align-items: center;
-  gap: 10px;
-  margin-top: 8px;
+  gap: 12px;
+  margin-top: 16px;
+  flex-wrap: wrap;
 }
 
 .stars {
-  color: #ffd166;
+  color: #FFD166;
   font-size: 14px;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
 }
 
 .reviews-text {
   font-size: 12px;
-  color: rgba(255,255,255,0.8);
+  color: #fff;
+  white-space: nowrap;
 }
-
 
 .btn-small {
   margin-left: auto;
