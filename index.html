@@ -186,7 +186,7 @@
   
   <section class="cta-section">
   <div class="cta-inner">
-    <h2>It's play time!</h2>
+<h2 id="playtime-title">It’s playtime!</h2>
     <p>Let imaginations run wild with soft, lovable friends made for every adventure.</p>
     <a href="#shop" class="cta-btn">Shop Now</a>
   </div>
@@ -282,6 +282,23 @@ fetch("hero.html")
       if (typeof initFooter === "function") initFooter();
     })
     .catch(err => console.error("Footer load failed:", err));
+</script>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const phrases = [
+      "It’s playtime!",
+      "Let the play begin!",
+      "Time to play together",
+      "Play starts here"
+    ];
+
+    const titleEl = document.getElementById("playtime-title");
+    if (!titleEl) return;
+
+    const randomIndex = Math.floor(Math.random() * phrases.length);
+    titleEl.textContent = phrases[randomIndex];
+  });
 </script>
 
 
