@@ -330,33 +330,38 @@ h1, h2, h3 {
 
 /* PRODUCT SLIDER */
 .product-slider {
-  display: flex !important;
-  flex-direction: row; /* horizontal scroll if needed */
+  display: flex;
+  flex-direction: row;
   gap: 16px;
+  overflow-x: auto; /* allow horizontal scroll if many cards */
+  padding-bottom: 8px; /* optional spacing */
+  scroll-snap-type: x mandatory; /* optional for snapping */
 }
 
 /* PRODUCT CARD */
 .product-card {
-  display: flex !important;
-  flex-direction: column !important;
+  flex: 0 0 300px;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  background: none !important;
-  padding: 0 !important;
-  margin: 0 !important;
+  background: none;
+  padding: 0;
+  margin: 0;
   text-align: center;
   position: relative;
-  cursor: pointer; /* show pointer on hover */
-  transition: transform 0.3s ease; /* subtle card zoom if needed */
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  scroll-snap-align: start; /* optional snapping */
 }
 
 /* Image wrapper for 1:1 ratio */
 .image-wrapper {
   position: relative;
   width: 100%;
-  padding-top: 100%; /* 1:1 Aspect Ratio */
+  padding-top: 100%; /* keeps image square */
   overflow: hidden;
-  border-radius: 16px; /* rounded corners */
-  transition: transform 0.3s ease; /* zoom on hover */
+  border-radius: 16px;
+  transition: transform 0.3s ease;
 }
 
 .image-wrapper img {
@@ -366,11 +371,11 @@ h1, h2, h3 {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 16px; /* rounded corners */
+  border-radius: 16px;
   transition: transform 0.3s ease;
 }
 
-/* Hover effect: zoom image */
+/* Zoom effect on hover */
 .product-card:hover .image-wrapper img {
   transform: scale(1.05);
 }
