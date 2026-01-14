@@ -1,0 +1,61 @@
+.bubunany-section {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap; /* stack on small screens */
+}
+
+.section-content.reverse {
+  flex-direction: row-reverse; /* swaps image & text */
+}
+
+.section-image {
+  flex: 1 1 400px; /* image column */
+}
+
+.section-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.section-image img:hover {
+  transform: scale(1.05); /* subtle hover zoom */
+}
+
+.section-text {
+  flex: 1 1 400px; /* text column */
+}
+
+.section-text h2 {
+  font-size: 28px;
+  margin-bottom: 16px;
+}
+
+.section-text p {
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.section-text ul {
+  padding-left: 20px;
+  margin: 10px 0;
+}
+
+@media (max-width: 768px) {
+  .section-content,
+  .section-content.reverse {
+    flex-direction: column; /* stack image above text on mobile */
+  }
+  .section-image, .section-text {
+    flex: 1 1 100%;
+  }
+}
