@@ -331,24 +331,32 @@ h1, h2, h3 {
 /* Product Card */
 .product-card {
   position: relative;
-  background: #fff;
-  border-radius: 16px;
-  overflow: hidden;
   text-align: center;
 }
 
-/* Image */
-.product-card img {
+/* Image wrapper to keep 1:1 ratio */
+.image-wrapper {
+  position: relative;
   width: 100%;
-  display: block;
+  padding-top: 100%; /* 1:1 Aspect Ratio */
+  overflow: hidden;
+}
+
+.image-wrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* keeps image from stretching */
 }
 
 /* Badge Bubble */
 .badge {
   position: absolute;
-  top: 12px;
-  left: 12px;
-  padding: 6px 14px;
+  top: 10px;
+  left: 10px;
+  padding: 5px 12px;
   font-size: 12px;
   font-weight: 600;
   color: #fff;
@@ -360,32 +368,33 @@ h1, h2, h3 {
 .badge.bestseller { background: #ff9f1c; }
 .badge.new { background: #2a9d8f; }
 
-/* Product Info */
+/* Product Info Below Image */
 .product-info {
-  padding: 14px;
+  margin-top: 8px;
 }
 
+/* Name and Price */
 .product-name {
   font-size: 16px;
-  margin: 6px 0 4px;
+  margin: 4px 0 2px;
 }
 
 .product-price {
   font-size: 15px;
   font-weight: 600;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 /* Color Dots */
 .color-dots {
   display: flex;
   justify-content: center;
-  gap: 8px;
+  gap: 6px;
 }
 
 .dot {
-  width: 14px;
-  height: 14px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   border: 1px solid #ddd;
 }
@@ -397,9 +406,3 @@ h1, h2, h3 {
 .dot.purple { background: #7b2cbf; }
 .dot.pink { background: #ffafcc; }
 .dot.orange { background: #f77f00; }
-
-/* Optional hover */
-.product-card:hover {
-  transform: translateY(-4px);
-  transition: 0.3s ease;
-}
