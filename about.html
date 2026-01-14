@@ -1,3 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About</title>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="header.css" />
+  <link rel="stylesheet" href="hero.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="footer.css" />
+  <link rel="stylesheet" href="about.css" />
+
+
+  <!-- Google Material Symbols (line icons) -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    rel="stylesheet"
+  />
+</head>
+
+  
+<body>
+  
+  <!-- HEADER -->
+<div id="header-placeholder"></div>
+
+
 <section class="about-page">
 
   <!-- 1. HERO STORY -->
@@ -88,3 +117,215 @@
   </section>
 
 </section>
+
+
+
+  <!-- SMALL SLIDER -->
+  <section class="container">
+    <h2>Meet the Characters</h2>
+    <div class="slider">
+      <div class="slide small">
+  <img
+    src="https://static.wixstatic.com/media/1799ca_cc0ccb8ebc4543608570e886893f5563~mv2.jpg"
+    alt="Slide image"
+  >
+</div>
+
+      <div class="slide small">2</div>
+      <div class="slide small">3</div>
+      <div class="slide small">4</div>
+      <div class="slide small">5</div>
+      <div class="slide small">6</div>
+      <div class="slide small">7</div>
+      <div class="slide small">8</div>
+      <div class="slide small">9</div>
+      <div class="slide small">10</div>
+    </div>
+  </section>
+
+
+  <!-- FAQ -->
+<section class="container" id="faq">
+  <h2>Questions & Answers</h2>
+
+  <div class="faq-item">
+    <div class="faq-question">What age is Bubunany suitable for?</div>
+    <div class="faq-answer">
+      Bubunany is recommended for ages 3 and up. It’s designed to be safe, soft, and comforting — and often loved well beyond childhood.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">Is Bubunany safe for children?</div>
+    <div class="faq-answer">
+      Yes. Bubunany is made with child-safe, non-toxic materials and meets safety standards for kids’ products.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">Can Bubunany be washed?</div>
+    <div class="faq-answer">
+      We recommend gentle hand washing and air drying to keep Bubunany soft and happy for years.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">What is Bubunany made of?</div>
+    <div class="faq-answer">
+      Bubunany is crafted from soft, high-quality fabrics designed to feel cozy, durable, and comforting.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">Is Bubunany good for bedtime?</div>
+    <div class="faq-answer">
+      Absolutely. Bubunany is designed to be a calming companion for bedtime, story time, and quiet moments.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">Is Bubunany a good gift?</div>
+    <div class="faq-answer">
+      Bubunany makes a thoughtful gift for birthdays, holidays, or special moments — loved by kids and parents alike.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">Where do you ship from?</div>
+    <div class="faq-answer">
+      Orders are shipped from our fulfillment partners, and shipping details are shown clearly at checkout.
+    </div>
+  </div>
+</section>
+
+
+<div id="sticky-buy" class="sticky-buy">
+  <span>Bubunany Puppet</span>
+  <a class="btn" href="#checkout">Buy Now</a>
+</div>
+
+  
+  <section class="cta-section">
+  <div class="cta-inner">
+<h2 id="playtime-title">It’s playtime!</h2>
+    <p>Let imaginations run wild with soft, lovable friends made for every adventure.</p>
+    <a href="#shop" class="cta-btn">Shop Now</a>
+  </div>
+</section>
+
+
+   <!-- FOOTER -->
+  <div id="footer-placeholder"></div>
+  
+
+  <!-- SCRIPT FOR FAQ TOGGLE -->
+  <script>
+    document.querySelectorAll('.faq-question').forEach(q => {
+      q.addEventListener('click', () => {
+        const answer = q.nextElementSibling;
+        answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+      });
+    });
+    
+document.addEventListener("DOMContentLoaded", () => {
+  const stickyBuy = document.getElementById("sticky-buy");
+  const trigger = document.getElementById("characters");
+  const footer = document.querySelector("footer");
+
+  if (!stickyBuy || !trigger) return;
+
+  window.addEventListener("scroll", () => {
+    const triggerTop = trigger.getBoundingClientRect().top;
+
+    if (triggerTop < 100) {
+      stickyBuy.classList.add("active");
+    } else {
+      stickyBuy.classList.remove("active");
+      stickyBuy.style.bottom = "0";
+      return;
+    }
+
+    if (footer) {
+      const footerTop = footer.getBoundingClientRect().top;
+      const overlap = window.innerHeight - footerTop;
+
+      stickyBuy.style.bottom = overlap > 0 ? `${overlap}px` : "0";
+    }
+  });
+});
+
+  </script>
+  
+
+  <!-- Scripts -->
+<script src="header.js"></script>
+
+<script>
+  // Load header
+  fetch("header.html")
+    .then(res => res.text())
+    .then(html => {
+      const headerEl = document.getElementById("header-placeholder");
+      if (!headerEl) return;
+
+      headerEl.innerHTML = html;
+
+      // Init only if functions exist
+      if (typeof initHeader === "function") initHeader();
+      if (typeof initProductsPage === "function") initProductsPage();
+    })
+    .catch(err => console.error("Header load failed:", err));
+  
+// Load hero
+fetch("hero.html")
+  .then(res => res.text())
+  .then(html => {
+    const heroEl = document.getElementById("hero-placeholder");
+    if (!heroEl) return;
+
+    heroEl.innerHTML = html;
+
+    // Init only if functions exist
+    if (typeof initHero === "function") initHero();
+  })
+  .catch(err => console.error("Hero load failed:", err));
+
+  // Load footer
+  fetch("footer.html")
+    .then(res => res.text())
+    .then(html => {
+      const footerEl = document.getElementById("footer-placeholder");
+      if (!footerEl) return;
+
+      footerEl.innerHTML = html;
+
+      // Init only if function exists
+      if (typeof initFooter === "function") initFooter();
+    })
+    .catch(err => console.error("Footer load failed:", err));
+</script>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const phrases = [
+      "It’s playtime!",
+      "Let the play begin!",
+      "Time to play together",
+      "Play starts here"
+    ];
+
+    const titleEl = document.getElementById("playtime-title");
+    if (!titleEl) return;
+
+    const randomIndex = Math.floor(Math.random() * phrases.length);
+    titleEl.textContent = phrases[randomIndex];
+  });
+</script>
+
+
+  <script src="footer.js"></script>
+  <script src="hero.js"></script>
+
+
+  </body>
+</html>
