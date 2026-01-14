@@ -154,3 +154,60 @@
   color: #fff; /* yellow accent */
   font-size: 48px; /* icon size */
 }
+
+.play-values {
+  background: #f9f5f2;
+  padding: 80px 20px;
+}
+
+.play-values-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.play-values h2 {
+  font-size: 28px;
+  margin-bottom: 48px;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 28px;
+}
+
+.value-card {
+  background: #fff;
+  border-radius: 24px;
+  padding: 28px 22px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.value-card .material-symbols-outlined {
+  font-size: 36px;
+  color: #436b65; /* Bubunany green */
+  margin-bottom: 12px;
+}
+
+.value-card h4 {
+  font-size: 16px;
+  margin: 8px 0;
+}
+
+.value-card p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #555;
+}
+
+/* Mobile tuning */
+@media (max-width: 768px) {
+  .play-values {
+    padding: 60px 16px;
+  }
+
+  .play-values h2 {
+    font-size: 24px;
+  }
+}
