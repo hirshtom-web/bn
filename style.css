@@ -24,6 +24,11 @@ h1, h2, h3 {
   margin-top: 0;
 }
 
+.h2 {
+  font-weight: 600;
+  font-size: 24px;
+}
+
 /* ---------------- BUTTON ---------------- */
 .btn {
   display: inline-block;
