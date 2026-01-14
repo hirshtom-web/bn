@@ -333,14 +333,20 @@ h1, h2, h3 {
   display: flex;
   flex-direction: row;
   gap: 16px;
-  overflow-x: auto; /* allow horizontal scroll if many cards */
-  padding-bottom: 8px; /* optional spacing */
-  scroll-snap-type: x mandatory; /* optional for snapping */
+  overflow-x: auto; /* allow horizontal scroll */
+  padding-bottom: 8px;
+
+  /* Hide scrollbar */
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+.product-slider::-webkit-scrollbar {
+  display: none;             /* Chrome, Safari, Opera */
 }
 
 /* PRODUCT CARD */
 .product-card {
-  flex: 0 0 300px;
+  flex: 0 0 300px; /* card width → image will also be 300px */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -350,18 +356,18 @@ h1, h2, h3 {
   text-align: center;
   position: relative;
   cursor: pointer;
-  transition: transform 0.3s ease;
-  scroll-snap-align: start; /* optional snapping */
+
+  /* subtle card zoom when hovering the whole card */
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Image wrapper for 1:1 ratio */
 .image-wrapper {
   position: relative;
   width: 100%;
-  padding-top: 100%; /* keeps image square */
+  padding-top: 100%; /* 1:1 aspect ratio */
   overflow: hidden;
   border-radius: 16px;
-  transition: transform 0.3s ease;
 }
 
 .image-wrapper img {
@@ -372,12 +378,14 @@ h1, h2, h3 {
   height: 100%;
   object-fit: cover;
   border-radius: 16px;
-  transition: transform 0.3s ease;
+
+  /* smooth zoom transition */
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Zoom effect on hover */
 .product-card:hover .image-wrapper img {
-  transform: scale(1.05);
+  transform: scale(1.08); /* slightly more pronounced zoom */
 }
 
 /* Badge bubble */
