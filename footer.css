@@ -347,3 +347,17 @@
   object-position: center;
   display: block;
 }
+
+@media (min-width: 769px) {
+  .region-selector {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 30px; /* adjust vertical position */
+    z-index: 5;
+  }
+
+  .site-footer {
+    position: relative; /* anchor for absolute positioning */
+  }
+}
