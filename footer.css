@@ -348,16 +348,30 @@
   display: block;
 }
 
+/* ===============================
+   REGION SELECTOR – DESKTOP
+================================ */
 @media (min-width: 769px) {
-  .region-selector {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 30px; /* adjust vertical position */
-    z-index: 5;
+  .site-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
   }
 
-  .site-footer {
-    position: relative; /* anchor for absolute positioning */
+  .footer-grid {
+    order: 0;
+  }
+
+  .region-selector {
+    order: 1;
+    display: flex;
+    justify-content: center;
+    margin: 32px 0 12px;
+  }
+
+  .footer-bottom {
+    order: 2;
+    margin-top: 16px;
+    text-align: center;
   }
 }
