@@ -179,6 +179,11 @@ h1, h2, h3 {
 
 
 /* ---------------- FAQ ---------------- */
+
+.faq-section {
+ background: #fff;
+}
+
 .faq-item {
   background: var(--card);
   border-radius: 14px;
