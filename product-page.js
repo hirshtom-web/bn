@@ -10,10 +10,22 @@ document.addEventListener("DOMContentLoaded", () => {
     const scrollBottom =
       productInfo.scrollTop + productInfo.clientHeight;
 
-    if (scrollBottom >= productInfo.scrollHeight - 10) {
-      stickyBuy.classList.add("active");
-    } else {
-      stickyBuy.classList.remove("active");
-    }
+    const atBottom =
+      scrollBottom >= productInfo.scrollHeight - 8;
+
+    stickyBuy.classList.toggle("active", atBottom);
+  });
+});
+
+/* ACCORDION – one open at a time */
+document.querySelectorAll(".accordion-header").forEach(header => {
+  header.addEventListener("click", () => {
+    const item = header.closest(".accordion-item");
+
+    document.querySelectorAll(".accordion-item").forEach(i => {
+      if (i !== item) i.classList.remove("active");
+    });
+
+    item.classList.toggle("active");
   });
 });
