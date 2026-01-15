@@ -518,10 +518,8 @@ h1, h2, h3 {
   grid-template-rows: repeat(3, 200px);
   gap: 20px;
   width: 100%;
-  max-width: 1400px;
   margin: auto;
   margin-bottom: 12px;
-  padding: 16px;
   
 }
 
