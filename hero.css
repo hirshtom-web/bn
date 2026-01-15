@@ -320,33 +320,3 @@
 }
 }  
 
-.top-award {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  margin-bottom: 16px;
-  color: #ffffff; /* make all text white by default */
-}
-
-.trophy {
-  font-size: 36px;
-  color: #ffffff; /* trophy icon white */
-  line-height: 1;
-}
-
-.award-text {
-  display: flex;
-  flex-direction: column;
-}
-
-.award-title {
-  font-size: 1rem;
-  font-weight: 700;
-  color: inherit; /* inherits white from .top-award */
-}
-
-.award-subtitle {
-  font-size: 0.85rem;
-  color: inherit; /* inherits white from .top-award */
-  line-height: 1.3;
-}
