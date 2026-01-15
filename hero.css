@@ -289,3 +289,17 @@
   }
 
 }
+
+
+
+.reviews-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* LEFT aligned */
+  gap: 12px;
+}
+
+/* Remove this so it doesn’t push right */
+.btn-small {
+  margin-left: 0;
+}
