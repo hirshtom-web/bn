@@ -518,14 +518,17 @@ h1, h2, h3 {
   grid-template-rows: repeat(3, 200px);
   gap: 20px;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: auto;
+  border-radius: 14px;
+  margin-bottom: 12px;
+  padding: 16px;
+  
 }
 
 .card {
   background: #1e293b;
   border-radius: 20px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
   display: flex;
   align-items: center;
   justify-content: center;
