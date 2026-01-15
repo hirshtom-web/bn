@@ -106,3 +106,58 @@
 .product-details li {
   margin-bottom: 10px;
 }
+
+
+/* RATING SUMMARY */
+.rating-summary {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+
+/* STARS */
+.rating-stars {
+  color: #FFD166;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+/* REVIEW TEXT */
+.rating-text {
+  font-size: 12px;
+  color: #000;          /* black text */
+  white-space: nowrap;
+}
+
+
+.feature-box-checks {
+  display: flex;
+  align-items: center;
+}
+
+.check-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.check-list li {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 12px;
+  font-size: 14px;
+  color: #000;
+}
+
+/* Green checkmark */
+.check-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #000;
+  font-weight: 700;
+}
