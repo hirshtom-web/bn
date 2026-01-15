@@ -457,3 +457,53 @@ h1, h2, h3 {
 .dot.purple { background: #7b2cbf; }
 .dot.pink { background: #ffafcc; }
 .dot.orange { background: #f77f00; }
+
+
+/* ---------------- BENEFITS ---------------- */
+.about-benefits h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 32px;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+}
+
+.benefit-card {
+  border-radius: 20px;
+  padding: 24px;
+  text-align: center;
+}
+
+.benefit-card img {
+  margin-bottom: 16px;
+}
+
+.benefit-card h4 {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.benefit-card p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .benefits-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+    gap: 16px; /* slightly tighter for mobile */
+  }
+
+  .benefit-card {
+    padding: 16px;
+  }
+
+  .about-benefits h2 {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+}
