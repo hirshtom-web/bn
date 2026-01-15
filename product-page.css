@@ -27,12 +27,25 @@
   gap: 12px;
 }
 
-.image-thumbs span {
-  width: 70px;
-  height: 70px;
-  background: #e5e7eb;
-  border-radius: 12px;
+/* Main image fits its container */
+.image-main img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* fills container nicely without stretching */
+  border-radius: 20px;
+  display: block;
 }
+
+/* Thumbnails fit their small boxes */
+.image-thumbs span img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+  cursor: pointer;
+}
+
 
 /* Info */
 .product-title {
