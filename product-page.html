@@ -269,6 +269,22 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 </script>
 
+  <script>
+document.addEventListener("DOMContentLoaded", () => {
+  const items = document.querySelectorAll(".accordion-item");
+
+  items.forEach(item => {
+    const header = item.querySelector(".accordion-header");
+
+    header.addEventListener("click", () => {
+      items.forEach(i => i.classList.remove("active"));
+      item.classList.add("active");
+    });
+  });
+});
+</script>
+
+  
   <script src="footer.js"></script>
   <script src="hero.js"></script>
 
