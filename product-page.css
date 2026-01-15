@@ -179,3 +179,28 @@
   color: #2e2e2e;
   white-space: nowrap;
 }
+
+
+/* Mobile responsive: stack columns */
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: 1fr; /* single column */
+    gap: 24px; /* smaller gap on mobile */
+  }
+
+  .product-actions {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .product-title-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .image-thumbs {
+    justify-content: flex-start;
+    gap: 8px;
+  }
+}
