@@ -520,7 +520,6 @@ h1, h2, h3 {
   width: 100%;
   max-width: 1400px;
   margin: auto;
-  border-radius: 14px;
   margin-bottom: 12px;
   padding: 16px;
   
@@ -528,7 +527,7 @@ h1, h2, h3 {
 
 .card {
   background: #fff;
-  border-radius: 20px;
+  border-radius: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
