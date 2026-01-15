@@ -132,19 +132,18 @@
 }
 
 
-.feature-box-checks {
-  display: flex;
-  align-items: center;
+/* BENEFITS */
+.product-benefits {
+  margin-top: 24px;
 }
 
-.check-list {
+.benefits-list {
   list-style: none;
   padding: 0;
   margin: 0;
-  width: 100%;
 }
 
-.check-list li {
+.benefits-list li {
   position: relative;
   padding-left: 28px;
   margin-bottom: 12px;
@@ -152,8 +151,8 @@
   color: #000;
 }
 
-/* Green checkmark */
-.check-list li::before {
+/* Checkmark */
+.benefits-list li::before {
   content: "✓";
   position: absolute;
   left: 0;
@@ -161,3 +160,4 @@
   color: #000;
   font-weight: 700;
 }
+
