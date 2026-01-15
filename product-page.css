@@ -314,3 +314,31 @@
 .accordion-header:active {
   opacity: 0.85;
 }
+
+
+/* Desktop only: make right column scrollable */
+@media (min-width: 1024px) {
+  .product-page {
+    height: calc(100vh - 120px); /* adjust for header */
+  }
+
+  .product-grid {
+    height: 100%;
+  }
+
+  .product-info {
+    max-height: 100%;
+    overflow-y: auto;
+    padding-right: 12px;
+  }
+
+  /* Optional: cleaner scrollbar */
+  .product-info::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .product-info::-webkit-scrollbar-thumb {
+    background: rgba(0,0,0,0.15);
+    border-radius: 4px;
+  }
+}
