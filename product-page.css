@@ -274,3 +274,21 @@
   margin-bottom: 8px;
 }
 
+.sticky-buy {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: -100px;
+  background: white;
+  border-top: 1px solid #e5e7eb;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 999;
+  transition: bottom 0.3s ease;
+}
+
+.sticky-buy.active {
+  bottom: 0;
+}
