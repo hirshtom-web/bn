@@ -204,3 +204,72 @@
     gap: 8px;
   }
 }
+
+/* RIGHT COLUMN SCROLL BEHAVIOR */
+@media (min-width: 1024px) {
+  .product-info {
+    max-height: calc(100vh - 120px); /* adjust if header is taller */
+    overflow-y: auto;
+    padding-right: 12px;
+  }
+
+  /* hide scrollbar but keep scroll */
+  .product-info::-webkit-scrollbar {
+    width: 0;
+  }
+}
+
+/* ACCORDION */
+.product-accordion {
+  margin-top: 32px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.accordion-item {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.accordion-header {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 18px 0;
+  font-size: 15px;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion-header::after {
+  content: "+";
+  font-size: 18px;
+  transition: transform 0.2s ease;
+}
+
+.accordion-item.active .accordion-header::after {
+  content: "−";
+}
+
+.accordion-content {
+  display: none;
+  padding-bottom: 16px;
+  font-size: 14px;
+  color: #374151;
+  line-height: 1.6;
+}
+
+.accordion-item.active .accordion-content {
+  display: block;
+}
+
+.accordion-content ul {
+  padding-left: 18px;
+}
+
+.accordion-content li {
+  margin-bottom: 8px;
+}
+
