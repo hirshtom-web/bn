@@ -527,12 +527,12 @@ h1, h2, h3 {
 }
 
 .card {
-  background: #1e293b;
+  background: #fff;
   border-radius: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #e5e7eb;
+  color: #222;
   font-size: 1.2rem;
 }
 
