@@ -292,7 +292,7 @@
 
 /* Hero text */
 .feature-box-hero p {
-  font-size: 50px;      /* instead of 2rem */
+  font-size: 36px;      /* instead of 2rem */
   font-weight: 700;
   line-height: 1.3;     /* keeps relative spacing */
   margin: 0;
