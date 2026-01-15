@@ -72,26 +72,27 @@ h1, h2, h3 {
   font-weight: 600;
 }
 
-/* Small squares slider */
+
+/* SMALL CIRCULAR SLIDER — IMAGE ONLY */
 .slide.small {
   width: 150px;
   height: 150px;
-  border-radius: 50%;      /* perfect circle */
-  background: var(--secondary);
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;        /* prevents child content from spilling out */
+  border-radius: 50%;
+  overflow: hidden;
+  background: none;       /* ❗ remove background */
+  padding: 0;
   flex: 0 0 auto;
   scroll-snap-align: start;
 }
+
 .slide.small img {
   width: 100%;
   height: 100%;
-  object-fit: cover;       /* fill the circle nicely */
-  border-radius: 50%;      /* make the image itself circular */
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
 }
+
 
 
 /* Large cards slider */
@@ -219,25 +220,6 @@ h1, h2, h3 {
 }
 
 
-
-
-
-.slide.small {
-  width: 150px;
-  height: 150px;
-  border-radius: 16px;
-  overflow: hidden;
-}
-
-.slide.small img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-
-
 /* ================= CTA SECTION ================= */
 .cta-section {
   width: 100%;
@@ -303,8 +285,6 @@ h1, h2, h3 {
     font-size: 14px;
   }
 }
-
-
 
 .slider {
   display: flex;
