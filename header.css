@@ -129,6 +129,9 @@
 .page-product {
   --awning-bg: #f6f1e8;
 }
+.page-about {
+  --awning-bg: #f6f1e8;
+}
 
 
 /* Remove SVG height influence if present */
