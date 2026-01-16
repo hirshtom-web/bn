@@ -21,14 +21,14 @@
 }
 
 .feature-icon {
-  font-size: 40px;
+  font-size: 30px;
   color: #222; /* highlight color */
   flex-shrink: 0;
 }
 
 .feature-text strong {
-  display: block;
-  font-size: 1.1rem;
+  font-weight: 600;
+  font-size: 15px;
   margin-bottom: 4px;
   color: #222;
 }
