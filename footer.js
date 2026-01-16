@@ -51,7 +51,7 @@ function initFooter() {
     { country: "Canada", code: "CA", currency: "CAD", flag: "🇨🇦" },
     { country: "United Kingdom", code: "GB", currency: "GBP", flag: "🇬🇧" },
     { country: "France", code: "FR", currency: "EUR", flag: "🇫🇷" },
-    { country: "Israel", code: "IL", currency: "NIS", flag: "🇮🇱" },
+    { country: "Israel", code: "IL", currency: "ILS", flag: "🇮🇱" },
     { country: "Spain", code: "ES", currency: "EUR", flag: "🇪🇸" },
     { country: "Italy", code: "IT", currency: "EUR", flag: "🇮🇹" },
     { country: "Germany", code: "DE", currency: "EUR", flag: "🇩🇪" },
