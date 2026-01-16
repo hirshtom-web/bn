@@ -29,8 +29,8 @@
   padding: clamp(80px, 12vw, 140px) 20px;
   overflow: hidden;
   text-align: center;
-  background: #111;
-  color: #fff;
+  background: #f6f1e8; /* light background */
+  color: #111; /* dark text */
 }
 
 /* Center content */
@@ -44,19 +44,20 @@
 .playtime-cta__inner h2 {
   font-size: clamp(1.8rem, 4vw, 2.4rem);
   margin-bottom: 12px;
+  color: #111; /* explicitly dark */
 }
 
 .playtime-cta__inner p {
   font-size: clamp(0.95rem, 2.5vw, 1.05rem);
-  color: #ddd;
+  color: #333; /* slightly lighter than pure black */
   margin-bottom: 28px;
 }
 
 .playtime-cta__btn {
   display: inline-block;
   padding: 14px 30px;
-  background: #ffd166;
-  color: #111;
+  background: #ff6f61; /* CTA button color */
+  color: #fff; /* button text white for contrast */
   text-decoration: none;
   border-radius: 999px;
   font-weight: 600;
