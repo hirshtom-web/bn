@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="about.css" />
   <link rel="stylesheet" href="sustainability.css" />
   <link rel="stylesheet" href="product-page.css" />
+  <link rel="stylesheet" href="features.css" />
 
 
   <!-- Google Material Symbols (line icons) -->
@@ -286,6 +287,16 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+</script>
+
+  <script>
+  // Load external HTML into a placeholder
+  fetch('features.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('features-placeholder').innerHTML = data;
+    })
+    .catch(err => console.error('Error loading features.html:', err));
 </script>
 
   
