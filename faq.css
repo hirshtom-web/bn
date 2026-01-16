@@ -44,20 +44,20 @@
 .playtime-cta__inner h2 {
   font-size: clamp(1.8rem, 4vw, 2.4rem);
   margin-bottom: 12px;
-  color: #111; /* explicitly dark */
+  color: #111;
 }
 
 .playtime-cta__inner p {
   font-size: clamp(0.95rem, 2.5vw, 1.05rem);
-  color: #333; /* slightly lighter than pure black */
+  color: #333;
   margin-bottom: 28px;
 }
 
 .playtime-cta__btn {
   display: inline-block;
   padding: 14px 30px;
-  background: #ff6f61; /* CTA button color */
-  color: #fff; /* button text white for contrast */
+  background: #ff6f61;
+  color: #fff;
   text-decoration: none;
   border-radius: 999px;
   font-weight: 600;
@@ -65,7 +65,7 @@
   position: relative;
 }
 
-/* Doodles container */
+/* ---------------- Doodles ---------------- */
 .playtime-doodles {
   position: absolute;
   inset: 0;
@@ -73,7 +73,6 @@
   z-index: 1;
 }
 
-/* Base doodle */
 .playtime-doodle {
   position: absolute;
   opacity: 0.85;
@@ -85,24 +84,21 @@
 .playtime-doodle--medium { width: 60px; height: 60px; }
 .playtime-doodle--small  { width: 35px; height: 35px; }
 
-/* SVG style — filled + stroke */
+/* SVG filled, no stroke */
 .playtime-doodle svg {
   width: 100%;
   height: 100%;
-  fill: currentColor;
-  stroke: #111;
-  stroke-width: 2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+  fill: currentColor; /* colored */
+  stroke: none;
 }
 
-/* Colors & positions */
-.playtime-doodle--1 { top: 12%; left: 10%;  color: #ffd166; animation-delay: 0s; }
-.playtime-doodle--2 { top: 18%; right: 12%; color: #ff6f61; animation-delay: 2s; }
-.playtime-doodle--3 { bottom: 22%; left: 14%; color: #6ec6ff; animation-delay: 4s; }
-.playtime-doodle--4 { bottom: 15%; right: 30%; color: #b388ff; animation-delay: 6s; }
-.playtime-doodle--5 { top: 60%; right: 18%; color: #7ee081; animation-delay: 8s; }
-.playtime-doodle--6 { top: 45%; left: 50%; color: #ffca28; animation-delay: 3s; }
+/* ---------------- Colors & positions ---------------- */
+/* around the title */
+.playtime-doodle--1 { top: 0%; left: 20%;  color: #ffd166; animation-delay: 0s; }
+.playtime-doodle--2 { top: 0%; right: 20%; color: #ff8a5b; animation-delay: 2s; }
+.playtime-doodle--3 { top: 20%; left: 0%;  color: #6ec1b6; animation-delay: 4s; }
+.playtime-doodle--4 { top: 20%; right: 0%; color: #436b65; animation-delay: 6s; }
+.playtime-doodle--5 { bottom: 0%; left: 15%; color: #d16f9a; animation-delay: 8s; }
 
 /* Float animation */
 @keyframes playtime-float {
@@ -111,23 +107,16 @@
   100% { transform: translateY(0) rotate(0deg); }
 }
 
-/* Mobile adjustments */
+/* ---------------- Mobile adjustments ---------------- */
 @media (max-width: 768px) {
-  .playtime-doodle--big    { width: 70px; height: 70px; }
-  .playtime-doodle--medium { width: 50px; height: 50px; }
-  .playtime-doodle--small  { width: 25px; height: 25px; }
+  .playtime-doodle--big    { width: 60px; height: 60px; }
+  .playtime-doodle--medium { width: 45px; height: 45px; }
+  .playtime-doodle--small  { width: 30px; height: 30px; }
 
-  .playtime-doodle--4,
-  .playtime-doodle--5,
-  .playtime-doodle--6 {
-    display: none; /* less clutter on mobile */
-  }
-
-  .playtime-cta__inner h2 {
-    font-size: clamp(1.6rem, 5vw, 2rem);
-  }
-
-  .playtime-cta__inner p {
-    font-size: clamp(0.9rem, 3vw, 1rem);
-  }
+  /* place doodles closer to title on mobile */
+  .playtime-doodle--1 { top: -10%; left: 10%; }
+  .playtime-doodle--2 { top: -10%; right: 10%; }
+  .playtime-doodle--3 { top: 10%; left: 0%; }
+  .playtime-doodle--4 { top: 10%; right: 0%; }
+  .playtime-doodle--5 { bottom: -5%; left: 15%; }
 }
