@@ -51,7 +51,6 @@ function initFooter() {
     { country: "Canada", code: "CA", currency: "CAD", flag: "🇨🇦" },
     { country: "United Kingdom", code: "GB", currency: "GBP", flag: "🇬🇧" },
     { country: "France", code: "FR", currency: "EUR", flag: "🇫🇷" },
-    { country: "Israel", code: "IL", currency: "ILS", flag: "🇮🇱" },
     { country: "Spain", code: "ES", currency: "EUR", flag: "🇪🇸" },
     { country: "Italy", code: "IT", currency: "EUR", flag: "🇮🇹" },
     { country: "Germany", code: "DE", currency: "EUR", flag: "🇩🇪" },
@@ -59,50 +58,49 @@ function initFooter() {
     { country: "Andorra", code: "AD", currency: "EUR", flag: "🇦🇩" }
   ];
 
- const regionToLang = {
-  US: "en", CA: "en", GB: "en",
-  FR: "fr", ES: "es", IT: "it",
-  DE: "de", BE: "fr", AD: "en",
-  IL: "he" // add Israel
-};
+  const regionToLang = {
+    US: "en", CA: "en", GB: "en",
+    FR: "fr", ES: "es", IT: "it",
+    DE: "de", BE: "fr", AD: "en"
+  };
 
-const translations = {
-  en: { shop: "Shop", about: "About", footer: "© 2026 Bubunany." },
-  fr: { shop: "Boutique", about: "À propos", footer: "© 2026 Bubunany." },
-  es: { shop: "Comprar", about: "Sobre nosotros", footer: "© 2026 Bubunany." },
-  it: { shop: "Negozio", about: "Chi siamo", footer: "© 2026 Bubunany." },
-  de: { shop: "Shop", about: "Über uns", footer: "© 2026 Bubunany." },
-  he: { shop: "קנה", about: "אודות", footer: "© 2026 בובונני." } // Hebrew
-};
+  const translations = {
+    en: { shop: "Shop", about: "About", footer: "© 2026 Bubunany." },
+    fr: { shop: "Boutique", about: "À propos", footer: "© 2026 Bubunany." },
+    es: { shop: "Comprar", about: "Sobre nosotros", footer: "© 2026 Bubunany." },
+    it: { shop: "Negozio", about: "Chi siamo", footer: "© 2026 Bubunany." },
+    de: { shop: "Shop", about: "Über uns", footer: "© 2026 Bubunany." }
+  };
 
-function applyLanguage(lang) {
-  document.querySelectorAll("[data-i18n]").forEach(el => {
-    const key = el.dataset.i18n;
-    if (translations[lang]?.[key]) {
-      el.textContent = translations[lang][key];
-    }
-  });
-
-  // RTL for Hebrew
-  if (lang === "he") {
-    document.documentElement.dir = "rtl";
-  } else {
-    document.documentElement.dir = "ltr";
+  function applyLanguage(lang) {
+    document.querySelectorAll("[data-i18n]").forEach(el => {
+      const key = el.dataset.i18n;
+      if (translations[lang]?.[key]) {
+        el.textContent = translations[lang][key];
+      }
+    });
+    localStorage.setItem("lang", lang);
   }
 
-  localStorage.setItem("lang", lang);
-}
+  const list = document.getElementById("regionList");
+  list.innerHTML = "";
 
-function setRegion(r) {
-  document.getElementById("currentFlag").textContent = r.flag;
-  document.getElementById("currentRegion").textContent =
-    `${r.country} · ${r.currency}`;
+  regions.forEach(r => {
+    const li = document.createElement("li");
+    li.innerHTML = `<span>${r.flag}</span> ${r.country} · ${r.currency}`;
+    li.addEventListener("click", () => setRegion(r));
+    list.appendChild(li);
+  });
 
-  applyLanguage(regionToLang[r.code] || "en");
-  localStorage.setItem("region", JSON.stringify(r));
-  popup.classList.remove("active");
-}
+  function setRegion(r) {
+    document.getElementById("currentFlag").textContent = r.flag;
+    document.getElementById("currentRegion").textContent =
+      `${r.country} · ${r.currency}`;
 
+    applyLanguage(regionToLang[r.code] || "en");
+    localStorage.setItem("region", JSON.stringify(r));
+    popup.classList.remove("active");
+  }
 
   const saved = localStorage.getItem("region");
   if (saved) {
