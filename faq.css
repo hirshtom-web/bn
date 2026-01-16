@@ -1,26 +1,83 @@
-/* ---------------- FAQ ---------------- */
+html {
+  scroll-behavior: smooth;
+}
+
+.faq-layout h2 {
+  margin-bottom: 24px;
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 32px;
+}
+
+/* LEFT SIDE */
+.faq-categories {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: sticky;
+  top: 100px;
+}
+
+.faq-bubble {
+  padding: 10px 14px;
+  border-radius: 20px;
+  background: #f2f2f2;
+  text-decoration: none;
+  color: #222;
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.faq-bubble:hover {
+  background: #222;
+  color: #fff;
+}
+
+/* RIGHT SIDE */
 .faq-section {
-  background: #f6f1e8;
+  margin-bottom: 40px;
+}
+
+.faq-section h3 {
+  margin-bottom: 16px;
+  font-size: 1.1rem;
 }
 
 .faq-item {
-  background: var(--card);
-  border-radius: 14px;
-  margin-bottom: 12px;
-  padding: 16px;
+  margin-bottom: 16px;
 }
 
 .faq-question {
-  cursor: pointer;
   font-weight: 600;
+  cursor: pointer;
 }
 
 .faq-answer {
-  display: none;
-  margin-top: 8px;
-  font-size: 0.95rem;
+  margin-top: 6px;
+  color: #555;
+  line-height: 1.5;
 }
 
+/* MOBILE */
+@media (max-width: 768px) {
+  .faq-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .faq-categories {
+    flex-direction: row;
+    overflow-x: auto;
+    position: static;
+  }
+
+  .faq-bubble {
+    white-space: nowrap;
+  }
+}
 
 /* ---------------- STICKY BUY ---------------- */
 .sticky-buy {
@@ -111,204 +168,3 @@
   }
 }
 
-.slider {
-  display: flex;
-  gap: 16px;
-}
-
-.slide.large {
-  width: 300px;
-  height: 300px;
-  border-radius: 20px;
-  overflow: hidden;
-  flex-shrink: 0;
-  background: #f2f2f2;
-}
-
-.slide.large img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;   /* 🔥 fills the card */
-  object-position: center;
-  display: block;
-}
-.slide.large img {
-  transition: transform 0.4s ease;
-}
-
-.slide.large:hover img {
-  transform: scale(1.05);
-}
-
-@media (max-width: 768px) {
-  .slide.large {
-    width: 240px;
-    height: 240px;
-  }
-}
-
-/* PRODUCT SLIDER */
-.product-slider {
-  display: flex;
-  flex-direction: row;
-  gap: 16px;
-  overflow-x: auto; /* allow horizontal scroll */
-  padding-bottom: 8px;
-
-  /* Hide scrollbar */
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;     /* Firefox */
-}
-.product-slider::-webkit-scrollbar {
-  display: none;             /* Chrome, Safari, Opera */
-}
-
-/* PRODUCT CARD */
-.product-card {
-  flex: 0 0 300px; /* card width → image will also be 300px */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: none;
-  padding: 0;
-  margin: 0;
-  text-align: center;
-  position: relative;
-  cursor: pointer;
-
-  /* subtle card zoom when hovering the whole card */
-  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* Image wrapper for 1:1 ratio */
-.image-wrapper {
-  position: relative;
-  width: 100%;
-  padding-top: 100%; /* 1:1 aspect ratio */
-  overflow: hidden;
-  border-radius: 16px;
-}
-
-.image-wrapper img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 16px;
-
-  /* smooth zoom transition */
-  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* Zoom effect on hover */
-.product-card:hover .image-wrapper img {
-  transform: scale(1.08); /* slightly more pronounced zoom */
-}
-
-/* Badge bubble */
-.badge {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  padding: 5px 12px;
-  font-size: 12px;
-  font-weight: 600;
-  color: #fff;
-  border-radius: 20px;
-  z-index: 2;
-}
-
-.badge.sale { background: #e63946; }
-.badge.bestseller { background: #ff9f1c; }
-.badge.new { background: #2a9d8f; }
-
-/* Product info below image */
-.product-info {
-  margin-top: 8px;
-}
-
-/* Name and price */
-.product-name {
-  font-size: 16px;
-  margin: 4px 0 2px;
-}
-
-.product-price {
-  font-size: 15px;
-  font-weight: 600;
-  margin-bottom: 6px;
-}
-
-/* Color dots */
-.color-dots {
-  display: flex;
-  justify-content: center;
-  gap: 6px;
-}
-
-.dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  border: 1px solid #ddd;
-}
-
-.dot.red { background: #e63946; }
-.dot.blue { background: #457b9d; }
-.dot.yellow { background: #f4d35e; }
-.dot.green { background: #2a9d8f; }
-.dot.purple { background: #7b2cbf; }
-.dot.pink { background: #ffafcc; }
-.dot.orange { background: #f77f00; }
-
-
-/* ---------------- BENEFITS ---------------- */
-.about-benefits h2 {
-  text-align: center;
-  margin-bottom: 40px;
-  font-size: 32px;
-}
-
-.benefits-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 24px;
-}
-
-.benefit-card {
-  border-radius: 20px;
-  padding: 24px;
-  text-align: center;
-}
-
-.benefit-card img {
-  margin-bottom: 16px;
-}
-
-.benefit-card h4 {
-  font-size: 16px;
-  margin-bottom: 8px;
-}
-
-.benefit-card p {
-  font-size: 14px;
-  line-height: 1.5;
-}
-
-@media (max-width: 768px) {
-  .benefits-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
-    gap: 16px; /* slightly tighter for mobile */
-  }
-
-  .benefit-card {
-    padding: 16px;
-  }
-
-  .about-benefits h2 {
-    font-size: 24px;
-    margin-bottom: 24px;
-  }
-}
