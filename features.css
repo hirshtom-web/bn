@@ -9,7 +9,6 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 40px;
-  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -23,7 +22,7 @@
 
 .feature-icon {
   font-size: 40px;
-  color: #ff6f61; /* highlight color */
+  color: #222; /* highlight color */
   flex-shrink: 0;
 }
 
@@ -31,7 +30,7 @@
   display: block;
   font-size: 1.1rem;
   margin-bottom: 4px;
-  color: #111;
+  color: #222;
 }
 
 .feature-text p {
