@@ -92,27 +92,32 @@
 }
 
 .feature-right {
-  width: 100%;
+  width: 50%;              /* 👈 was 100% */
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden; /* prevents bleed */
+  padding-right: 40px;     /* 👈 nice breathing room */
+  overflow: hidden;
 }
 
+
 .feature-right img {
-  max-width: 100%;
-  max-height: 420px; /* adjust if needed */
-  width: auto;
-  height: auto;
+  width: 100%;
+  max-width: 500px;        /* 🎯 target size */
+  max-height: 500px;
+  aspect-ratio: 1 / 1;
   object-fit: contain;
 }
+
 
 /* Mobile */
 @media (max-width: 768px) {
   .feature-right img {
-    max-height: 260px;
+    max-width: 300px;
+    max-height: 300px;
   }
 }
+
 
 
 
