@@ -103,11 +103,12 @@
 
 .feature-right img {
   width: 100%;
-  max-width: 500px;        /* 🎯 target size */
-  max-height: 500px;
+  max-width: 620px;    /* ⬅️ bigger */
+  max-height: 620px;
   aspect-ratio: 1 / 1;
   object-fit: contain;
 }
+
 
 
 /* Mobile */
