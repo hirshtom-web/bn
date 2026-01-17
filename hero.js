@@ -1,15 +1,21 @@
-const slides = document.querySelector('.feature-slides');
-const dots = document.querySelectorAll('.feature-dots .dot');
+document.addEventListener('DOMContentLoaded', () => {
+  const slides = document.querySelector('.feature-slides');
+  const dots = document.querySelectorAll('.feature-dots .dot');
 
-dots.forEach(dot => {
-  dot.addEventListener('click', () => {
-    const index = dot.dataset.index;
+  if (!slides || !dots.length) {
+    console.warn('Slider elements missing');
+    return;
+  }
 
-    // Move slides
-    slides.style.transform = `translateX(-${index * 100}%)`;
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
 
-    // Update active dot
-    dots.forEach(d => d.classList.remove('active'));
-    dot.classList.add('active');
+      // Move slides
+      slides.style.transform = `translateX(-${index * 100}%)`;
+
+      // Update active dot
+      dots.forEach(d => d.classList.remove('active'));
+      dot.classList.add('active');
+    });
   });
 });
