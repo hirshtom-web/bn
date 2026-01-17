@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="sustainability.css" />
   <link rel="stylesheet" href="product-page.css" />
   <link rel="stylesheet" href="features.css" />
+  <link rel="stylesheet" href="reviews.css" />
 
 
   <!-- Google Material Symbols (line icons) -->
@@ -211,6 +212,9 @@
   <!-- features -->
 <div id="features-placeholder"></div>
 
+    <!-- reviews -->
+<div id="reviews-placeholder"></div>
+
   
 <div id="sticky-buy" class="sticky-buy">
   <span>Bubunany Puppet</span>
@@ -370,6 +374,16 @@ document.addEventListener("DOMContentLoaded", () => {
       document.getElementById('features-placeholder').innerHTML = data;
     })
     .catch(err => console.error('Error loading features.html:', err));
+</script>
+
+   <script>
+  // Load external HTML into a placeholder
+  fetch('reviews.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('reviews-placeholder').innerHTML = data;
+    })
+    .catch(err => console.error('Error loading reviews.html:', err));
 </script>
 
   
