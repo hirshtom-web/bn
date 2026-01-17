@@ -11,8 +11,8 @@
   display: flex;
   gap: 32px;
   align-items: center;
-  margin-bottom: 60px;
 }
+
 
 /* LEFT */
 .reviews-score {
@@ -28,7 +28,8 @@
   color: #111;
   font-size: 12px;
   font-weight: 700;
-  margin-bottom: 12px;
+  margin-bottom: 6px;
+
 }
 
 /* 4.9 + out of 5 on same line */
@@ -76,10 +77,16 @@
 }
 
 .rating-row {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
   gap: 10px;
 }
+
+.rating-row span:first-child {
+  white-space: nowrap;
+}
+
 
 .rating-row span {
   width: 12px;
