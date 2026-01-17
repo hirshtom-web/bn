@@ -189,3 +189,39 @@
   font-weight: 600;
   color: #111;
 }
+
+
+/* ================= FIX RATING ROW OVERLAP ================= */
+
+/* Keep 2-column layout but make rows bulletproof */
+.reviews-bars {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+/* Lock row structure */
+.rating-row {
+  display: grid;
+  grid-template-columns: 90px 1fr 36px;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Label */
+.rating-row span:first-child {
+  font-size: 13px;
+  white-space: nowrap;
+  text-align: left;
+}
+
+/* Bar safety */
+.rating-row .bar {
+  width: 100%;
+}
+
+/* Score value */
+.rating-value {
+  font-size: 13px;
+  font-weight: 600;
+  text-align: right;
+  color: #111;
+}
