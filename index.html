@@ -479,15 +479,19 @@ fetch("hero.html")
 </script>
 
   <script>
-  fetch('playtime-cta.html')
-    .then(response => response.text())
-    .then(html => {
-      document.getElementById('cta-playtime-cta').innerHTML = html;
-    })
-    .catch(err => {
-      console.error('Failed to load playtime-cta:', err);
-    });
+  function loadSection(id, file) {
+    const el = document.getElementById(id);
+    if (!el) return;
+
+    fetch(file)
+      .then(r => r.text())
+      .then(html => el.innerHTML = html)
+      .catch(err => console.error(`Error loading ${file}`, err));
+  }
+
+  loadSection('playtime-cta-placeholder', 'playtime-cta.html');
 </script>
+
 
   <script>
   document.addEventListener("DOMContentLoaded", () => {
