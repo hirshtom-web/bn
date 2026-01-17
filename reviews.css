@@ -225,3 +225,58 @@
   text-align: right;
   color: #111;
 }
+
+
+/* Make horizontal row */
+.reviews-score {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* space between bubble and rest */
+  flex-wrap: wrap; /* safe on small screens */
+}
+
+/* Bubble */
+.score-bubble {
+  background: #ffd166; /* yellow bubble */
+  color: #111;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+/* The rest of the line */
+.score-number-line {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* space between numbers, stars, ratings */
+  font-size: 14px;
+  color: #111;
+  flex-wrap: wrap; /* wrap on mobile */
+}
+
+/* Score number big */
+.score-number {
+  font-size: 28px;
+  font-weight: 800;
+}
+
+/* Out of 5 smaller */
+.score-outof {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Stars */
+.stars-outline {
+  color: #ffd166; /* yellow stars */
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+/* Ratings count */
+.ratings-count {
+  font-size: 13px;
+  color: #111;
+}
