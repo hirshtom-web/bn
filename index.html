@@ -477,6 +477,17 @@ fetch("hero.html")
 </script>
 
   <script>
+  fetch('playtime-cta.html')
+    .then(response => response.text())
+    .then(html => {
+      document.getElementById('cta-playtime-cta').innerHTML = html;
+    })
+    .catch(err => {
+      console.error('Failed to load playtime-cta:', err);
+    });
+</script>
+
+  <script>
   document.addEventListener("DOMContentLoaded", () => {
     const phrases = [
       "It’s playtime!",
@@ -492,6 +503,7 @@ fetch("hero.html")
     titleEl.textContent = phrases[randomIndex];
   });
 </script>
+
 
 
   <script src="footer.js"></script>
