@@ -1,14 +1,28 @@
-/* ================= TOP SUMMARY HORIZONTAL ================= */
+.reviews-section {
+  background: #f6f1e8;
+  padding: 80px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ===== TOP SUMMARY HORIZONTAL ===== */
+.reviews-summary {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
 .reviews-score {
   display: flex;
   align-items: center;
-  gap: 12px;           /* space between bubble and rest */
-  flex-wrap: wrap;      /* wraps nicely on mobile */
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
-/* Bubble */
 .score-bubble {
-  background: #ffd166;  /* yellow */
+  background: #ffd166;
   color: #111;
   padding: 6px 14px;
   border-radius: 999px;
@@ -17,48 +31,41 @@
   flex-shrink: 0;
 }
 
-/* Rest of the horizontal line */
 .score-number-line {
   display: flex;
   align-items: baseline;
-  gap: 8px;            /* spacing between number, out-of, stars, ratings */
+  gap: 8px;
   flex-wrap: wrap;
 }
 
-/* Score number */
 .score-number {
   font-size: 28px;
   font-weight: 800;
 }
 
-/* Out of 5 */
 .score-outof {
   font-size: 14px;
   color: #555;
 }
 
-/* Stars */
 .stars-outline {
   color: #ffd166;
   font-size: 16px;
   letter-spacing: 1px;
 }
 
-/* Ratings count */
 .ratings-count {
   font-size: 13px;
   color: #111;
 }
 
-/* ================= RATING ROWS ================= */
+/* ===== RATING BARS ===== */
 .reviews-bars {
   display: grid;
-  grid-template-columns: 1fr;  /* full width by default */
   gap: 12px 24px;
-  margin-bottom: 40px;         /* spacing below bars */
+  margin-bottom: 60px; /* space to reviews below */
 }
 
-/* Individual rating row */
 .rating-row {
   display: grid;
   grid-template-columns: 90px 1fr 36px; /* label | bar | score */
@@ -66,14 +73,12 @@
   gap: 8px;
 }
 
-/* Label */
 .rating-row span:first-child {
   font-size: 13px;
   white-space: nowrap;
   text-align: left;
 }
 
-/* Bar */
 .bar {
   height: 8px;
   border-radius: 999px;
@@ -82,13 +87,11 @@
   width: 100%;
 }
 
-/* Fill */
 .bar-fill.full { width: 100%; background: #ffd166; }
 .bar-fill.mid  { background: #ffd166; }
 .bar-fill.soft { background: rgba(255, 209, 102, 0.5); }
 .bar-fill.empty { width: 0; }
 
-/* Score value */
 .rating-value {
   font-size: 13px;
   font-weight: 600;
@@ -96,12 +99,56 @@
   color: #111;
 }
 
-/* ================= MOBILE ================= */
+/* ===== REVIEW CARD ===== */
+.review-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 28px;
+  max-width: 700px;
+  margin-bottom: 40px;
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.review-user {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.review-user img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+
+.review-date {
+  display: block;
+  font-size: 12px;
+  color: #777;
+}
+
+.review-stars {
+  color: #ffd166;
+  font-size: 14px;
+}
+
+.review-text {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* ===== MOBILE ===== */
 @media (max-width: 768px) {
-  .reviews-score {
+  .reviews-summary {
     flex-direction: column;
     align-items: flex-start;
-    gap: 8px;
   }
 
   .score-number-line {
