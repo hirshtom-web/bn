@@ -1,0 +1,97 @@
+/* ---------------- PLAYTIME CTA ---------------- */
+.playtime-cta {
+  position: relative;
+  padding: clamp(80px, 12vw, 140px) 20px;
+  overflow: hidden;
+  text-align: center;
+  background: #f6f1e8; /* light background */
+  color: #111; /* dark text */
+}
+
+/* Center content */
+.playtime-cta__inner {
+  position: relative;
+  z-index: 2;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.playtime-cta__inner h2 {
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  margin-bottom: 12px;
+  color: #111;
+}
+
+.playtime-cta__inner p {
+  font-size: clamp(0.95rem, 2.5vw, 1.05rem);
+  color: #333;
+  margin-bottom: 28px;
+}
+
+.playtime-cta__btn {
+  display: inline-block;
+  padding: 14px 30px;
+  background: #ff6f61;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 999px;
+  font-weight: 600;
+  z-index: 2;
+  position: relative;
+}
+
+/* ---------------- Doodles ---------------- */
+.playtime-doodles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.playtime-doodle {
+  position: absolute;
+  opacity: 0.85;
+  animation: playtime-float 10s ease-in-out infinite;
+}
+
+/* Sizes */
+.playtime-doodle--big    { width: 90px; height: 90px; }
+.playtime-doodle--medium { width: 60px; height: 60px; }
+.playtime-doodle--small  { width: 35px; height: 35px; }
+
+/* SVG filled, no stroke */
+.playtime-doodle svg {
+  width: 100%;
+  height: 100%;
+  fill: currentColor; /* colored */
+  stroke: none;
+}
+
+/* ---------------- Colors & positions ---------------- */
+/* around the title */
+.playtime-doodle--1 { top: 0%; left: 20%;  color: #ffd166; animation-delay: 0s; }
+.playtime-doodle--2 { top: 0%; right: 20%; color: #ff8a5b; animation-delay: 2s; }
+.playtime-doodle--3 { top: 20%; left: 0%;  color: #6ec1b6; animation-delay: 4s; }
+.playtime-doodle--4 { top: 20%; right: 0%; color: #436b65; animation-delay: 6s; }
+.playtime-doodle--5 { bottom: 0%; left: 15%; color: #d16f9a; animation-delay: 8s; }
+
+/* Float animation */
+@keyframes playtime-float {
+  0%   { transform: translateY(0) rotate(0deg); }
+  50%  { transform: translateY(-12px) rotate(5deg); }
+  100% { transform: translateY(0) rotate(0deg); }
+}
+
+/* ---------------- Mobile adjustments ---------------- */
+@media (max-width: 768px) {
+  .playtime-doodle--big    { width: 60px; height: 60px; }
+  .playtime-doodle--medium { width: 45px; height: 45px; }
+  .playtime-doodle--small  { width: 30px; height: 30px; }
+
+  /* place doodles closer to title on mobile */
+  .playtime-doodle--1 { top: -10%; left: 10%; }
+  .playtime-doodle--2 { top: -10%; right: 10%; }
+  .playtime-doodle--3 { top: 10%; left: 0%; }
+  .playtime-doodle--4 { top: 10%; right: 0%; }
+  .playtime-doodle--5 { bottom: -5%; left: 15%; }
+}
