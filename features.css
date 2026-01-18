@@ -23,19 +23,20 @@
 }
 
 .feature-icon {
-  font-size: 30px;
-  color: #222;
-
-  /* bubble background */
   width: 60px;
   height: 60px;
-  background: #ffd166;
+  background: #ffd166; /* bubble color */
   border-radius: 50%;
+  border: 0.5px solid #222; /* optional thin frame */
 
-  /* perfect centering */
-  display: grid; /* easier than flex for single item */
-  place-items: center; /* centers both vertically and horizontally */
+  display: flex;               /* flex centering */
+  align-items: center;         /* vertical */
+  justify-content: center;     /* horizontal */
+  font-size: 30px;
+  line-height: 1;              /* important! removes extra vertical spacing */
+  vertical-align: middle;      /* aligns icon font properly */
 }
+
 
 
 .feature-text strong {
