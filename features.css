@@ -1,7 +1,6 @@
 .features-section {
   background: #f6f1e8;
   padding: 80px 20px;
-  overflow: hidden;
 }
 
 /* SLIDER TRACK */
@@ -33,7 +32,7 @@
 
 /* Bubble */
 .feature-icon {
-  position: relative;           /* required */
+  position: relative;
   width: 48px;
   height: 48px;
   background: #ffd166;
@@ -42,18 +41,25 @@
   display: grid;
   place-items: center;
   flex-shrink: 0;
+
+  z-index: 1; /* 🔑 keeps bubble above wave */
 }
+
 
 /* wave */
 .feature-icon::after {
   content: "";
   position: absolute;
-  inset: 0;
-  border-radius: 50%;
-  background: rgba(255, 209, 102, 0.4);
 
+  inset: -10px;              /* 🔑 larger than bubble */
+  border-radius: 50%;
+
+  background: rgba(255, 209, 102, 0.35);
+
+  z-index: -1;               /* 🔑 behind bubble */
   animation: wave 2.5s ease-out infinite;
 }
+
 
 @keyframes wave {
   0% {
