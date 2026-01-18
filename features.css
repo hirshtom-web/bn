@@ -28,14 +28,16 @@
   height: 60px;
   background: #ffd166; /* bubble color */
   border-radius: 50%;
-  display: flex;               /* center the icon */
-  align-items: center;         /* vertical centering */
-  justify-content: center;     /* horizontal centering */
+  
+  display: grid;         /* grid centers content perfectly */
+  place-items: center;   /* vertical + horizontal centering */
+  
   font-size: 30px;
-  color: #fff;                 /* icon color white */
-  line-height: 1;              /* remove extra vertical space */
-  flex-shrink: 0;              /* don't shrink on small screens */
+  color: #fff;           /* icon color white */
+  line-height: normal;   /* fix Material Symbols vertical alignment */
+  flex-shrink: 0;        /* don't shrink on small screens */
 }
+
 
 .feature-text strong {
   display: block;
