@@ -1,27 +1,40 @@
 .features-section {
   background: #f6f1e8;
-  padding: 100px 20px;
-  text-align: center;
+  padding: 80px 20px;
+  overflow: hidden; /* hides scrollbar overflow */
 }
 
+/* SLIDER TRACK */
 .features-container {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 32px;
+  gap: 24px;
+  overflow-x: auto;                 /* 🔑 horizontal scroll */
+  scroll-snap-type: x mandatory;    /* 🔑 snapping */
+  padding-bottom: 10px;
+
+  -webkit-overflow-scrolling: touch;
+}
+
+/* hide scrollbar (optional, modern look) */
+.features-container::-webkit-scrollbar {
+  display: none;
 }
 
 .feature {
-  display: flex;
-  align-items: flex-start; /* 🔑 important */
-  gap: 16px;
+  flex: 0 0 auto;                   /* 🔑 prevent wrapping */
   width: 300px;
+
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+
   background: #FFD16680;
   border-radius: 16px;
   padding: 16px;
   text-align: left;
-}
 
+  scroll-snap-align: start;         /* 🔑 snap per card */
+}
 
 .feature-icon {
   width: 60px;
@@ -30,7 +43,7 @@
   border-radius: 50%;
 
   display: grid;
-  place-items: center;   /* 🔑 bulletproof centering */
+  place-items: center;
 
   font-size: 30px;
   color: #222;
@@ -39,25 +52,21 @@
   flex-shrink: 0;
 }
 
-
-/* Material Symbols specific fix */
+/* Material Symbols fix */
 .material-symbols-outlined {
   display: block;
 }
 
 .feature-text strong {
-  display: block;
   font-weight: 600;
   font-size: 15px;
   color: #222;
-  line-height: 1.3;      /* 🔑 prevents visual drift */
+  line-height: 1.3;
 }
 
-
-/* Mobile */
+/* MOBILE */
 @media (max-width: 768px) {
   .feature {
-    width: 100%;
-    max-width: 320px;
+    width: 260px;   /* shows ~1.2 cards */
   }
 }
