@@ -26,17 +26,20 @@
 .feature-icon {
   width: 60px;
   height: 60px;
-  background: #ffd166; /* bubble color */
+  background: #ffd166;
   border-radius: 50%;
-  
-  display: grid;         /* grid centers content perfectly */
-  place-items: center;   /* vertical + horizontal centering */
-  
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   font-size: 30px;
-  color: #222;           /* icon color white */
-  line-height: normal;   /* fix Material Symbols vertical alignment */
-  flex-shrink: 0;        /* don't shrink on small screens */
+  color: #222;
+
+  line-height: 0;          /* key fix */
+  vertical-align: middle;  /* key fix */
 }
+
 
 
 .feature-text strong {
