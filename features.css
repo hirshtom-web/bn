@@ -24,17 +24,17 @@
 
 .feature-icon {
   font-size: 30px;
-  color: #222; /* icon color */
-  flex-shrink: 0;
+  color: #222;
 
   /* bubble background */
   width: 60px;
   height: 60px;
-  background: #ffd166; /* bubble color */
+  background: #ffd166;
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
+  /* perfect centering */
+  display: grid; /* easier than flex for single item */
+  place-items: center; /* centers both vertically and horizontally */
 }
 
 
