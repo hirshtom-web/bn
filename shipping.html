@@ -1,3 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shipping</title>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="header.css" />
+  <link rel="stylesheet" href="footer.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="about.css" />
+  <link rel="stylesheet" href="faq.css" />
+  <link rel="stylesheet" href="playtime-css.css" />
+  <link rel="stylesheet" href="wholesale.css" />
+
+
+  <!-- Google Material Symbols (line icons) -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    rel="stylesheet"
+  />
+</head>
+
+  
+<body class="page-faq">
+  
+  <!-- HEADER -->
+<div id="header-placeholder"></div>
+
 <table class="delivery-table">
   <thead>
     <tr>
@@ -32,3 +62,137 @@
     </tr>
   </tbody>
 </table>
+  
+  <!-- PLAYTIME-CTA -->
+<div id="playtime-cta-placeholder"></div>
+
+
+
+  <!-- FOOTER -->
+<div id="footer-placeholder"></div>
+  
+
+  <!-- SCRIPT FOR FAQ TOGGLE -->
+  <script>
+    document.querySelectorAll('.faq-question').forEach(q => {
+      q.addEventListener('click', () => {
+        const answer = q.nextElementSibling;
+        answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+      });
+    });
+    
+document.addEventListener("DOMContentLoaded", () => {
+  const stickyBuy = document.getElementById("sticky-buy");
+  const trigger = document.getElementById("characters");
+  const footer = document.querySelector("footer");
+
+  if (!stickyBuy || !trigger) return;
+
+  window.addEventListener("scroll", () => {
+    const triggerTop = trigger.getBoundingClientRect().top;
+
+    if (triggerTop < 100) {
+      stickyBuy.classList.add("active");
+    } else {
+      stickyBuy.classList.remove("active");
+      stickyBuy.style.bottom = "0";
+      return;
+    }
+
+    if (footer) {
+      const footerTop = footer.getBoundingClientRect().top;
+      const overlap = window.innerHeight - footerTop;
+
+      stickyBuy.style.bottom = overlap > 0 ? `${overlap}px` : "0";
+    }
+  });
+});
+
+  </script>
+  
+
+  <!-- Scripts -->
+<script src="header.js"></script>
+
+<script>
+  // Load header
+  fetch("header.html")
+    .then(res => res.text())
+    .then(html => {
+      const headerEl = document.getElementById("header-placeholder");
+      if (!headerEl) return;
+
+      headerEl.innerHTML = html;
+
+      // Init only if functions exist
+      if (typeof initHeader === "function") initHeader();
+      if (typeof initProductsPage === "function") initProductsPage();
+    })
+    .catch(err => console.error("Header load failed:", err));
+  
+// Load hero
+fetch("hero.html")
+  .then(res => res.text())
+  .then(html => {
+    const heroEl = document.getElementById("hero-placeholder");
+    if (!heroEl) return;
+
+    heroEl.innerHTML = html;
+
+    // Init only if functions exist
+    if (typeof initHero === "function") initHero();
+  })
+  .catch(err => console.error("Hero load failed:", err));
+
+  // Load footer
+  fetch("footer.html")
+    .then(res => res.text())
+    .then(html => {
+      const footerEl = document.getElementById("footer-placeholder");
+      if (!footerEl) return;
+
+      footerEl.innerHTML = html;
+
+      // Init only if function exists
+      if (typeof initFooter === "function") initFooter();
+    })
+    .catch(err => console.error("Footer load failed:", err));
+</script>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const phrases = [
+      "It’s playtime!",
+      "Let the play begin!",
+      "Time to play together",
+      "Play starts here"
+    ];
+
+    const titleEl = document.getElementById("playtime-title");
+    if (!titleEl) return;
+
+    const randomIndex = Math.floor(Math.random() * phrases.length);
+    titleEl.textContent = phrases[randomIndex];
+  });
+</script>
+
+  <script>
+  function loadSection(id, file) {
+    const el = document.getElementById(id);
+    if (!el) return;
+
+    fetch(file)
+      .then(r => r.text())
+      .then(html => el.innerHTML = html)
+      .catch(err => console.error(`Error loading ${file}`, err));
+  }
+
+  loadSection('playtime-cta-placeholder', 'playtime-cta.html');
+</script>
+
+
+  <script src="footer.js"></script>
+
+
+  </body>
+</html>
