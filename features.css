@@ -20,25 +20,18 @@
 
 /* FEATURE CARD */
 .feature {
-  flex: 0 0 auto;
-
   display: flex;
-  align-items: center;              /* 🔑 vertical alignment */
+  align-items: center;
   gap: 16px;
 
-  height: 96px;                     /* 🔑 fixed height */
-  min-width: 220px;                 /* keeps rhythm */
-  max-width: 420px;                 /* prevents runaway width */
-
+  height: 96px;
   padding: 16px 20px;
+
   background: #FFD16680;
   border-radius: 16px;
-  text-align: left;
-
-  scroll-snap-align: start;
 }
 
-/* ICON BUBBLE */
+/* Bubble */
 .feature-icon {
   width: 48px;
   height: 48px;
@@ -46,22 +39,19 @@
   border-radius: 50%;
 
   display: grid;
-  place-items: center;   /* 🔑 true center */
-
-  font-size: 24px;
-  color: #222;
+  place-items: center;
 
   flex-shrink: 0;
 }
 
+/* Actual icon */
+.feature-icon .material-symbols-outlined {
+  font-size: 24px;
+  color: #222;
 
-/* Material Symbols fix */
-.material-symbols-outlined {
-  font-variation-settings: 'wght' 400;
-  line-height: 1;
   display: block;
+  line-height: 1;
 }
-
 
 /* TEXT */
 .feature-text strong {
