@@ -21,8 +21,8 @@
 }
 
 .feature {
-  flex: 0 0 auto;                   /* 🔑 prevent wrapping */
-  width: 300px;
+  flex: 0 0 auto;      /* do not stretch, do not shrink */
+  white-space: nowrap;/* keep text on one line if desired */
 
   display: flex;
   align-items: flex-start;
