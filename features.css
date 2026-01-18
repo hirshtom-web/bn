@@ -63,16 +63,25 @@
   white-space: nowrap;              /* keeps single-line */
 }
 
-/* MOBILE */
 @media (max-width: 768px) {
   .feature {
-    height: 88px;
+    height: auto;            /* allow card to grow */
+    min-height: 88px;        /* stable minimum */
     min-width: 200px;
+
+    align-items: flex-start; /* text can wrap naturally */
   }
 
   .feature-icon {
     width: 44px;
     height: 44px;
+  }
+
+  .feature-icon .material-symbols-outlined {
     font-size: 22px;
+  }
+
+  .feature-text strong {
+    white-space: normal;     /* allow wrapping */
   }
 }
