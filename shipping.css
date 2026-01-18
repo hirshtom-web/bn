@@ -1,0 +1,36 @@
+.delivery-table {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  font-size: 14px;
+  color: #222;
+}
+
+.delivery-table thead th {
+  text-align: left;
+  font-weight: 600;
+  padding: 14px 12px;
+  border-bottom: 1px solid #ddd;   /* header divider */
+}
+
+.delivery-table tbody td {
+  padding: 14px 12px;
+  border-bottom: 1px solid #eee;   /* row dividers */
+}
+
+/* remove last divider */
+.delivery-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+@media (max-width: 768px) {
+  .delivery-table {
+    font-size: 13px;
+  }
+
+  .delivery-table th,
+  .delivery-table td {
+    padding: 10px 8px;
+  }
+}
