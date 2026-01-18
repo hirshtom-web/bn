@@ -40,25 +40,28 @@
 
 /* ICON BUBBLE */
 .feature-icon {
-  width: 48px;                      /* 🔑 consistent size */
+  width: 48px;
   height: 48px;
   background: #ffd166;
   border-radius: 50%;
 
   display: grid;
-  place-items: center;
+  place-items: center;   /* 🔑 true center */
 
-  font-size: 24px;                  /* 🔑 balanced icon */
+  font-size: 24px;
   color: #222;
 
-  line-height: 1;
   flex-shrink: 0;
 }
 
+
 /* Material Symbols fix */
 .material-symbols-outlined {
+  font-variation-settings: 'wght' 400;
+  line-height: 1;
   display: block;
 }
+
 
 /* TEXT */
 .feature-text strong {
