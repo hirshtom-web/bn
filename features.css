@@ -22,9 +22,19 @@
 
 .feature-icon {
   font-size: 30px;
-  color: #222; /* highlight color */
+  color: #222; /* icon color */
   flex-shrink: 0;
+
+  /* bubble background */
+  width: 60px;
+  height: 60px;
+  background: #ffd166; /* bubble color */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 
 .feature-text strong {
   font-weight: 600;
