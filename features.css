@@ -33,7 +33,7 @@
   place-items: center;   /* vertical + horizontal centering */
   
   font-size: 30px;
-  color: #fff;           /* icon color white */
+  color: #222;           /* icon color white */
   line-height: normal;   /* fix Material Symbols vertical alignment */
   flex-shrink: 0;        /* don't shrink on small screens */
 }
