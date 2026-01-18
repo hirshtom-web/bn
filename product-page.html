@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="product-page.css" />
   <link rel="stylesheet" href="features.css" />
   <link rel="stylesheet" href="reviews.css" />
+  <link rel="stylesheet" href="bundle.css" />
 
 
   <!-- Google Material Symbols (line icons) -->
@@ -212,6 +213,9 @@
   <!-- features -->
 <div id="features-placeholder"></div>
 
+    <!-- features -->
+<div id="bundle-placeholder"></div>
+
     <!-- reviews -->
 <div id="reviews-placeholder"></div>
 
@@ -384,6 +388,16 @@ document.addEventListener("DOMContentLoaded", () => {
       document.getElementById('reviews-placeholder').innerHTML = data;
     })
     .catch(err => console.error('Error loading reviews.html:', err));
+</script>
+
+  <script>
+  // Load external HTML into a placeholder
+  fetch('bundle.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('bundle-placeholder').innerHTML = data;
+    })
+    .catch(err => console.error('Error loading bundle.html:', err));
 </script>
 
   
