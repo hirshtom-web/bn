@@ -33,6 +33,7 @@
 
 /* Bubble */
 .feature-icon {
+  position: relative;           /* required */
   width: 48px;
   height: 48px;
   background: #ffd166;
@@ -40,8 +41,29 @@
 
   display: grid;
   place-items: center;
-
   flex-shrink: 0;
+}
+
+/* wave */
+.feature-icon::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: rgba(255, 209, 102, 0.4);
+
+  animation: wave 2.5s ease-out infinite;
+}
+
+@keyframes wave {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1.8);
+    opacity: 0;
+  }
 }
 
 /* Actual icon */
