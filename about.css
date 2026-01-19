@@ -80,13 +80,15 @@
 .btn-small {
   display: inline-block;
   background: #f6f1e8;
-  color: #2e2e2e;
-  padding: 10px 18px;
+  color: #ce3641;
+  padding: 16px 28px;   /* ↑ bigger top/bottom & left/right */
   border-radius: 999px;
   font-weight: 700;
+  font-size: 18px;      /* ↑ bigger text */
   text-decoration: none;
-  margin-top: 8px;
+  margin-top: 12px;     /* optional extra spacing */
 }
+
 
 /* RIGHT PANEL SLIDER */
 /* Move indicators out of slider clipping */
