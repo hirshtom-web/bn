@@ -192,3 +192,44 @@
     height: 300px;
   }
 }
+
+
+/* Hide mobile SVG by default, show desktop */
+.hero-left-shape.mobile-svg {
+  display: none;
+}
+
+.hero-left-shape.desktop-svg {
+  display: block;
+}
+
+/* MOBILE LAYOUT */
+@media (max-width: 768px) {
+  .hero-split-container {
+    flex-direction: column; /* stack vertically */
+  }
+
+  /* Hide desktop SVG, show mobile SVG */
+  .hero-left-shape.desktop-svg {
+    display: none;
+  }
+
+  .hero-left-shape.mobile-svg {
+    display: block;
+    width: 280px;     /* your desired mobile size */
+    height: 420px;
+    margin: 0 auto;   /* center it */
+  }
+
+  .hero-right-panel {
+    width: 100%;
+    height: 300px;
+    margin-top: 20px; /* spacing below mobile SVG */
+  }
+
+  .hero-content {
+    text-align: center;
+    max-width: 90%;
+    margin: auto;
+  }
+}
