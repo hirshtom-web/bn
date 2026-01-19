@@ -2,22 +2,27 @@
 .split-container {
   display: flex;
   border-radius: 28px;       /* rounded corners */
-  overflow: hidden;          /* clip inner panels */
+  overflow: hidden;          /* clip edges */
   margin: 50px;              /* 50px all around */
   min-height: 500px;         /* minimum height */
-  padding: 0;                /* inner padding handled by panels */
+  position: relative;
   box-sizing: border-box;
 }
 
-/* LEFT PANEL (RED) */
+/* LEFT PANEL (SVG) */
 .left-panel {
   flex: 1;
-  background: #c62828;
-  color: white;
-  padding: 3rem;             /* inner padding for content */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;   /* vertically center text */
+  position: relative;        /* needed for overlap */
+  overflow: visible;         /* allow SVG to overflow into right panel */
+}
+
+/* SVG IMAGE */
+.left-shape {
+  width: 120%;               /* bigger than panel to overlap */
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  left: -20%;                /* shift left so it overlaps pink */
 }
 
 /* RIGHT PANEL (PINK) */
@@ -25,13 +30,13 @@
   flex: 1;
   background: #f48fb1;
   color: #222;
-  padding: 3rem;             /* inner padding for content */
+  padding: 3rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;   /* vertically center text */
+  justify-content: center;
 }
 
-/* OPTIONAL TYPOGRAPHY */
+/* TYPOGRAPHY */
 .split-container h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
@@ -47,7 +52,13 @@
   .split-container {
     flex-direction: column;
   }
+
+  .left-shape {
+    width: 100%;
+    left: 0;
+  }
 }
+
 
 
 
