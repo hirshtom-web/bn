@@ -4,7 +4,7 @@
   border-radius: 28px;       
   overflow: hidden;          /* clips outer corners */
   margin: 50px;              
-  min-height: 650px;         
+  min-height: 500px;         
   position: relative;        
   box-sizing: border-box;
 }
@@ -21,73 +21,34 @@
   position: absolute;        
   top: 0;
   left: 0;
-  width: 110%;               /* 5% overlap into right panel */
+  width: 105%;               /* 5% overlap into right panel */
   height: 100%;
   object-fit: cover;
   z-index: 3;                /* make sure SVG is on top */
 }
 
 /* RIGHT PANEL (PINK) */
-* RIGHT PANEL / SLIDER */
 .right-panel {
   flex: 1;
-  position: relative;
-  z-index: 1;
-}
-
-/* SLIDER CONTAINER */
-.slider {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  overflow: hidden;
-}
-
-/* INDIVIDUAL SLIDES */
-.slide {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  transition: opacity 0.8s ease-in-out;
-}
-
-.slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* ACTIVE SLIDE */
-.slide.active {
-  opacity: 1;
-  z-index: 1;
-}
-
-/* SLIDER INDICATORS (balls) */
-.slider-indicators {
-  position: absolute;
-  bottom: 15px;
-  left: 50%;
-  transform: translateX(-50%);
+  background: #f48fb1;
+  color: #222;
+  padding: 3rem;
   display: flex;
-  gap: 10px;
-  z-index: 10;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;        
+  z-index: 1;                /* below SVG */
 }
 
-.slider-indicators .dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.6);
-  cursor: pointer;
-  transition: background 0.3s;
+/* TYPOGRAPHY */
+.split-container h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
-.slider-indicators .dot.active {
-  background: rgba(255, 255, 255, 1);
+.split-container p {
+  font-size: 1.1rem;
+  line-height: 1.6;
 }
 
 /* MOBILE */
@@ -99,7 +60,7 @@
   .left-shape {
     position: relative;
     width: 100%;
-    margin-right: 0;
+    z-index: 2;
   }
 }
 
