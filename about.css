@@ -218,7 +218,6 @@
   display: flex;
   gap: 2rem;
   align-items: stretch;
-  max-width: 1000px;
 }
 
 .column {
