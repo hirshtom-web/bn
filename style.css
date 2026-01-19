@@ -75,8 +75,8 @@ h1, h2, h3 {
 
 /* SMALL CIRCULAR SLIDER — IMAGE ONLY */
 .slide.small {
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 220px;
   border-radius: 50%;
   overflow: hidden;
   background: none;       /* ❗ remove background */
