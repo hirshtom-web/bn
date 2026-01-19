@@ -14,19 +14,81 @@
   flex: 1;
   position: relative;
   z-index: 2;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 50px; /* 50px margin all around */
 }
 
 .left-shape {
   position: absolute;
   top: 0;
   left: 0;
-  width: 110%;       /* overlap right panel by 10% */
+  width: 110%;  /* overlap right panel */
   height: 100%;
   object-fit: cover;
-  z-index: 3;
+  z-index: 1;   /* behind text */
 }
 
-/* RIGHT PANEL (SLIDER) */
+/* HERO TEXT OVER SVG */
+.hero-content {
+  position: relative;
+  z-index: 3;   /* above SVG */
+  max-width: 520px;
+  color: #fff;
+}
+
+.hero-bubble {
+  display: inline-block;
+  background: rgba(31, 77, 58, 0.15);
+  padding: 6px 12px;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 10px;
+  margin-bottom: 12px;
+}
+
+.hero-content p {
+  font-size: 30px;
+  line-height: 1.4;
+  margin: 0 0 16px 0;
+}
+
+.reviews-block {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.reviews-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.stars {
+  color: #FFD166;
+  font-size: 14px;
+}
+
+.reviews-text {
+  font-size: 12px;
+  color: #fff;
+}
+
+.btn-small {
+  display: inline-block;
+  background: #ffd166;
+  color: #2e2e2e;
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+  margin-top: 8px;
+}
+
+/* RIGHT PANEL SLIDER */
 .right-panel {
   flex: 1;
   position: relative;
@@ -36,7 +98,6 @@
   justify-content: center;
 }
 
-/* SLIDER CONTAINER */
 .slider {
   width: 100%;
   height: 100%;
@@ -44,7 +105,6 @@
   overflow: hidden;
 }
 
-/* INDIVIDUAL SLIDES */
 .slide {
   position: absolute;
   top: 0;
@@ -55,19 +115,18 @@
   transition: opacity 0.8s ease-in-out;
 }
 
+.slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
 .slide img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-/* ACTIVE SLIDE */
-.slide.active {
-  opacity: 1;
-  z-index: 1;
-}
-
-/* SLIDER INDICATORS (balls) */
+/* Slider balls */
 .slider-indicators {
   position: absolute;
   bottom: 15px;
@@ -75,7 +134,6 @@
   transform: translateX(-50%);
   display: flex;
   gap: 10px;
-  z-index: 10;
 }
 
 .slider-indicators .dot {
@@ -100,13 +158,20 @@
   .left-shape {
     position: relative;
     width: 100%;
-    z-index: 2;
+    z-index: 1;
+  }
+
+  .hero-content {
+    text-align: center;
+    max-width: 90%;
+    margin: auto;
   }
 
   .right-panel {
-    height: 300px; /* adjust for mobile */
+    height: 300px;
   }
 }
+
 
 
 
