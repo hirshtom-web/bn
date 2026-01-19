@@ -217,24 +217,32 @@
 .two-column-section {
   display: flex;
   gap: 2rem;
+  align-items: stretch;
 }
 
 .column {
   flex: 1;
 }
 
-/* Limit ONLY the readable text width */
+/* TEXT COLUMN */
+.content-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Readable width */
 .content-column h2,
 .content-column p,
 .content-column .icon-text {
-  max-width: 520px; /* ← adjust (480–640px works well) */
+  max-width: 520px;
 }
 
-.content-column h2,{
-margin-top: 100px;
+/* IMAGE COLUMN */
+.image-column {
+  display: flex;
 }
 
-/* Image */
 .image-column img {
   width: 100%;
   height: auto;
@@ -255,9 +263,14 @@ margin-top: 100px;
     flex-direction: column;
   }
 
+  .content-column {
+    justify-content: flex-start;
+  }
+
   .content-column h2,
   .content-column p,
   .content-column .icon-text {
     max-width: 100%;
   }
 }
+
