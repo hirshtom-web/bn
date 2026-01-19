@@ -214,45 +214,59 @@
 
 
 /* COLUMN-SECTION */
+/* --------------------------
+  TWO-COLUMN SECTION
+--------------------------- */
 .two-column-section {
   display: flex;
   gap: 2rem;
-  align-items: stretch;
+  align-items: stretch; /* ensures both columns are same height */
 }
 
+/* --------------------------
+  COLUMN BASE
+--------------------------- */
 .column {
   flex: 1;
 }
 
-/* TEXT COLUMN */
+/* --------------------------
+  CONTENT COLUMN (TEXT)
+--------------------------- */
 .content-column {
+  flex: 0.85; /* slightly smaller than image column */
   display: flex;
   flex-direction: column;
-  justify-content: center;
-
-  /* column spacing (where text starts) */
-  padding-left: 4rem;
-  padding-right: 2rem;
+  justify-content: center; /* vertical centering */
+  padding-left: 8rem;      /* pushes text toward center */
+  padding-right: 2rem;     /* optional right padding */
+  box-sizing: border-box;  /* include padding in width */
 }
 
-/* readable line length */
+/* limit line length for readability */
 .content-column > * {
   max-width: 520px;
 }
 
-
-/* IMAGE COLUMN */
+/* --------------------------
+  IMAGE COLUMN
+--------------------------- */
 .image-column {
+  flex: 1.15; /* slightly bigger than text column */
   display: flex;
+  align-items: center;     /* optional, centers image vertically */
 }
 
 .image-column img {
   width: 100%;
   height: auto;
   display: block;
+  object-fit: cover;       /* ensures image fills the column nicely */
 }
 
-/* Icon row */
+/* --------------------------
+  ICON ROW
+--------------------------- */
 .icon-text {
   display: flex;
   align-items: center;
@@ -260,7 +274,9 @@
   margin-top: 1rem;
 }
 
-/* Mobile */
+/* --------------------------
+  MOBILE RESPONSIVE
+--------------------------- */
 @media (max-width: 768px) {
   .two-column-section {
     flex-direction: column;
@@ -269,11 +285,15 @@
   .content-column {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+    flex: 1;
+    justify-content: flex-start; /* vertical centering unnecessary on mobile */
+  }
+
+  .image-column {
+    flex: 1;
   }
 
   .content-column > * {
     max-width: 100%;
   }
 }
-
-
