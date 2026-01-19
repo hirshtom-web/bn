@@ -1,45 +1,30 @@
 /* OUTER CONTAINER */
 .split-container {
   display: flex;
-  border-radius: 28px;     /* rounded corners on left & right */
-  overflow: hidden;        /* clip children to rounded edges */
+  border-radius: 28px;   /* rounded OUTSIDE corners */
+  overflow: hidden;     /* clips inner panels */
   max-width: 1100px;
   margin: 4rem auto;
   min-height: 300px;
 }
 
-/* LEFT PANEL */
+/* LEFT PANEL (RED) */
 .left-panel {
   flex: 1;
   background: #c62828;
   color: white;
   padding: 3rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
-/* RIGHT PANEL WITH WAVE IN THE MIDDLE */
+/* RIGHT PANEL (PINK) */
 .right-panel {
   flex: 1;
   background: #f48fb1;
   color: #222;
   padding: 3rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  /* Wavy left edge */
-  clip-path: polygon(
-    0% 0%,       /* top-left */
-    85% 0%,      /* top before wave */
-    100% 50%,    /* wave tip in middle */
-    85% 100%,    /* bottom before wave */
-    0% 100%      /* bottom-left */
-  );
 }
 
-/* TYPOGRAPHY */
+/* OPTIONAL TYPOGRAPHY */
 .split-container h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
@@ -54,10 +39,6 @@
 @media (max-width: 768px) {
   .split-container {
     flex-direction: column;
-  }
-
-  .right-panel {
-    clip-path: none;
   }
 }
 
