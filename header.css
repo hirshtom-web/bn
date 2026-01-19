@@ -111,37 +111,6 @@
   margin-left: 5px;  /* space between text and icon */
 }
 
-
-/* ================= OWNING / AWNING HEADER (GREEN – STATIC) ================= */
-.site-header .awning {
-  background: var(--awning-bg, transparent);
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  font-size: 12px;
-}
-
-.page-home {
-  --awning-bg: #436b65;
-}
-.page-product {
-  --awning-bg: #f6f1e8;
-}
-.page-about {
-  --awning-bg: #436b65;
-}
-
-
-/* Remove SVG height influence if present */
-.site-header .awning svg {
-  height: 40px;
-  width: 100%;
-  display: block;
-}
-
-
 /* ================= MOBILE: ICONS ONLY ================= */
 @media (max-width: 768px) {
 
