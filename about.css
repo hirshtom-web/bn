@@ -1,53 +1,94 @@
 /* OUTER CONTAINER */
 .split-container {
   display: flex;
-  border-radius: 28px;       
-  overflow: hidden;          /* clips outer corners */
-  margin: 50px;              
-  min-height: 600px;         
-  position: relative;        
+  border-radius: 28px;
+  overflow: hidden;
+  margin: 50px;
+  min-height: 600px;
+  position: relative;
   box-sizing: border-box;
 }
 
 /* LEFT PANEL (SVG) */
 .left-panel {
   flex: 1;
-  position: relative;        
+  position: relative;
   z-index: 2;
 }
 
 .left-shape {
-  position: absolute;        
+  position: absolute;
   top: 0;
   left: 0;
-  width: 110%;               /* overlap right panel */
+  width: 110%;       /* overlap right panel by 10% */
   height: 100%;
   object-fit: cover;
   z-index: 3;
 }
 
-/* RIGHT PANEL (IMAGE) */
+/* RIGHT PANEL (SLIDER) */
 .right-panel {
   flex: 1;
-  background: url("https://static.wixstatic.com/media/1799ca_dbf46c45e6ba46728df20bebbbcc3af0~mv2.png") center/cover no-repeat;
-  color: white;              /* adjust text color if needed */
-  padding: 3rem;
+  position: relative;
+  z-index: 1;
   display: flex;
-  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  position: relative;        
+}
+
+/* SLIDER CONTAINER */
+.slider {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* INDIVIDUAL SLIDES */
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ACTIVE SLIDE */
+.slide.active {
+  opacity: 1;
   z-index: 1;
 }
 
-/* TYPOGRAPHY */
-.split-container h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+/* SLIDER INDICATORS (balls) */
+.slider-indicators {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 10;
 }
 
-.split-container p {
-  font-size: 1.1rem;
-  line-height: 1.6;
+.slider-indicators .dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.slider-indicators .dot.active {
+  background: rgba(255, 255, 255, 1);
 }
 
 /* MOBILE */
@@ -63,8 +104,7 @@
   }
 
   .right-panel {
-    background-size: cover;
-    background-position: center;
+    height: 300px; /* adjust for mobile */
   }
 }
 
