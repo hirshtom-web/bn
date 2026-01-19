@@ -213,7 +213,6 @@
 }
 
 
-/* COLUMN-SECTION */
 /* --------------------------
   TWO-COLUMN SECTION
 --------------------------- */
@@ -221,6 +220,8 @@
   display: flex;
   gap: 2rem;
   align-items: stretch; /* ensures both columns are same height */
+  font-family: 'Arial', sans-serif; /* global font for this section */
+  color: #222; /* default text color */
 }
 
 /* --------------------------
@@ -239,8 +240,33 @@
   flex-direction: column;
   justify-content: center; /* vertical centering */
   padding-left: 8rem;      /* pushes text toward center */
-  padding-right: 2rem;     /* optional right padding */
-  box-sizing: border-box;  /* include padding in width */
+  padding-right: 2rem;
+  box-sizing: border-box;
+}
+
+/* --------------------------
+  TYPOGRAPHY
+--------------------------- */
+.content-column h2 {
+  font-size: 2.25rem;       /* headline size */
+  font-weight: 700;         /* bold */
+  line-height: 1.2;         /* tighter for headings */
+  margin: 0 0 1rem 0;       /* spacing below heading */
+}
+
+.content-column p {
+  font-size: 1.125rem;      /* paragraph size */
+  line-height: 1.6;         /* readable line height */
+  margin: 0 0 1.25rem 0;    /* spacing between paragraphs */
+}
+
+.icon-text {
+  font-size: 1rem;          /* icon text size */
+  line-height: 1.4;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1rem;
 }
 
 /* limit line length for readability */
@@ -261,17 +287,7 @@
   width: 100%;
   height: auto;
   display: block;
-  object-fit: cover;       /* ensures image fills the column nicely */
-}
-
-/* --------------------------
-  ICON ROW
---------------------------- */
-.icon-text {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  margin-top: 1rem;
+  object-fit: cover;
 }
 
 /* --------------------------
@@ -295,5 +311,18 @@
 
   .content-column > * {
     max-width: 100%;
+  }
+
+  /* Responsive text sizes */
+  .content-column h2 {
+    font-size: 32px;
+  }
+
+  .content-column p {
+    font-size: 16px;
+  }
+
+  .icon-text {
+    font-size: 16px;
   }
 }
