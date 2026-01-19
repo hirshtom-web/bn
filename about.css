@@ -211,3 +211,39 @@
     font-size: 24px;
   }
 }
+
+
+.two-column-section {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.column {
+  flex: 1;
+}
+
+.image-column img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.icon-text {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* Mobile layout */
+@media (max-width: 768px) {
+  .two-column-section {
+    flex-direction: column;
+  }
+}
