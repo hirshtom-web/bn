@@ -1,11 +1,12 @@
 /* OUTER CONTAINER */
 .split-container {
   display: flex;
-  border-radius: 28px;   /* rounded OUTSIDE corners */
-  overflow: hidden;     /* clips inner panels */
-  margin: 4rem auto;
-  min-height: 300px;
-    padding: 50px;
+  border-radius: 28px;       /* rounded corners */
+  overflow: hidden;          /* clip inner panels */
+  margin: 50px;              /* 50px all around */
+  min-height: 500px;         /* minimum height */
+  padding: 0;                /* inner padding handled by panels */
+  box-sizing: border-box;
 }
 
 /* LEFT PANEL (RED) */
@@ -13,7 +14,10 @@
   flex: 1;
   background: #c62828;
   color: white;
-  padding: 3rem;
+  padding: 3rem;             /* inner padding for content */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   /* vertically center text */
 }
 
 /* RIGHT PANEL (PINK) */
@@ -21,7 +25,10 @@
   flex: 1;
   background: #f48fb1;
   color: #222;
-  padding: 3rem;
+  padding: 3rem;             /* inner padding for content */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   /* vertically center text */
 }
 
 /* OPTIONAL TYPOGRAPHY */
@@ -41,6 +48,7 @@
     flex-direction: column;
   }
 }
+
 
 
 .about-page {
