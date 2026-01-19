@@ -152,61 +152,39 @@
 }
 
 /* ---------------- RESPONSIVE ---------------- */
-@media (max-width: 768px) {
-  .hero-split-container {
-    flex-direction: column;
-    min-height: auto;
-    margin: 20px;
-  }
-
-  .hero-left-panel {
-    padding: 20px;
-    height: auto;
-  }
-
-  .hero-slide img {
-    width: 110%;
-    height: 100%;
-  }
+/* Desktop default */
+.split-container {
+  display: flex;
+  border-radius: 28px;
+  overflow: hidden;
+  margin: 50px;
+  min-height: 600px;
+  position: relative;
+  box-sizing: border-box;
 }
 
-/* MOBILE HERO SVG SIZE */
-@media (max-width: 768px) {
-  .hero-left-shape {
-    position: relative;       /* allow normal flow */
-    width: 280px;             /* mobile width */
-    height: 420px;            /* mobile height */
-    transform: rotate(90deg); /* if you still want it rotated */
-    transform-origin: top left;
-    margin: 0 auto;           /* center horizontally */
-    z-index: 1;
-  }
-
-  .hero-content {
-    text-align: center;
-    max-width: 90%;
-    margin: auto;
-  }
-
-  .hero-right-panel {
-    height: 300px;
-  }
-}
-
-
-/* Hide mobile SVG by default, show desktop */
+/* Hero left shapes */
 .hero-left-shape.mobile-svg {
-  display: none;
+  display: none; /* mobile version hidden by default */
 }
 
 .hero-left-shape.desktop-svg {
-  display: block;
+  display: block; /* desktop version visible */
 }
 
-/* MOBILE LAYOUT */
+/* Hero content desktop */
+.hero-content {
+  position: relative;
+  z-index: 3;   /* above SVG */
+  max-width: 520px;
+  color: #f6f1e8;
+}
+
+/* MOBILE */
 @media (max-width: 768px) {
-  .hero-split-container {
-    flex-direction: column; /* stack vertically */
+  .split-container {
+    flex-direction: column; /* only stack on mobile */
+    align-items: center;    /* center children vertically */
   }
 
   /* Hide desktop SVG, show mobile SVG */
@@ -216,20 +194,22 @@
 
   .hero-left-shape.mobile-svg {
     display: block;
-    width: 280px;     /* your desired mobile size */
+    width: 280px;     
     height: 420px;
-    margin: 0 auto;   /* center it */
+    margin: 0 auto;   /* center horizontally */
   }
 
-  .hero-right-panel {
-    width: 100%;
-    height: 300px;
-    margin-top: 20px; /* spacing below mobile SVG */
-  }
-
+  /* Move hero content below the mobile SVG */
   .hero-content {
     text-align: center;
     max-width: 90%;
-    margin: auto;
+    margin: 20px auto 0 auto; /* spacing above and below */
+  }
+
+  /* Right panel slider full width below */
+  .hero-right-panel {
+    width: 100%;
+    height: 300px;
+    margin-top: 20px;
   }
 }
