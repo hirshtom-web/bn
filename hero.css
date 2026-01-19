@@ -192,3 +192,145 @@
     height: 300px;
   }
 }
+
+/* Default: show desktop, hide mobile */
+.hero-desktop-container {
+  display: block;
+}
+
+.hero-mobile-only {
+  display: none;
+}
+
+/* Mobile screens */
+@media (max-width: 768px) {
+  .hero-desktop-container {
+    display: none;  /* hide desktop */
+  }
+
+  .hero-mobile-only {
+    display: block; /* show mobile */
+  }
+}
+
+.hero-mobile-container {
+  display: flex;
+  flex-direction: column; /* vertical stack */
+  align-items: center;
+  padding: 20px;
+  background: #436b65;
+  color: #f6f1e8;
+  gap: 20px;
+}
+
+/* SVG on top */
+.hero-mobile-shape {
+  width: 280px;
+  height: 420px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Hero Text */
+.hero-mobile-content {
+  text-align: center;
+  max-width: 320px;
+}
+
+.hero-bubble {
+  display: inline-block;
+  background: rgba(31, 77, 58, 0.15);
+  padding: 6px 12px;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.hero-text {
+  font-size: 24px;
+  line-height: 1.4;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.hero-reviews-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.hero-reviews-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.hero-stars {
+  color: #FFD166;
+  font-size: 16px;
+}
+
+.hero-reviews-text {
+  font-size: 14px;
+}
+
+.hero-btn-small {
+  display: inline-block;
+  background: #f6f1e8;
+  color: #ce3641;
+  padding: 16px 28px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 16px;
+  text-decoration: none;
+  margin-top: 8px;
+}
+
+/* Slider */
+.hero-mobile-slider {
+  width: 100%;
+  max-width: 360px;
+  position: relative;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.hero-slide {
+  width: 100%;
+  display: none;
+}
+
+.hero-slide.active {
+  display: block;
+}
+
+.hero-slide img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+/* Dots */
+.hero-slider-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.hero-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+}
+
+.hero-dot.active {
+  background: rgba(255, 255, 255, 1);
+}
