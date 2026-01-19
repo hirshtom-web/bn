@@ -1,8 +1,8 @@
 /* OUTER CONTAINER */
 .split-container {
   display: flex;
-  border-radius: 28px;      /* outer rounding */
-  overflow: hidden;         /* clip edges */
+  border-radius: 28px;     /* rounded corners on left & right */
+  overflow: hidden;        /* clip children to rounded edges */
   max-width: 1100px;
   margin: 4rem auto;
   min-height: 300px;
@@ -14,22 +14,28 @@
   background: #c62828;
   color: white;
   padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-/* RIGHT PANEL WITH WAVY LEFT EDGE */
+/* RIGHT PANEL WITH WAVE IN THE MIDDLE */
 .right-panel {
   flex: 1;
   background: #f48fb1;
   color: #222;
   padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
-  /* THE WAVE */
+  /* Wavy left edge */
   clip-path: polygon(
-    0% 0%,   /* top left */
-    90% 0%,  /* top right before wave */
-    100% 50%, /* mid-right (wave tip) */
-    90% 100%, /* bottom right before wave */
-    0% 100%  /* bottom left */
+    0% 0%,       /* top-left */
+    85% 0%,      /* top before wave */
+    100% 50%,    /* wave tip in middle */
+    85% 100%,    /* bottom before wave */
+    0% 100%      /* bottom-left */
   );
 }
 
@@ -54,7 +60,6 @@
     clip-path: none;
   }
 }
-
 
 
 .about-page {
