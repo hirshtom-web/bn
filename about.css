@@ -220,12 +220,13 @@
   gap: 2rem;
 }
 
-.image-column {
+.column {
   flex: 1;
 }
 
-.content-column {
-  flex: 0 0 70%;
+/* Limit only the text width */
+.text-wrap {
+  max-width: 520px; /* ← adjust to taste */
 }
 
 /* Mobile */
@@ -234,8 +235,7 @@
     flex-direction: column;
   }
 
-  .content-column,
-  .image-column {
-    flex: 0 0 100%;
+  .text-wrap {
+    max-width: 100%;
   }
 }
