@@ -18,12 +18,12 @@
 
 /* SVG IMAGE */
 .left-shape {
-  width: calc(100% + 20px);  /* make it wider than left panel */
+  width: calc(100% + 40px);  /* make it wider than left panel */
   height: 100%;
   object-fit: cover;
   position: relative;
   left: 0;                    /* shift left if needed */
-  margin-right: -20px;        /* this creates exact 20px overlap into right panel */
+  margin-right: -40px;        /* this creates exact 20px overlap into right panel */
 }
 
 /* RIGHT PANEL (PINK) */
