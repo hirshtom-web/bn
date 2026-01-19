@@ -1,5 +1,5 @@
-/* OUTER CONTAINER */
-.split-container {
+/* ================= HERO SPLIT CONTAINER ================= */
+.hero-split-container {
   display: flex;
   border-radius: 28px;
   overflow: hidden;
@@ -9,31 +9,31 @@
   box-sizing: border-box;
 }
 
-/* LEFT PANEL (SVG) */
-.left-panel {
+/* ---------------- LEFT HERO PANEL ---------------- */
+.hero-left-panel {
   flex: 1;
   position: relative;
   z-index: 2;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding: 50px; /* 50px margin all around */
+  padding: 50px;
 }
 
-.left-shape {
+.hero-left-shape {
   position: absolute;
   top: 0;
   left: 0;
   width: 110%;  /* overlap right panel */
   height: 100%;
   object-fit: cover;
-  z-index: 1;   /* behind text */
+  z-index: 1;
 }
 
-/* HERO TEXT OVER SVG */
+/* HERO CONTENT */
 .hero-content {
   position: relative;
-  z-index: 3;   /* above SVG */
+  z-index: 3;
   max-width: 520px;
   color: #f6f1e8;
 }
@@ -48,77 +48,65 @@
   font-size: 10px;
 }
 
-.hero-content p {
+.hero-text {
   font-size: 56px;
   line-height: 1.2;
   font-weight: 700;
   margin-top: 20px;
 }
 
-.reviews-block {
+.hero-reviews-block {
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
 
-.reviews-row {
+.hero-reviews-row {
   display: flex;
   align-items: center;
   gap: 12px;
 }
 
-.stars {
+.hero-stars {
   color: #f6f1e8;
   font-size: 20px;
 }
 
-.reviews-text {
+.hero-reviews-text {
   font-size: 18px;
   color: #f6f1e8;
 }
 
-.btn-small {
+.hero-btn-small {
   display: inline-block;
   background: #f6f1e8;
   color: #ce3641;
-  padding: 16px 28px;   /* ↑ bigger top/bottom & left/right */
+  padding: 16px 28px;
   border-radius: 999px;
   font-weight: 700;
-  font-size: 18px;      /* ↑ bigger text */
+  font-size: 18px;
   text-decoration: none;
-  margin-top: 12px;     /* optional extra spacing */
+  margin-top: 12px;
 }
 
-
-/* RIGHT PANEL SLIDER */
-/* Move indicators out of slider clipping */
-.right-panel {
+/* ---------------- RIGHT HERO PANEL ---------------- */
+.hero-right-panel {
   flex: 1;
-  position: relative;  /* ensure child absolute positioning is relative to panel */
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: visible;   /* <--- key: allow dots to show outside slider */
+  overflow: visible;
 }
 
-.slider-indicators {
-  position: absolute;
-  bottom: 15px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 10px;
-  z-index: 10;         /* make sure dots are on top */
-}
-
-.slider {
+.hero-slider {
   width: 100%;
   height: 100%;
   position: relative;
   overflow: hidden;
 }
 
-.slide {
+.hero-slide {
   position: absolute;
   top: 0;
   left: 0;
@@ -128,21 +116,29 @@
   transition: opacity 0.8s ease-in-out;
 }
 
-.slide.active {
+.hero-slide.active {
   opacity: 1;
   z-index: 1;
 }
 
-.slide img {
-  width: 100%;
+.hero-slide img {
+  width: 110%;   /* slider extends a bit for overlap */
   height: 100%;
   object-fit: cover;
 }
 
-/* Slider balls */
+/* Slider dots */
+.hero-slider-indicators {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
 
-
-.slider-indicators .dot {
+.hero-slider-indicators .hero-dot {
   width: 12px;
   height: 12px;
   border-radius: 50%;
@@ -151,57 +147,33 @@
   transition: background 0.3s;
 }
 
-.slider-indicators .dot.active {
+.hero-slider-indicators .hero-dot.active {
   background: rgba(255, 255, 255, 1);
 }
 
-/* MOBILE */
+/* ---------------- RESPONSIVE ---------------- */
 @media (max-width: 768px) {
-  .split-container {
+  .hero-split-container {
     flex-direction: column;
-  }
-
-  .left-shape {
-    position: relative;
-    width: 100%;
-    z-index: 1;
-  }
-
-  .hero-content {
-    text-align: center;
-    max-width: 90%;
-    margin: auto;
-  }
-
-  .right-panel {
-    height: 300px;
-  }
-}
-
-
-@media (max-width: 768px) {
-
-  .split-container {
-    flex-direction: column;
-    min-height: auto;       /* allow container height to adjust */
+    min-height: auto;
     margin: 20px;
   }
 
-  .left-panel {
+  .hero-left-panel {
     padding: 20px;
     height: auto;
   }
 
-  /* Rotate SVG 90deg but center it nicely */
-  .left-shape {
-    position: absolute;           /* keep overlapping the slider */
+  /* Rotate SVG on mobile and center */
+  .hero-left-shape {
+    position: absolute;
     top: 0;
-    left: 50%;                    /* center horizontally */
+    left: 50%;
     transform: rotate(90deg) translateX(-50%);
     transform-origin: center;
-    width: 100%;                  /* full width of mobile viewport */
-    height: auto;                 /* maintain aspect ratio */
-    max-height: 300px;            /* optional limit */
+    width: 100%;
+    height: auto;
+    max-height: 300px;
     z-index: 1;
   }
 
@@ -213,9 +185,12 @@
     margin: 20px auto 0 auto;
   }
 
-  .right-panel {
-    height: 250px;                /* reduce slider height on mobile */
+  .hero-right-panel {
+    height: 250px;
+  }
+
+  .hero-slide img {
+    width: 110%;
+    height: 100%;
   }
 }
-
-
