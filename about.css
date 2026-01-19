@@ -230,6 +230,10 @@
   max-width: 520px; /* ← adjust (480–640px works well) */
 }
 
+.content-column h2,{
+margin-top: 100px;
+}
+
 /* Image */
 .image-column img {
   width: 100%;
