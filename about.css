@@ -1,32 +1,14 @@
-/* SECTION */
-.main-section {
-  padding: 4rem;
-}
-
-/* OUTER CONTAINER (ROUNDED CORNERS ONLY HERE) */
-/* OUTER CONTAINER */
+/* OUTER CONTAINER — REAL ROUNDING */
 .container {
   display: flex;
   position: relative;
   border-radius: 28px;
-  overflow: hidden;
+  overflow: hidden; /* HARD CLIP */
   min-height: 420px;
+  background: transparent;
 }
 
-/* WAVY DIVIDER — VERTICAL */
-.wave-divider {
-  position: absolute;
-  top: 0;
-  left: calc(45% - 40px); /* position between panels */
-  width: 80px;
-  height: 100%;
-  fill: #c62828;
-  pointer-events: none;
-  z-index: 3;
-}
-
-
-/* LEFT (RED) */
+/* LEFT PANEL */
 .left {
   flex: 0.9;
   background: #c62828;
@@ -37,11 +19,25 @@
   justify-content: center;
 }
 
-/* RIGHT (MEDIA) */
+/* WAVE SEAM (THE FIX) */
+.wave-seam {
+  width: 70px;              /* controls wave thickness */
+  background: #c62828;      /* matches left panel */
+  flex-shrink: 0;
+}
+
+.wave-seam svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  fill: #c62828;
+}
+
+/* RIGHT PANEL */
 .right {
   flex: 1.1;
   position: relative;
-  background: #000;
+  background: transparent; /* REMOVE BLACK */
 }
 
 /* SLIDER */
@@ -55,7 +51,7 @@
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover;  /* FILL COLUMN */
   opacity: 0;
   transition: opacity 0.5s ease;
 }
@@ -86,14 +82,13 @@
   background: white;
 }
 
-
 /* MOBILE */
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
   }
 
-  .wave-divider {
+  .wave-seam {
     display: none;
   }
 }
