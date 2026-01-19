@@ -5,25 +5,26 @@
   overflow: hidden;          /* clips outer corners */
   margin: 50px;              
   min-height: 500px;         
-  position: relative;        /* needed for absolute SVG */
+  position: relative;        
   box-sizing: border-box;
 }
 
-/* LEFT PANEL (RED replaced by SVG) */
+/* LEFT PANEL */
 .left-panel {
   flex: 1;
-  position: relative;        /* for positioning SVG inside */
+  position: relative;        
+  z-index: 2;                /* put left panel above right panel */
 }
 
 /* SVG IMAGE */
 .left-shape {
-  position: absolute;        /* allow it to overflow freely */
+  position: absolute;        
   top: 0;
   left: 0;
   width: 105%;               /* 5% overlap into right panel */
   height: 100%;
   object-fit: cover;
-  z-index: 1;                /* behind content if needed */
+  z-index: 3;                /* make sure SVG is on top */
 }
 
 /* RIGHT PANEL (PINK) */
@@ -35,8 +36,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  position: relative;        /* keep above SVG */
-  z-index: 2;                /* ensures text not hidden */
+  position: relative;        
+  z-index: 1;                /* below SVG */
 }
 
 /* TYPOGRAPHY */
@@ -59,8 +60,10 @@
   .left-shape {
     position: relative;
     width: 100%;
+    z-index: 2;
   }
 }
+
 
 
 
