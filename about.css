@@ -12,17 +12,18 @@
 /* LEFT PANEL (SVG) */
 .left-panel {
   flex: 1;
-  position: relative;        /* needed for overlap */
+  position: relative;
   overflow: visible;         /* allow SVG to overflow into right panel */
 }
 
 /* SVG IMAGE */
 .left-shape {
-  width: 120%;               /* bigger than panel to overlap */
+  width: calc(100% + 20px);  /* make it wider than left panel */
   height: 100%;
   object-fit: cover;
   position: relative;
-  left: -20%;                /* shift left so it overlaps pink */
+  left: 0;                    /* shift left if needed */
+  margin-right: -20px;        /* this creates exact 20px overlap into right panel */
 }
 
 /* RIGHT PANEL (PINK) */
@@ -55,7 +56,7 @@
 
   .left-shape {
     width: 100%;
-    left: 0;
+    margin-right: 0;  /* no overlap on mobile */
   }
 }
 
