@@ -9,35 +9,34 @@
   box-sizing: border-box;
 }
 
-/* LEFT PANEL */
+/* LEFT PANEL (SVG) */
 .left-panel {
   flex: 1;
   position: relative;        
-  z-index: 2;                /* put left panel above right panel */
+  z-index: 2;
 }
 
-/* SVG IMAGE */
 .left-shape {
   position: absolute;        
   top: 0;
   left: 0;
-  width: 110%;               /* 5% overlap into right panel */
+  width: 110%;               /* overlap right panel */
   height: 100%;
   object-fit: cover;
-  z-index: 3;                /* make sure SVG is on top */
+  z-index: 3;
 }
 
-/* RIGHT PANEL (PINK) */
+/* RIGHT PANEL (IMAGE) */
 .right-panel {
   flex: 1;
-  background: #f48fb1;
-  color: #222;
+  background: url("https://static.wixstatic.com/media/1799ca_dbf46c45e6ba46728df20bebbbcc3af0~mv2.png") center/cover no-repeat;
+  color: white;              /* adjust text color if needed */
   padding: 3rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   position: relative;        
-  z-index: 1;                /* below SVG */
+  z-index: 1;
 }
 
 /* TYPOGRAPHY */
@@ -62,7 +61,13 @@
     width: 100%;
     z-index: 2;
   }
+
+  .right-panel {
+    background-size: cover;
+    background-position: center;
+  }
 }
+
 
 
 
