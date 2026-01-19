@@ -1,96 +1,22 @@
-/* OUTER CONTAINER — REAL ROUNDING */
-.container {
-  display: flex;
-  position: relative;
-  border-radius: 28px;
-  overflow: hidden; /* HARD CLIP */
-  min-height: 420px;
-  background: transparent;
-}
-
-/* LEFT PANEL */
-.left {
-  flex: 0.9;
-  background: #c62828;
+.red-container {
+  background-color: #c62828; /* red */
+  border-radius: 28px;       /* rounded corners */
+  padding: 3rem 4rem;        /* inner spacing */
   color: white;
-  padding: 4rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  max-width: 1100px;         /* optional */
+  margin: 4rem auto;         /* center on page */
+  box-sizing: border-box;
 }
 
-/* WAVE SEAM (THE FIX) */
-.wave-seam {
-  width: 70px;              /* controls wave thickness */
-  background: #c62828;      /* matches left panel */
-  flex-shrink: 0;
+/* Typography (optional) */
+.red-container h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
-.wave-seam svg {
-  width: 100%;
-  height: 100%;
-  display: block;
-  fill: #c62828;
-}
-
-/* RIGHT PANEL */
-.right {
-  flex: 1.1;
-  position: relative;
-  background: transparent; /* REMOVE BLACK */
-}
-
-/* SLIDER */
-.slider {
-  position: absolute;
-  inset: 0;
-}
-
-.slide {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;  /* FILL COLUMN */
-  opacity: 0;
-  transition: opacity 0.5s ease;
-}
-
-.slide.active {
-  opacity: 1;
-}
-
-/* DOTS */
-.dots {
-  position: absolute;
-  bottom: 1.5rem;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  gap: 0.6rem;
-  z-index: 2;
-}
-
-.dot {
-  width: 10px;
-  height: 10px;
-  background: rgba(255,255,255,0.5);
-  border-radius: 50%;
-}
-
-.dot.active {
-  background: white;
-}
-
-/* MOBILE */
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-  }
-
-  .wave-seam {
-    display: none;
-  }
+.red-container p {
+  font-size: 1.1rem;
+  line-height: 1.6;
 }
 
 
