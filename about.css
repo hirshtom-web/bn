@@ -35,7 +35,7 @@
   position: relative;
   z-index: 3;   /* above SVG */
   max-width: 520px;
-  color: #fff;
+  color: #f6f1e8;
 }
 
 .hero-bubble {
@@ -74,7 +74,7 @@
 
 .reviews-text {
   font-size: 18px;
-  color: #fff;
+  color: #f6f1e8;
 }
 
 .btn-small {
