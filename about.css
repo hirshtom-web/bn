@@ -88,13 +88,24 @@
 }
 
 /* RIGHT PANEL SLIDER */
+/* Move indicators out of slider clipping */
 .right-panel {
   flex: 1;
-  position: relative;
-  z-index: 1;
+  position: relative;  /* ensure child absolute positioning is relative to panel */
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: visible;   /* <--- key: allow dots to show outside slider */
+}
+
+.slider-indicators {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 10;         /* make sure dots are on top */
 }
 
 .slider {
@@ -126,14 +137,7 @@
 }
 
 /* Slider balls */
-.slider-indicators {
-  position: absolute;
-  bottom: 15px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 10px;
-}
+
 
 .slider-indicators .dot {
   width: 12px;
