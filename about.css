@@ -177,6 +177,23 @@
 }
 
 
+@media (max-width: 768px) {
+  .left-shape {
+    position: relative;
+    width: 100%;
+    height: auto;      /* allow height to adjust after rotation */
+    transform: rotate(90deg);
+    transform-origin: top left; /* pivot point for rotation */
+    margin: 0 auto;    /* center it horizontally */
+    z-index: 1;
+  }
+
+  .hero-content {
+    text-align: center;
+    max-width: 90%;
+    margin: auto;
+  }
+}
 
 
 
