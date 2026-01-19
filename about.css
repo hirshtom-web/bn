@@ -229,14 +229,17 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  /* column spacing (where text starts) */
+  padding-left: 4rem;
+  padding-right: 2rem;
 }
 
-/* Readable width */
-.content-column h2,
-.content-column p,
-.content-column .icon-text {
+/* readable line length */
+.content-column > * {
   max-width: 520px;
 }
+
 
 /* IMAGE COLUMN */
 .image-column {
@@ -264,13 +267,13 @@
   }
 
   .content-column {
-    justify-content: flex-start;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 
-  .content-column h2,
-  .content-column p,
-  .content-column .icon-text {
+  .content-column > * {
     max-width: 100%;
   }
 }
+
 
