@@ -4,7 +4,7 @@
   border-radius: 28px;       
   overflow: hidden;          /* clips outer corners */
   margin: 50px;              
-  min-height: 500px;         
+  min-height: 600px;         
   position: relative;        
   box-sizing: border-box;
 }
@@ -21,7 +21,7 @@
   position: absolute;        
   top: 0;
   left: 0;
-  width: 105%;               /* 5% overlap into right panel */
+  width: 110%;               /* 5% overlap into right panel */
   height: 100%;
   object-fit: cover;
   z-index: 3;                /* make sure SVG is on top */
