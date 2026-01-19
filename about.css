@@ -180,22 +180,44 @@
 
 
 @media (max-width: 768px) {
+
+  .split-container {
+    flex-direction: column;
+    min-height: auto;       /* allow container height to adjust */
+    margin: 20px;
+  }
+
+  .left-panel {
+    padding: 20px;
+    height: auto;
+  }
+
+  /* Rotate SVG 90deg but center it nicely */
   .left-shape {
-    position: relative;
-    width: 100%;
-    height: auto;      /* allow height to adjust after rotation */
-    transform: rotate(90deg);
-    transform-origin: top left; /* pivot point for rotation */
-    margin: 0 auto;    /* center it horizontally */
+    position: absolute;           /* keep overlapping the slider */
+    top: 0;
+    left: 50%;                    /* center horizontally */
+    transform: rotate(90deg) translateX(-50%);
+    transform-origin: center;
+    width: 100%;                  /* full width of mobile viewport */
+    height: auto;                 /* maintain aspect ratio */
+    max-height: 300px;            /* optional limit */
     z-index: 1;
   }
 
   .hero-content {
+    position: relative;
+    z-index: 3;
     text-align: center;
     max-width: 90%;
-    margin: auto;
+    margin: 20px auto 0 auto;
+  }
+
+  .right-panel {
+    height: 250px;                /* reduce slider height on mobile */
   }
 }
+
 
 
 
