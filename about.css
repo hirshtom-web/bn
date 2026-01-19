@@ -214,7 +214,6 @@
 
 
 /* COLUMN-SECTION */
-
 .two-column-section {
   display: flex;
   gap: 2rem;
@@ -224,9 +223,26 @@
   flex: 1;
 }
 
-/* Limit only the text width */
-.text-wrap {
-  max-width: 520px; /* ← adjust to taste */
+/* Limit ONLY the readable text width */
+.content-column h2,
+.content-column p,
+.content-column .icon-text {
+  max-width: 520px; /* ← adjust (480–640px works well) */
+}
+
+/* Image */
+.image-column img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Icon row */
+.icon-text {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1rem;
 }
 
 /* Mobile */
@@ -235,7 +251,9 @@
     flex-direction: column;
   }
 
-  .text-wrap {
+  .content-column h2,
+  .content-column p,
+  .content-column .icon-text {
     max-width: 100%;
   }
 }
