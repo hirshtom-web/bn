@@ -4,13 +4,27 @@
 }
 
 /* OUTER CONTAINER (ROUNDED CORNERS ONLY HERE) */
+/* OUTER CONTAINER */
 .container {
   display: flex;
   position: relative;
   border-radius: 28px;
-  overflow: hidden; /* clips wave inside */
+  overflow: hidden;
   min-height: 420px;
 }
+
+/* WAVY DIVIDER — VERTICAL */
+.wave-divider {
+  position: absolute;
+  top: 0;
+  left: calc(45% - 40px); /* position between panels */
+  width: 80px;
+  height: 100%;
+  fill: #c62828;
+  pointer-events: none;
+  z-index: 3;
+}
+
 
 /* LEFT (RED) */
 .left {
@@ -72,16 +86,6 @@
   background: white;
 }
 
-/* WAVY DIVIDER (ONLY MIDDLE) */
-.wave-divider {
-  position: absolute;
-  left: calc(45% - 20px);
-  top: 0;
-  width: 80px;
-  height: 100%;
-  fill: #c62828;
-  pointer-events: none;
-}
 
 /* MOBILE */
 @media (max-width: 768px) {
