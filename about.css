@@ -3,9 +3,9 @@
   display: flex;
   border-radius: 28px;   /* rounded OUTSIDE corners */
   overflow: hidden;     /* clips inner panels */
-  max-width: 1100px;
   margin: 4rem auto;
   min-height: 300px;
+    padding: 30px;
 }
 
 /* LEFT PANEL (RED) */
