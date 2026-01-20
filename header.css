@@ -6,7 +6,7 @@
 /* Slider container - relative positioning */
 /* ================= TOP BAR ================= */
 .site-header .top-bar {
-  background: #ff0039;
+  background: #f6f1e8;
   color: #000;
   overflow: hidden;
   box-sizing: border-box;
@@ -89,8 +89,8 @@
 
 /* ================= MAIN HEADER ================= */
 .site-header .main-header {
-  background: #ce3641;
-  color: #fff;
+  background: #ff0039;
+  color: #f6f1e8;
   border-radius: 28px;
 
   /* OUTER spacing */
