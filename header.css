@@ -1,45 +1,5 @@
-/* ================= SITE HEADER SCOPE ================= */
-.site-header {
-  --beige: #f6f1e8;
-  --pink: #f5c3c7;
-  --green: #436b65;
-
-  font-family: Arial, sans-serif;
-}
-
 /* ================= TOP BAR ================= */
-.site-header .top-bar {
-  height: 50px;
-  background: var(--beige);
-  color: #000;
-  overflow: hidden;
-}
-
-/* Inner wrapper */
-.site-header .top-bar-inner {
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  font-size: 11px;
-}
-
-/* Slider container */
-.site-header .top-bar .slider {
-  position: relative;
-  width: 100%;
-  height: 40px;
-}
-
-/* Individual messages */
-
-.slider span:nth-child(1) { animation-delay: 0s; }
-.slider span:nth-child(2) { animation-delay: 2s; }
-.slider span:nth-child(3) { animation-delay: 4s; }
-.slider span:nth-child(4) { animation-delay: 6s; }
-.slider span:nth-child(5) { animation-delay: 8s; }
-
+/* Top-bar messages */
 .slider span {
   position: absolute;
   inset: 0;
@@ -51,12 +11,18 @@
   animation: fade-slide 10s infinite;
 }
 
+/* Delay for each message */
+.slider span:nth-child(1) { animation-delay: 0s; }
+.slider span:nth-child(2) { animation-delay: 2s; }
+.slider span:nth-child(3) { animation-delay: 4s; }
+.slider span:nth-child(4) { animation-delay: 6s; }
+.slider span:nth-child(5) { animation-delay: 8s; }
+
+/* Animation */
 @keyframes fade-slide {
-  0%   { opacity: 0; }
-  10%  { opacity: 1; }
-  30%  { opacity: 1; }
-  40%  { opacity: 0; }
-  100% { opacity: 0; }
+  0%, 19.99%   { opacity: 0; }
+  20%, 39.99%  { opacity: 1; }
+  40%, 100%    { opacity: 0; }
 }
 
 
