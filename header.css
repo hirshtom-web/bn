@@ -28,9 +28,7 @@
 .site-header .top-bar .slider {
   position: relative;
   width: 100%;
-  padding: 50px;
   height: 40px;
-  border-radius: 28px;
 }
 
 .site-header .top-bar .slider span {
@@ -63,12 +61,16 @@
   height: 40px;
   background: var(--pink);
   color: #fff;
-  padding: 0 20px; /* 20px from edges */
+  position: relative;
+  width: 100%;
+  padding: 50px;
+  border-radius: 28px;
 }
 
 .site-header .header-inner {
   height: 100%;
   display: grid;
+  padding: 50px;
   grid-template-columns: 1fr auto 1fr;
   align-items: center; /* vertical center in the grid */
 }
