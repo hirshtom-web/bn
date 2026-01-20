@@ -103,9 +103,19 @@
 }
 
 /* Center */
-.site-header .header-center {
+.header-center {
+  display: flex;
+  align-items: center;
   justify-content: center;
+  white-space: nowrap;
 }
+
+/* Logo size */
+.header-logo {
+  height: 40px; /* adjust as needed */
+  width: auto;
+}
+
 
 /* Right */
 .site-header .header-right {
