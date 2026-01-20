@@ -3,6 +3,12 @@
 
 }
 
+@media (min-width: 624px) {
+  .product-page {
+  padding: 10px;
+  }
+}
+
 .product-grid {
   display: grid;
   grid-template-columns: 1.1fr 1fr;
