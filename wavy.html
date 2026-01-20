@@ -1,0 +1,32 @@
+<section class="wavy-section">
+  <svg
+    viewBox="0 0 1440 120"
+    preserveAspectRatio="none"
+    class="wave-svg"
+  >
+    <defs>
+      <path
+        id="wavePath"
+        d="M0,60 C240,20 480,100 720,60 960,20 1200,100 1440,60"
+      />
+    </defs>
+
+    <!-- Text following the wave -->
+    <text class="wave-text">
+      <textPath href="#wavePath" startOffset="50%" text-anchor="middle">
+        FREE SHIPPING ON ORDERS OVER $75 • FREE SHIPPING ON ORDERS OVER $75
+      </textPath>
+    </text>
+
+    <!-- Wave shape -->
+    <path
+      d="M0,60 C240,20 480,100 720,60 960,20 1200,100 1440,60 L1440,120 L0,120 Z"
+      fill="#f47c20"
+    />
+  </svg>
+
+  <div class="wavy-content">
+    <h2>Your Section Content</h2>
+    <p>This content sits below the wave.</p>
+  </div>
+</section>
