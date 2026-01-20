@@ -458,16 +458,16 @@ h1, h2, h3 {
   }
 }
 
-
-/* Beige-on-orange theme */
+/* All text and icons in beige */
 .beige-on-orange {
-  color: #f6f1e8;
+  color: #f6f1e8; /* beige */
 }
 
 /* Headings */
 .beige-on-orange h2,
 .beige-on-orange h4 {
   color: #f6f1e8;
+  font-weight: 700;
 }
 
 /* Paragraphs */
@@ -482,8 +482,37 @@ h1, h2, h3 {
   font-size: 48px;
 }
 
-/* Optional: card spacing polish */
+/* Cards */
 .beige-on-orange .benefit-card {
   text-align: center;
   padding: 20px;
+  /* transparent background (orange shows through) */
+  background: transparent;
+  border-radius: 0; /* optional: remove card shape if not needed */
+}
+
+/* Grid spacing */
+.beige-on-orange .benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
+
+/* Container padding */
+.beige-on-orange .about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Mobile adjustments */
+@media (max-width: 600px) {
+  .beige-on-orange .benefit-card {
+    padding: 16px;
+  }
+
+  .beige-on-orange .benefits-grid {
+    gap: 16px;
+  }
 }
