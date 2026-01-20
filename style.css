@@ -204,7 +204,7 @@ h1, h2, h3 {
 
 .faq-container h2 {
   margin-bottom: 40px;
-  font-size: 2rem;
+  font-size: 35px;
   font-weight: 700;
   color: #333;
 }
@@ -250,14 +250,14 @@ h1, h2, h3 {
   font-size: 0.95rem;
   transition: max-height 0.3s ease, padding 0.3s ease;
   color: #c60034;
-  text-align: center; /* center the answer text */
+  text-align: left;
 }
 
 .faq-item.open .faq-answer {
   max-height: 500px; /* enough for most answers */
   padding-top: 8px;
   color: #c60034;
-  text-align: center; /* center the answer text */
+  text-align: left;
 }
 
 /* ---------------- STICKY BUY ---------------- */
