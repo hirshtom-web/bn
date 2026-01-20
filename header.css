@@ -4,58 +4,58 @@
 }
 
 /* Slider container - relative positioning */
+/* Top bar slider wrapper */
 .site-header .top-bar .top-bar-slider {
   position: relative;
   width: 100%;
   max-width: 800px;
-  height: 40px;
   margin: 0 auto;
-  overflow: hidden;  /* hide overflowing text */
-}
-
-/* Individual messages */
-.site-header .top-bar .top-bar-slider span {
-  position: absolute;       /* stay on top of each other */
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%); /* center horizontally */
+  overflow: hidden;
+  height: 40px; /* fixed height for desktop */
   display: flex;
-  justify-content: center;
   align-items: center;
-  white-space: nowrap;
-  opacity: 0;
+  justify-content: center;
   font-size: 11px;
-  line-height: 1.2;
-  padding: 0 5px;
-  box-sizing: border-box;
-  animation: fade-slide 10s infinite;
 }
 
-/* Delays */
-.top-bar-slider span:nth-child(1) { animation-delay: 0s; }
-.top-bar-slider span:nth-child(2) { animation-delay: 2s; }
-.top-bar-slider span:nth-child(3) { animation-delay: 4s; }
-.top-bar-slider span:nth-child(4) { animation-delay: 6s; }
-.top-bar-slider span:nth-child(5) { animation-delay: 8s; }
-
-/* Fade animation */
-@keyframes fade-slide {
-  0%, 19.99%   { opacity: 0; }
-  20%, 39.99%  { opacity: 1; }
-  40%, 100%    { opacity: 0; }
+/* Slider track: holds all messages in a column */
+.top-bar-slider .slider-track {
+  display: flex;
+  flex-direction: column; /* stack messages */
+  animation: slide-fade 10s infinite;
 }
 
-/* Mobile fix: make slider height auto */
+/* Each message */
+.top-bar-slider .slider-track span {
+  height: 40px; /* match container height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+}
+
+/* Animation keyframes: fade in/out one by one */
+@keyframes slide-fade {
+  0%, 19.99%   { transform: translateY(0); }
+  20%, 39.99%  { transform: translateY(-40px); } /* move up one message */
+  40%, 59.99%  { transform: translateY(-80px); }
+  60%, 79.99%  { transform: translateY(-120px); }
+  80%, 99.99%  { transform: translateY(-160px); }
+  100%         { transform: translateY(0); }
+}
+
+/* Mobile responsive: stack naturally, no animation */
 @media screen and (max-width: 600px) {
   .site-header .top-bar .top-bar-slider {
-    height: auto;       /* allow text to wrap */
+    height: auto;
   }
-  .site-header .top-bar .top-bar-slider span {
-    position: relative; /* stack naturally */
-    left: auto;
-    transform: none;
-    opacity: 1;         /* always visible, just stacked */
+  .top-bar-slider .slider-track {
+    flex-direction: column;
     animation: none;
+  }
+  .top-bar-slider .slider-track span {
+    opacity: 1;
+    height: auto;
     margin-bottom: 5px;
   }
 }
