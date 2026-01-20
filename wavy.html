@@ -1,32 +1,39 @@
-<section class="wavy-section">
+<section class="orange-wave">
+  <!-- Wave cutout -->
   <svg
+    class="wave-top"
     viewBox="0 0 1440 120"
     preserveAspectRatio="none"
-    class="wave-svg"
+  >
+    <path
+      d="M0,60 C240,20 480,100 720,60 960,20 1200,100 1440,60 L1440,0 L0,0 Z"
+      fill="#fff"
+    />
+  </svg>
+
+  <!-- Wave text -->
+  <svg
+    class="wave-text-svg"
+    viewBox="0 0 1440 120"
+    preserveAspectRatio="none"
   >
     <defs>
       <path
-        id="wavePath"
+        id="waveTextPath"
         d="M0,60 C240,20 480,100 720,60 960,20 1200,100 1440,60"
       />
     </defs>
 
-    <!-- Text following the wave -->
     <text class="wave-text">
-      <textPath href="#wavePath" startOffset="50%" text-anchor="middle">
-        FREE SHIPPING ON ORDERS OVER $75 • FREE SHIPPING ON ORDERS OVER $75
+      <textPath href="#waveTextPath" startOffset="50%" text-anchor="middle">
+        FREE SHIPPING • FREE RETURNS • SHOP NOW
       </textPath>
     </text>
-
-    <!-- Wave shape -->
-    <path
-      d="M0,60 C240,20 480,100 720,60 960,20 1200,100 1440,60 L1440,120 L0,120 Z"
-      fill="#f47c20"
-    />
   </svg>
 
-  <div class="wavy-content">
-    <h2>Your Section Content</h2>
-    <p>This content sits below the wave.</p>
+  <!-- Content -->
+  <div class="orange-content">
+    <h2>Orange Section</h2>
+    <p>This section has a wavy top edge.</p>
   </div>
 </section>
