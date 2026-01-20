@@ -59,7 +59,7 @@
 /* ================= MAIN HEADER (PINK – STATIC) ================= */
 .site-header .main-header {
   height: 40px;
-  background: var(--pink);
+  background: #ce3641;
   color: #fff;
   position: relative;
   width: 100%;
