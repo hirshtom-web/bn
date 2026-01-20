@@ -369,3 +369,47 @@
   gap: 6px;
 }
 
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;  /* container width */
+  margin: 0 auto;    /* center on page */
+  overflow: hidden;
+  border-radius: 10px; /* optional rounded corners */
+}
+
+/* Make video responsive */
+.video-element {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Play button overlay */
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  color: white;
+  background: rgba(0,0,0,0.5);
+  border: none;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s;
+}
+
+.play-button:hover {
+  background: rgba(0,0,0,0.7);
+}
+
+/* Hide button when playing */
+.video-element.playing + .play-button {
+  display: none;
+}
