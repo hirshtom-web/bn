@@ -7,7 +7,6 @@
   font-family: Arial, sans-serif;
 }
 
-/* ================= TOP BAR SLIDER – FIXED POSITION ================= */
 /* ================= TOP BAR ================= */
 .site-header .top-bar {
   height: 50px;
@@ -112,7 +111,7 @@
 
 /* Logo size */
 .header-logo {
-  height: 40px; /* adjust as needed */
+  height: 30px; /* adjust as needed */
   width: auto;
 }
 
