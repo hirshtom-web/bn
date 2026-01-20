@@ -549,3 +549,14 @@ h1, h2, h3 {
   .beige-on-orange .benefit-card { padding: 16px; }
   .beige-on-orange .benefits-grid { gap: 16px; }
 }
+
+.swiper-container {
+  padding: 40px 0;
+}
+
+.swiper-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: transparent;  /* so orange shows through */
+}
