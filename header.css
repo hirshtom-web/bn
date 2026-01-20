@@ -1,14 +1,32 @@
 /* ================= SITE HEADER SCOPE ================= */
 .site-header {
-  --beige: #f6f1e8;
-  --pink: #f5c3c7;
-  --green: #436b65;
-
   font-family: Arial, sans-serif;
 }
 
 /* ================= TOP BAR ================= */
 /* Top-bar messages */
+.site-header .top-bar {
+  height: 50px;
+  background: #f6f1e8;
+  color: #000;
+  overflow: hidden;
+}
+
+.site-header .top-bar-inner {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  font-size: 11px;
+}
+
+.site-header .top-bar .slider {
+  position: relative;
+  width: 100%;
+  height: 40px;
+}
+
 .slider span {
   position: absolute;
   inset: 0;
