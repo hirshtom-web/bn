@@ -199,7 +199,7 @@ h1, h2, h3 {
 .faq-container {
   width: 100%;
   max-width: 600px;
-  text-align: center; /* centers the heading and FAQ items */
+  text-align: center; /* centers heading and FAQ items */
 }
 
 .faq-container h2 {
@@ -218,6 +218,7 @@ h1, h2, h3 {
   cursor: pointer;
   transition: background 0.3s;
   color: #c60034;
+  text-align: center; /* center all text inside the card */
 }
 
 .faq-item:hover {
@@ -230,6 +231,7 @@ h1, h2, h3 {
   justify-content: space-between;
   align-items: center;
   color: #c60034;
+  text-align: center; /* ensures question text is centered */
 }
 
 .faq-toggle {
@@ -248,12 +250,14 @@ h1, h2, h3 {
   font-size: 0.95rem;
   transition: max-height 0.3s ease, padding 0.3s ease;
   color: #c60034;
+  text-align: center; /* center the answer text */
 }
 
 .faq-item.open .faq-answer {
   max-height: 500px; /* enough for most answers */
   padding-top: 8px;
- color: #c60034;
+  color: #c60034;
+  text-align: center; /* center the answer text */
 }
 
 /* ---------------- STICKY BUY ---------------- */
