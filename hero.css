@@ -157,57 +157,8 @@
   background: rgba(255, 255, 255, 1);
 }
 
-/* ---------------- RESPONSIVE ---------------- */
 @media (max-width: 768px) {
   .hero-split-container {
-    flex-direction: column;
-    min-height: auto;
-    margin: 20px;
-  }
-
-  .hero-left-panel {
-    padding: 20px;
-    height: auto;
-  }
-
-  .hero-slide img {
-    width: 110%;
-    height: 100%;
-  }
-  .hero-btn-small {
-  align-self: center;
-}
-}
-
-/* MOBILE HERO SVG SIZE */
-@media (max-width: 768px) {
-  .hero-left-shape {
-    position: relative;       /* allow normal flow */
-    width: 280px;             /* mobile width */
-    height: 420px;            /* mobile height */
-    transform: rotate(90deg); /* if you still want it rotated */
-    transform-origin: top left;
-    margin: 0 auto;           /* center horizontally */
-    z-index: 1;
-  }
-
-  .hero-content {
-    text-align: center;
-    max-width: 90%;
-    margin: auto;
-  }
-
-  .hero-right-panel {
-    height: 300px;
+    display: none;
   }
 }
-
-/* Default: show desktop, hide mobile */
-.hero-desktop-container {
-  display: block;
-}
-
-.hero-mobile-only {
-  display: none;
-}
-
