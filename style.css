@@ -192,26 +192,58 @@ h1, h2, h3 {
 /* ---------------- FAQ ---------------- */
 .faq-section {
   background: #fff;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.faq-container {
+  width: 100%;
+  max-width: 600px;
 }
 
 .faq-item {
-  background: var(--card);
+  background: #f6f1e8; /* replace var(--card) with beige color */
   border-radius: 14px;
   margin-bottom: 12px;
   padding: 16px;
+  position: relative;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.faq-item:hover {
+  background: #f0e9dd;
 }
 
 .faq-question {
-  cursor: pointer;
   font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-toggle {
+  font-size: 24px;
+  transition: transform 0.3s;
+}
+
+.faq-item.open .faq-toggle {
+  transform: rotate(45deg); /* + turns into × */
 }
 
 .faq-answer {
-  display: none;
+  max-height: 0;
+  overflow: hidden;
   margin-top: 8px;
   font-size: 0.95rem;
+  transition: max-height 0.3s ease, padding 0.3s ease;
 }
 
+.faq-item.open .faq-answer {
+  max-height: 500px; /* enough for most answers */
+  padding-top: 8px;
+}
 
 /* ---------------- STICKY BUY ---------------- */
 .sticky-buy {
