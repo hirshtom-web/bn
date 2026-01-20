@@ -26,14 +26,14 @@
 }
 
 /* Slider container */
-.site-header .top-bar .slider {
+.site-header .top-bar .top-bar-slider {
   position: relative;
   width: 100%;
   height: 40px;          /* desktop fixed height for animation */
 }
 
 /* Individual slider messages */
-.site-header .top-bar .slider span {
+.site-header .top-bar .top-bar-slider span {
   position: absolute;    /* overlay for fading */
   inset: 0;
   display: flex;
@@ -48,11 +48,11 @@
 }
 
 /* Delay each message */
-.slider span:nth-child(1) { animation-delay: 0s; }
-.slider span:nth-child(2) { animation-delay: 2s; }
-.slider span:nth-child(3) { animation-delay: 4s; }
-.slider span:nth-child(4) { animation-delay: 6s; }
-.slider span:nth-child(5) { animation-delay: 8s; }
+.top-bar-slider span:nth-child(1) { animation-delay: 0s; }
+.top-bar-slider span:nth-child(2) { animation-delay: 2s; }
+.top-bar-slider span:nth-child(3) { animation-delay: 4s; }
+.top-bar-slider span:nth-child(4) { animation-delay: 6s; }
+.top-bar-slider span:nth-child(5) { animation-delay: 8s; }
 
 /* Fade animation */
 @keyframes fade-slide {
@@ -68,14 +68,14 @@
     padding: 5px 15px;
   }
 
-  .site-header .top-bar .slider {
+  .site-header .top-bar .top-bar-slider {
     height: auto;           /* remove fixed height */
     display: flex;          /* stack all messages vertically */
     flex-direction: column;
     gap: 2px;
   }
 
-  .site-header .top-bar .slider span {
+  .site-header .top-bar .top-bar-slider span {
     position: relative;     /* allow normal flow */
     inset: auto;
     opacity: 1;             /* always visible */
