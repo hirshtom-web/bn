@@ -457,3 +457,33 @@ h1, h2, h3 {
     margin-bottom: 24px;
   }
 }
+
+
+/* Beige-on-orange theme */
+.beige-on-orange {
+  color: #f6f1e8;
+}
+
+/* Headings */
+.beige-on-orange h2,
+.beige-on-orange h4 {
+  color: #f6f1e8;
+}
+
+/* Paragraphs */
+.beige-on-orange p {
+  color: #f6f1e8;
+  opacity: 0.9; /* softer body text */
+}
+
+/* Icons */
+.beige-on-orange .material-symbols-outlined {
+  color: #f6f1e8;
+  font-size: 48px;
+}
+
+/* Optional: card spacing polish */
+.beige-on-orange .benefit-card {
+  text-align: center;
+  padding: 20px;
+}
