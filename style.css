@@ -217,6 +217,7 @@ h1, h2, h3 {
   position: relative;
   cursor: pointer;
   transition: background 0.3s;
+  color: #c60034;
 }
 
 .faq-item:hover {
@@ -228,6 +229,7 @@ h1, h2, h3 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  color: #c60034;
 }
 
 .faq-toggle {
@@ -245,11 +247,13 @@ h1, h2, h3 {
   margin-top: 8px;
   font-size: 0.95rem;
   transition: max-height 0.3s ease, padding 0.3s ease;
+  color: #c60034;
 }
 
 .faq-item.open .faq-answer {
   max-height: 500px; /* enough for most answers */
   padding-top: 8px;
+ color: #c60034;
 }
 
 /* ---------------- STICKY BUY ---------------- */
