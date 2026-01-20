@@ -139,9 +139,9 @@
     display: none;
   }
 
-  /* Hide center on mobile */
-  .site-header .header-center {
-    display: none;
+  .header-logo {
+  height: 25px; /* adjust as needed */
+  width: auto;
   }
 
   /* Touch-friendly icons */
