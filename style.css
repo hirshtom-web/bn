@@ -202,7 +202,7 @@ h1, h2, h3 {
 }
 
 .faq-item {
-  background: #f6f1e8;
+  background: #f9dbca;
   border-radius: 14px;
   margin-bottom: 12px;
   padding: 16px;
@@ -212,7 +212,7 @@ h1, h2, h3 {
 }
 
 .faq-item:hover {
-  background: #f0e9dd;
+  background: #f7c6ad;
 }
 
 .faq-question {
