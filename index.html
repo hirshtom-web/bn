@@ -276,52 +276,44 @@
   
 
 <!-- FAQ -->
-<section class="container" id="faq">
-  <h2>Questions & Answers</h2>
 
-  <div class="faq-item">
-    <div class="faq-question">What age is Bubunany suitable for?</div>
-    <div class="faq-answer">
-      Bubunany is recommended for ages 3 and up. It’s designed to be safe, soft, and comforting — and often loved well beyond childhood.
+  <section class="faq-section">
+  <div class="faq-container">
+<h2>Questions & Answers</h2>
+    
+    <div class="faq-item">
+      <div class="faq-question">
+        What is your return policy?
+        <span class="faq-toggle">+</span>
+      </div>
+      <div class="faq-answer">
+        You can return any product within 30 days of purchase. Make sure it’s in original condition.
+      </div>
     </div>
-  </div>
 
-  <div class="faq-item">
-    <div class="faq-question">Can Bubunany be washed?</div>
-    <div class="faq-answer">
-      We recommend gentle hand washing and air drying to keep Bubunany soft and happy for years.
+    <div class="faq-item">
+      <div class="faq-question">
+        Do you offer free shipping?
+        <span class="faq-toggle">+</span>
+      </div>
+      <div class="faq-answer">
+        Yes! All orders over $50 are eligible for free shipping.
+      </div>
     </div>
-  </div>
 
-  <div class="faq-item">
-    <div class="faq-question">What is Bubunany made of?</div>
-    <div class="faq-answer">
-      Bubunany is crafted from soft, high-quality fabrics designed to feel cozy, durable, and comforting.
+    <div class="faq-item">
+      <div class="faq-question">
+        Can I track my order?
+        <span class="faq-toggle">+</span>
+      </div>
+      <div class="faq-answer">
+        Absolutely! Once your order ships, you’ll receive a tracking number via email.
+      </div>
     </div>
-  </div>
 
-  <div class="faq-item">
-    <div class="faq-question">Is Bubunany good for bedtime?</div>
-    <div class="faq-answer">
-      Absolutely. Bubunany is designed to be a calming companion for bedtime, story time, and quiet moments.
-    </div>
   </div>
-
-  <div class="faq-item">
-    <div class="faq-question">Is Bubunany a good gift?</div>
-    <div class="faq-answer">
-      Bubunany makes a thoughtful gift for birthdays, holidays, or special moments — loved by kids and parents alike.
-    </div>
-  </div>
-
-  <div class="faq-item">
-    <div class="faq-question">Where do you ship from?</div>
-    <div class="faq-answer">
-      Orders are shipped from our fulfillment partners, and shipping details are shown clearly at checkout.
-    </div>
-  </div>
-  
 </section>
+  
 
   
    <!-- PLAYTIME-CTA -->
@@ -530,6 +522,14 @@ fetch("hero.html")
       1200: { slidesPerView: 4 },
     },
   });
+</script>
+<script>
+document.querySelectorAll('.faq-item').forEach(item => {
+  const question = item.querySelector('.faq-question');
+  question.addEventListener('click', () => {
+    item.classList.toggle('open');
+  });
+});
 </script>
 
 
