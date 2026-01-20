@@ -60,36 +60,6 @@
   }
 }
 
-/* ================= MOBILE FIX ================= */
-@media (max-width: 768px) {
-
-  /* Top-bar auto height, some padding */
-  .site-header .top-bar {
-    min-height: auto;
-    padding: 5px 15px;
-  }
-
-  /* Slider becomes vertical stack */
-  .site-header .top-bar .top-bar-slider {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-    height: auto;          /* remove fixed height */
-  }
-
-  /* Messages become normal flow */
-  .site-header .top-bar .top-bar-slider span {
-    position: relative;
-    inset: auto;
-    opacity: 1;
-    animation: none;       /* disable animation on mobile */
-    font-size: 10px;       /* slightly smaller */
-    text-align: center;
-    white-space: normal;   /* allow wrapping */
-  }
-}
-
 
 /* ================= MAIN HEADER ================= */
 .site-header .main-header {
