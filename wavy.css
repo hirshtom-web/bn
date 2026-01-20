@@ -28,11 +28,10 @@
 
 .wave-text {
   fill: #f47c20;          /* matches orange */
-  font-size: 40px;        /* BIGGER text */
+  font-size: 35px;        /* BIGGER text */
   font-weight: 700;       /* 👈 700 weight */
   letter-spacing: 3px;
   font-family: Arial, sans-serif;
-  text-transform: uppercase;
 }
 
 
