@@ -67,15 +67,22 @@
 /* ================= MOBILE FIX ================= */
 @media screen and (max-width: 600px) {
   .top-bar-slider {
-    height: auto; /* allow text to wrap */
+    height: 48px; /* give room for wrapped text */
   }
+
   .top-bar-slider span {
-    position: relative; /* normal flow */
-    opacity: 1;         /* always visible */
-    animation: none;    /* turn off animation */
-    display: block;
-    margin-bottom: 5px;
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    animation: fade 10s infinite; /* keeps auto-slide */
+    opacity: 0;
+
+    white-space: normal; /* allow wrapping */
     text-align: center;
+    padding: 0 10px;
   }
 }
 
