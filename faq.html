@@ -12,7 +12,9 @@
   <link rel="stylesheet" href="about.css" />
   <link rel="stylesheet" href="faq.css" />
   <link rel="stylesheet" href="playtime-css.css" />
+  <link rel="stylesheet" href="wavy.css" />
 
+  
 
   <!-- Google Material Symbols (line icons) -->
   <link
@@ -79,6 +81,9 @@
   
    <!-- PLAYTIME-CTA -->
   <div id="playtime-cta-placeholder"></div>
+
+     <!-- WAVY-CTA -->
+  <div id="wavy-placeholder"></div>
 
 
 
@@ -203,7 +208,23 @@ fetch("hero.html")
 
   loadSection('playtime-cta-placeholder', 'playtime-cta.html');
 </script>
+  <script>
+  function loadSection(id, file) {
+    const el = document.getElementById(id);
+    if (!el) return;
 
+    fetch(file)
+      .then(r => r.text())
+      .then(html => el.innerHTML = html)
+      .catch(err => console.error(`Error loading ${file}`, err));
+  }
+
+  loadSection('playtime-cta-placeholder', 'playtime-cta.html');
+  loadSection('wavy-placeholder', 'wavy.html');
+</script>
+
+
+  
 
   <script src="footer.js"></script>
 
