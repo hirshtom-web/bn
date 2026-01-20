@@ -459,6 +459,14 @@ h1, h2, h3 {
 }
 
 
+.wave-section {
+  background: #f47c20;  /* orange background */
+  position: relative;
+  overflow: hidden;
+  padding: 120px 0;     /* space for top/bottom waves */
+}
+
+/* Waves */
 .wave-divider {
   position: absolute;
   width: 100%;
@@ -469,6 +477,7 @@ h1, h2, h3 {
 .wave-divider-top { top: -1px; }
 .wave-divider-bottom { bottom: -1px; }
 
+/* Wave text */
 .wave-text-layer {
   position: absolute;
   top: -16px;
@@ -480,7 +489,7 @@ h1, h2, h3 {
 }
 
 .wave-curve-text {
-  fill: #f6f1e8;
+  fill: #f6f1e8;      /* beige text */
   font-size: 40px;
   font-weight: 700;
   letter-spacing: 3px;
@@ -489,10 +498,9 @@ h1, h2, h3 {
   text-anchor: middle;
 }
 
-
-/* All text and icons in beige */
+/* All text/icons beige */
 .beige-on-orange {
-  color: #f6f1e8; /* beige */
+  color: #f6f1e8;
 }
 
 /* Headings */
@@ -505,7 +513,7 @@ h1, h2, h3 {
 /* Paragraphs */
 .beige-on-orange p {
   color: #f6f1e8;
-  opacity: 0.9; /* softer body text */
+  opacity: 0.9;
 }
 
 /* Icons */
@@ -518,9 +526,8 @@ h1, h2, h3 {
 .beige-on-orange .benefit-card {
   text-align: center;
   padding: 20px;
-  /* transparent background (orange shows through) */
   background: transparent;
-  border-radius: 0; /* optional: remove card shape if not needed */
+  border-radius: 0;
 }
 
 /* Grid spacing */
@@ -540,18 +547,6 @@ h1, h2, h3 {
 
 /* Mobile adjustments */
 @media (max-width: 600px) {
-  .beige-on-orange .benefit-card {
-    padding: 16px;
-  }
-
-  .beige-on-orange .benefits-grid {
-    gap: 16px;
-  }
-}
-
-.wave-section {
-  background: #f47c20;  /* orange */
-  position: relative;
-  overflow: hidden;
-  padding: 120px 0;     /* space for top/bottom waves */
+  .beige-on-orange .benefit-card { padding: 16px; }
+  .beige-on-orange .benefits-grid { gap: 16px; }
 }
