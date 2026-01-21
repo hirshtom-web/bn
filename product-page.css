@@ -370,17 +370,27 @@ product-page container {
   gap: 6px;
 }
 
+/* ================= VIDEO SECTION ================= */
+
+/* Outer container — controls spacing from screen */
 .video-container {
   position: relative;
   width: 100%;
-  max-width: 1300px;  /* container width */
-  margin: 0 auto;    /* center on page */
-  overflow: hidden;
-  border-radius: 10px; /* optional rounded corners */
-  padding: 20px;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 20px;              /* 20px from screen edges */
+  box-sizing: border-box;
 }
 
-/* Make video responsive */
+/* Inner wrapper — video + button positioning */
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;        /* rounded video corners */
+}
+
+/* Video itself */
 .video-element {
   width: 100%;
   height: auto;
@@ -395,7 +405,7 @@ product-page container {
   transform: translate(-50%, -50%);
   font-size: 50px;
   color: white;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.5);
   border: none;
   border-radius: 50%;
   width: 80px;
@@ -404,17 +414,26 @@ product-page container {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background 0.3s;
+  transition: background 0.3s ease;
+  z-index: 2;
 }
 
 .play-button:hover {
-  background: rgba(0,0,0,0.7);
+  background: rgba(0, 0, 0, 0.7);
 }
 
-/* Hide button when playing */
+/* Hide play button when video starts */
 .video-element.playing + .play-button {
   display: none;
 }
+
+/* Mobile safety: prevent collapse */
+@media (max-width: 768px) {
+  .video-wrapper {
+    min-height: 220px;
+  }
+}
+
 
 @media (max-width: 768px) {
   .product-page {
