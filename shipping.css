@@ -81,3 +81,11 @@ hr {
   color: #555;
   margin-top: -20px;
 }
+
+.flag {
+  width: 24px;
+  height: auto;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
