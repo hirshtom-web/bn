@@ -207,6 +207,7 @@ product-page container {
   .product-grid {
     grid-template-columns: 1fr; /* single column */
     gap: 24px; /* smaller gap on mobile */
+    padding: 0 20px;
   }
 
   .product-actions {
