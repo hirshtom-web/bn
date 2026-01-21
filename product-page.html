@@ -286,21 +286,21 @@ fetch("hero.html")
 
   <script>
   
- const mainImage = document.querySelector(".image-main img");
+const mainImage = document.querySelector(".image-main img");
 const thumbs = document.querySelectorAll(".image-thumbs img");
 
-thumbs.forEach((thumb, index) => {
+thumbs.forEach(thumb => {
   thumb.addEventListener("click", () => {
-    // Update main image src
     mainImage.src = thumb.src;
-
-    // Highlight active thumb
     thumbs.forEach(t => t.classList.remove("active"));
     thumb.classList.add("active");
+
+    // Optional: scroll thumbnail into view
+    thumb.scrollIntoView({ behavior: "smooth", inline: "center" });
   });
 });
 
-// Optional: mark first thumb active on load
+// Set first thumb active
 thumbs[0].classList.add("active");
 
     </script>
