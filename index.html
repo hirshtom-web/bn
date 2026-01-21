@@ -8,6 +8,7 @@
   <!-- External CSS -->
   <link rel="stylesheet" href="header.css" />
   <link rel="stylesheet" href="hero.css" />
+    <link rel="stylesheet" href="mobile-hero.css" />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="footer.css" />
   <link rel="stylesheet" href="playtime-cta.css" />
@@ -38,6 +39,7 @@
 
     <!-- HERO -->
 <div id="hero-placeholder"></div>
+<div id="mobile-hero-placeholder"></div>
 
 
   <!-- PRODUCT SLIDER -->
@@ -460,6 +462,22 @@ fetch("hero.html")
     if (typeof initHero === "function") initHero();
   })
   .catch(err => console.error("Hero load failed:", err));
+
+  // Mobile Load Hero — only on screens <= 768px
+if (window.innerWidth <= 768) {
+  fetch("mobile-hero.html")
+    .then(res => res.text())
+    .then(html => {
+      const heroEl = document.getElementById("mobile-hero-placeholder"); // placeholder
+      if (!heroEl) return; // safety check
+
+      heroEl.innerHTML = html; // inject the HTML
+
+      // Initialize slider or other JS
+      if (typeof initHero === "function") initHero();
+    })
+    .catch(err => console.error("Hero load failed:", err));
+}
 
   // Load footer
   fetch("footer.html")
