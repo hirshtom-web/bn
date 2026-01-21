@@ -347,19 +347,34 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 
   <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const video = document.querySelector(".video-element");
-    const playButton = document.querySelector(".play-button");
+document.addEventListener("DOMContentLoaded", () => {
+  const wrapper = document.querySelector(".video-wrapper");
+  const video = document.querySelector(".video-element");
+  const button = document.querySelector(".play-button");
 
-    if (!video || !playButton) return;
+  if (!video || !button || !wrapper) return;
 
-    playButton.addEventListener("click", () => {
+  button.addEventListener("click", () => {
+    if (video.paused) {
       video.muted = false;      // allow sound after interaction
       video.play();
-      video.classList.add("playing");
-    });
+      wrapper.classList.add("playing");
+      button.textContent = "❚❚"; // pause icon
+    } else {
+      video.pause();
+      wrapper.classList.remove("playing");
+      button.textContent = "▶";  // play icon
+    }
   });
+
+  // When video ends, restore cover state
+  video.addEventListener("ended", () => {
+    wrapper.classList.remove("playing");
+    button.textContent = "▶";
+  });
+});
 </script>
+
 
   
   <script src="footer.js"></script>
