@@ -93,6 +93,10 @@
 }
 
 @media (max-width: 768px) {
+  .features-section {
+  padding: 20px;
+  }
+    
   .feature {
     height: auto;            /* allow card to grow */
     min-height: 88px;        /* stable minimum */
