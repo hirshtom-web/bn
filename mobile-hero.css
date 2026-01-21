@@ -35,17 +35,18 @@
   border-bottom-right-radius: 16px;
 }
 
-]/* SVG as background starting from top */
+/* SVG as background starting from top */
 .hero-mobile-shape {
   position: absolute;
-  top: -50px;           /* move SVG up by 50px to overlap image */
+  top: -50px;           /* move SVG up 50px to overlap image */
   left: 50%;
   transform: translateX(-50%);
   width: 120%;          /* slightly wider for overlap */
-  height: auto;         /* keep aspect ratio */
+  height: auto;         /* maintain aspect ratio */
   object-fit: cover;
-  z-index: 1;
+  z-index: 1;           /* below content */
 }
+
 
 
 
