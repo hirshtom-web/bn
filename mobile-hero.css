@@ -34,19 +34,24 @@
 }
 
 /* Content over bottom 50% of image */
+/* Hide the button */
+.hero-mobile-btn {
+  display: none;
+}
+
+/* Center all content vertically in the hero */
 .hero-mobile-content {
   position: absolute;
-  bottom: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* centers horizontally and vertically */
   width: 100%;
-  height: 50%;          /* restrict content to bottom half */
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  padding: 20px;
-  z-index: 3;
   text-align: center;
-  color: #f6f1e8; /* bubbles & text color */
+  color: #f6f1e8;
+  padding: 0 20px;
   box-sizing: border-box;
 }
 
