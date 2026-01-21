@@ -5,7 +5,7 @@
   max-width: 100%;
   overflow: hidden;
   border-radius: 16px;      /* rounded corners for entire container */
-  padding: 16px 16px;           /* horizontal padding from screen edges */
+  padding: 20px 20px;           /* padding from screen edges */
   box-sizing: border-box;
 }
 
