@@ -37,16 +37,16 @@
 
 ]/* SVG as background starting from top */
 .hero-mobile-shape {
-  position: relative;
-  width: 120%;               /* slightly wider for overlap if you want */
-  max-width: none;
-  height: auto;
+  position: absolute;
+  top: -15%;              /* move SVG up by 15% of its container height */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120%;             /* slightly wider for overlap */
+  height: 100%;
   object-fit: cover;
-  display: block;
-  margin: 0 auto;
   z-index: 1;
-  transform: translateY(-15%);  /* move the SVG up by 15% of its height */
 }
+
 
 
 
