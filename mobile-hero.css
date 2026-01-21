@@ -5,6 +5,10 @@
   max-width: 100%;
   overflow: hidden;
   border-radius: 16px;
+  
+  /* Add padding outside the edges */
+  padding: 0 10px; /* 16px left/right padding, you can adjust */
+  box-sizing: border-box; /* ensures padding doesn't break width */
 }
 
 /* Top image 40% */
