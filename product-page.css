@@ -377,7 +377,7 @@ product-page container {
   width: 100%;
   max-width: 1450px;
   margin: 0 auto;
-  padding: 20px;                 /* 👈 mobile padding */
+  padding: 50px;                 /* 👈 mobile padding */
   box-sizing: border-box;
 }
 
@@ -437,8 +437,11 @@ product-page container {
   .video-wrapper {
     height: 280px;
   }
-}
 
+  .video-container {
+  padding: 20px;                 /* 👈 mobile padding */
+}
+}
 
 
 @media (max-width: 768px) {
