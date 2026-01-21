@@ -37,15 +37,17 @@
 
 /* SVG as background starting from top */
 .hero-mobile-shape {
-  position: absolute;
-  top: 0;             /* start from top of bottom container */
-  left: 50%;
-  transform: translateX(-50%);
-  width: 120%;
-  height: 100%;
+  position: relative;      /* keep it in the flow */
+  top: -40px;              /* move the SVG up to reveal top wavy part */
+  width: 120%;             /* optional: extend a bit for overlap */
+  max-width: none;
+  height: auto;
   object-fit: cover;
+  display: block;
+  margin: 0 auto;          /* center it horizontally */
   z-index: 1;
 }
+
 
 /* Content on top of SVG */
 .hero-mobile-content {
