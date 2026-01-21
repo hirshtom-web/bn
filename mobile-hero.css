@@ -7,9 +7,15 @@
   border-radius: 16px;
   
   /* Add padding outside the edges */
-  padding: 0 10px; /* 16px left/right padding, you can adjust */
+  padding: 0 16px; /* 16px left/right padding, you can adjust */
   box-sizing: border-box; /* ensures padding doesn't break width */
 }
+
+/* Optional: vertical padding too */
+.hero-mobile-container {
+  padding: 16px; /* 16px on all sides, adjust as needed */
+}
+
 
 /* Top image 40% */
 .hero-mobile-top {
