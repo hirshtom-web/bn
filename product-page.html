@@ -380,9 +380,11 @@ document.addEventListener("DOMContentLoaded", () => {
     stickyBuy.classList.toggle("active", atBottom);
   });
 });
+</script>
 
 
 /* ACCORDION – only one open at a time, click to toggle */
+<script>
 document.addEventListener("DOMContentLoaded", () => {
   const items = document.querySelectorAll(".accordion-item");
 
@@ -393,19 +395,23 @@ document.addEventListener("DOMContentLoaded", () => {
     header.addEventListener("click", () => {
       const isOpen = item.classList.contains("active");
 
-      // Close all items
+      // Close all
       items.forEach(i => {
         i.classList.remove("active");
         i.querySelector(".accordion-content").style.maxHeight = null;
       });
 
-      // Toggle current item
+      // Open clicked (toggle)
       if (!isOpen) {
         item.classList.add("active");
         content.style.maxHeight = content.scrollHeight + "px";
       }
     });
   });
+});
+</script>
+<script>
+
 
   // Initialize open items if any
   items.forEach(item => {
