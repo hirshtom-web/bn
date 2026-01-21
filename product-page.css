@@ -372,62 +372,63 @@ product-page container {
 
 /* ================= VIDEO SECTION ================= */
 
-/* Outer container — controls spacing from screen */
+/* Outer spacing (screen padding) */
 .video-container {
-  position: relative;
   width: 100%;
   max-width: 1300px;
   margin: 0 auto;
-  padding: 20px;              /* 20px from screen edges */
+  padding: 20px;                 /* 👈 mobile padding */
   box-sizing: border-box;
 }
 
-/* Inner wrapper — video + button positioning */
+/* Video + overlay wrapper */
 .video-wrapper {
   position: relative;
   width: 100%;
   overflow: hidden;
-  border-radius: 10px;        /* rounded video corners */
+  border-radius: 12px;           /* 👈 always rounded */
+  background: #000;
 }
 
-/* Video itself */
+/* Video */
 .video-element {
   width: 100%;
   height: auto;
   display: block;
 }
 
-/* Play button overlay */
+/* Play / pause button */
 .play-button {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 50px;
-  color: white;
-  background: rgba(0, 0, 0, 0.5);
-  border: none;
-  border-radius: 50%;
   width: 80px;
   height: 80px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0,0,0,0.5);
+  color: white;
+  font-size: 42px;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background 0.3s ease;
+  transition: background 0.25s ease, opacity 0.25s ease;
   z-index: 2;
 }
 
 .play-button:hover {
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0,0,0,0.7);
 }
 
-/* Hide play button when video starts */
-.video-element.playing + .play-button {
-  display: none;
+/* Hide button while playing */
+.video-wrapper.playing .play-button {
+  opacity: 0;
+  pointer-events: none;
 }
 
-/* Mobile safety: prevent collapse */
+/* Mobile safety */
 @media (max-width: 768px) {
   .video-wrapper {
     min-height: 220px;
