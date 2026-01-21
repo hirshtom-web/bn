@@ -1,66 +1,50 @@
 .hero-mobile-container {
   position: relative;
-  display: flex;
-  flex-direction: column;
   width: 100%;
   max-width: 100%;
-  border-radius: 16px; /* rounded corners for whole container */
-  overflow: hidden;    /* keep image and SVG inside rounded corners */
-    padding: 20px 20px; 
+  height: 500px;           /* fixed hero height */
+  border-radius: 16px;     /* rounded container */
+  overflow: hidden;        /* crop edges for rounded corners */
+  display: flex;
+  flex-direction: column;
 }
 
-/* Top image (40%) */
-.hero-mobile-top {
-  flex: 0 0 40%;
-  width: 100%;
-  overflow: hidden;
-}
-
-.hero-mobile-top img {
+/* Hero image fills container */
+.hero-mobile-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
-  border-top-left-radius: 16px;
-  border-top-right-radius: 16px;
+  z-index: 1;
 }
 
-/* Bottom content (60%) */
-.hero-mobile-bottom {
-  flex: 0 0 60%;
-  position: relative;
-  width: 100%;
-  overflow: visible; /* allow SVG to overlap the image above */
-  border-bottom-left-radius: 16px;
-  border-bottom-right-radius: 16px;
-  background: #1f4d3a; /* optional background behind text */
-}
-
-/* SVG overlay */
+/* SVG overlay on bottom part */
 .hero-mobile-shape {
   position: absolute;
-  top: -50px;      /* move SVG 50px up to overlap top image */
+  bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 120%;     /* make SVG slightly wider than container */
+  width: 120%;      /* slightly wider to extend edges */
   height: auto;
-  z-index: 1;
-  pointer-events: none; /* let clicks pass through */
-  padding: 0 20px; 
+  z-index: 2;
+  pointer-events: none; /* click passes through */
 }
 
-/* Content on top of SVG */
+/* Content over bottom 50% of image */
 .hero-mobile-content {
-  position: relative;
-  z-index: 2;
-  height: 100%;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50%;          /* restrict content to bottom half */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 20px;
+  z-index: 3;
   text-align: center;
-  color: #f6f1e8;
+  color: #1f4d3a; /* bubbles & text color */
+  box-sizing: border-box;
 }
 
 /* Bubbles like desktop */
@@ -80,7 +64,6 @@
   letter-spacing: 0.08em;
   font-size: 10px;
   white-space: nowrap;
-  color: #f6f1e8;
 }
 
 /* Text */
@@ -99,16 +82,16 @@
 
 .hero-mobile-reviews-text {
   font-size: 12px;
-  color: #f6f1e8;
+  color: #1f4d3a;
 }
 
 /* Button */
 .hero-mobile-btn {
   display: block;
   margin-top: 12px;
-  padding: 14px;
-  background: #f6f1e8;
-  color: #222;
+  padding: 14px 28px;
+  background: #1f4d3a;
+  color: #f6f1e8;
   border-radius: 999px;
   text-decoration: none;
 }
