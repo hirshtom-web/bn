@@ -38,8 +38,7 @@
 /* SVG as background starting from top */
 .hero-mobile-shape {
   position: absolute;
-  top: -50px;           /* move SVG up 50px to overlap image */
-  left: 50%;
+  top: 0px;           /* move SVG up 50px to overlap image */
   transform: translateX(-50%);
   width: 120%;          /* slightly wider for overlap */
   height: auto;         /* maintain aspect ratio */
