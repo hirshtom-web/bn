@@ -373,10 +373,11 @@ product-page container {
 .video-container {
   position: relative;
   width: 100%;
-  max-width: 800px;  /* container width */
+  max-width: 1300px;  /* container width */
   margin: 0 auto;    /* center on page */
   overflow: hidden;
   border-radius: 10px; /* optional rounded corners */
+  padding: 20px;
 }
 
 /* Make video responsive */
