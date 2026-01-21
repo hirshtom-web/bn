@@ -414,3 +414,17 @@ product-page container {
 .video-element.playing + .play-button {
   display: none;
 }
+
+@media (max-width: 768px) {
+  .product-page {
+    padding: 0; /* remove desktop padding */
+  }
+}
+
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 0 20px; /* ← SINGLE horizontal padding */
+  }
+}
