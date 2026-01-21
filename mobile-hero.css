@@ -1,20 +1,19 @@
 .hero-mobile-container {
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 100%;
   max-width: 100%;
   overflow: hidden;
-  border-radius: 16px;      /* rounded corners for entire container */
-  padding: 20px 20px;           /* padding from screen edges */
-  box-sizing: border-box;
+  border-radius: 16px; /* container corners */
 }
 
-/* Top image 40% */
+/* Top Image 40% */
 .hero-mobile-top {
   flex: 0 0 40%;
   width: 100%;
   overflow: hidden;
-  border-top-left-radius: 16px;   /* match container corners */
+  border-top-left-radius: 16px;
   border-top-right-radius: 16px;
 }
 
@@ -31,23 +30,21 @@
   position: relative;
   width: 100%;
   overflow: hidden;
-  border-bottom-left-radius: 16px;  /* match container corners */
+  border-bottom-left-radius: 16px;
   border-bottom-right-radius: 16px;
 }
 
-]/* SVG as background starting from top */
+/* SVG overlaying image by 50px */
 .hero-mobile-shape {
   position: absolute;
-  top: -50px;           /* move SVG up by 50px to overlap image */
+  top: -50px;           /* moves SVG up to overlap image */
   left: 50%;
   transform: translateX(-50%);
-  width: 120%;          /* slightly wider for overlap */
-  height: auto;         /* keep aspect ratio */
+  width: 120%;
+  min-height: 50px;     /* ensure overlap is visible */
   object-fit: cover;
   z-index: 1;
 }
-
-
 
 /* Content on top of SVG */
 .hero-mobile-content {
@@ -60,29 +57,28 @@
   align-items: center;
   padding: 20px;
   text-align: center;
-  color: #f6f1e8;
+  color: #1f4d3a;
 }
 
-/* Bubbles */
+/* Bubbles like desktop */
 .hero-mobile-bubbles {
   display: flex;
   align-items: center;
-  gap: 8px;          /* space between bubbles */
+  gap: 8px;
   justify-content: center;
   margin-bottom: 12px;
 }
 
 .hero-mobile-bubble {
-  background: rgba(31, 77, 58, 0.15);  /* same as desktop */
-  padding: 6px 12px;                    /* pill padding */
-  border-radius: 999px;                 /* full round */
-  text-transform: uppercase;            /* uppercase text */
-  letter-spacing: 0.08em;               /* spacing between letters */
-  font-size: 10px;                       /* same as desktop */
-  white-space: nowrap;                   /* prevent wrapping */
-  color: #1f4d3a;                       /* optional: make text visible if needed */
+  background: rgba(31, 77, 58, 0.15);
+  padding: 6px 12px;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 10px;
+  white-space: nowrap;
+  color: #1f4d3a;
 }
-
 
 /* Text */
 .hero-mobile-text {
@@ -100,7 +96,7 @@
 
 .hero-mobile-reviews-text {
   font-size: 12px;
-  color: #f6f1e8;
+  color: #1f4d3a;
 }
 
 /* Button */
@@ -114,7 +110,7 @@
   text-decoration: none;
 }
 
-/* Hide mobile hero on desktop */
+/* Hide on desktop */
 @media (min-width: 769px) {
   .hero-mobile-container {
     display: none;
