@@ -41,7 +41,7 @@
 .hero-bubbles {
   display: flex;
   align-items: center;
-  gap: 8px;        /* space between bubbles */
+  gap: 8px;
 }
 
 .hero-bubble {
@@ -53,7 +53,6 @@
   font-size: 10px;
   white-space: nowrap;
 }
-
 
 .hero-text {
   font-size: 56px;
@@ -97,10 +96,9 @@
 }
 
 .hero-btn-small {
-  align-self: flex-start; /* prevents stretching */
-  width: fit-content;     /* button wraps text only */
+  align-self: flex-start;
+  width: fit-content;
 }
-
 
 /* ---------------- RIGHT HERO PANEL ---------------- */
 .hero-right-panel {
@@ -164,69 +162,71 @@
   background: rgba(255, 255, 255, 1);
 }
 
-/* DEFAULT (DESKTOP) */
+/* ================= MOBILE HERO ================= */
+/* Show mobile hero by default */
 .hero-mobile-container {
-  display: none;
+  display: block;
   padding: 20px;
   text-align: center;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
-/* MOBILE ONLY */
-@media (max-width: 768px) {
+.hero-mobile-slide img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 16px;
+  display: block;
+}
 
+.hero-mobile-bubbles {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.hero-mobile-bubble {
+  background: #f2f2f2;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.hero-mobile-text {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: 16px;
+}
+
+.hero-mobile-stars {
+  font-size: 16px;
+}
+
+.hero-mobile-reviews-text {
+  font-size: 12px;
+  color: #666;
+}
+
+.hero-mobile-btn {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  background: #000;
+  color: #fff;
+  border-radius: 999px;
+  text-decoration: none;
+}
+
+/* ================= DESKTOP OVERRIDE ================= */
+@media (min-width: 769px) {
   .hero-desktop-container {
-    display: none;
+    display: block;
   }
 
   .hero-mobile-container {
-    display: block;
-  }
-
-  .hero-mobile-slide img {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    border-radius: 16px;
-    display: block;
-  }
-
-  .hero-mobile-bubbles {
-    display: flex;
-    justify-content: center;
-    gap: 8px;
-    margin-bottom: 12px;
-  }
-
-  .hero-mobile-bubble {
-    background: #f2f2f2;
-    padding: 6px 12px;
-    border-radius: 20px;
-    font-size: 12px;
-  }
-
-  .hero-mobile-text {
-    font-size: 22px;
-    font-weight: 600;
-    line-height: 1.3;
-    margin-bottom: 16px;
-  }
-
-  .hero-mobile-stars {
-    font-size: 16px;
-  }
-
-  .hero-mobile-reviews-text {
-    font-size: 12px;
-    color: #666;
-  }
-
-  .hero-mobile-btn {
-    display: block;
-    width: 100%;
-    padding: 14px;
-    background: #000;
-    color: #fff;
-    border-radius: 999px;
-    text-decoration: none;
+    display: none;
   }
 }
