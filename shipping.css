@@ -41,7 +41,18 @@
   font-family: sans-serif;
   color: #222;
   line-height: 1.5;
+
+  padding-top: 40px;    /* add top padding */
+  padding-bottom: 40px; /* add bottom padding */
 }
+
+@media (max-width: 768px) {
+  .shipping-container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
 
 .delivery-table {
   width: 100%;
