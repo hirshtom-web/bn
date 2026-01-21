@@ -302,21 +302,6 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 
   <script>
-document.addEventListener("DOMContentLoaded", () => {
-  const items = document.querySelectorAll(".accordion-item");
-
-  items.forEach(item => {
-    const header = item.querySelector(".accordion-header");
-
-    header.addEventListener("click", () => {
-      items.forEach(i => i.classList.remove("active"));
-      item.classList.add("active");
-    });
-  });
-});
-</script>
-
-  <script>
   // Load external HTML into a placeholder
   fetch('features.html')
     .then(response => response.text())
