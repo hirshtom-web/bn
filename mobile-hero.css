@@ -58,7 +58,7 @@
   align-items: center;
   padding: 20px;
   text-align: center;
-  color: #000;
+  color: #f6f1e8;
 }
 
 /* Bubbles */
@@ -92,7 +92,7 @@
 
 .hero-mobile-reviews-text {
   font-size: 12px;
-  color: #666;
+  color: #f6f1e8;
 }
 
 /* Button */
@@ -100,8 +100,8 @@
   display: block;
   margin-top: 12px;
   padding: 14px;
-  background: #000;
-  color: #fff;
+  background: #f6f1e8;
+  color: #222;
   border-radius: 999px;
   text-decoration: none;
 }
