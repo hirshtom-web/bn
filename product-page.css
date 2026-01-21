@@ -313,10 +313,10 @@ product-page container {
 
 /* Open state */
 .accordion-item.active .accordion-content {
-  max-height: 800px; /* enough for content */
   opacity: 1;
   padding-bottom: 16px;
 }
+
 
 /* Lists inside accordion */
 .accordion-content ul {
