@@ -100,3 +100,19 @@ hr {
   vertical-align: middle;
 }
 
+/* Hide specific columns on mobile */
+@media (max-width: 768px) {
+  /* Hide table headers */
+  .delivery-table thead th:nth-child(2),
+  .delivery-table thead th:nth-child(3),
+  .delivery-table thead th:nth-child(4) {
+    display: none;
+  }
+
+  /* Hide table body cells for same columns */
+  .delivery-table tbody td:nth-child(2),
+  .delivery-table tbody td:nth-child(3),
+  .delivery-table tbody td:nth-child(4) {
+    display: none;
+  }
+}
