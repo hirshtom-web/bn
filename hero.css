@@ -162,3 +162,9 @@
   background: rgba(255, 255, 255, 1);
 }
 
+/* HIDE DESKTOP HERO ON MOBILE */
+@media (max-width: 768px) {
+  .hero-split-container {
+    display: none !important;
+  }
+}
