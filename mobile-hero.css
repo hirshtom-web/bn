@@ -7,7 +7,6 @@
   border-radius: 16px;      /* rounded corners for entire container */
   padding: 0 16px;           /* horizontal padding from screen edges */
   box-sizing: border-box;
-  background: #fff;          /* optional: background so edges match rounded corners */
 }
 
 /* Top image 40% */
