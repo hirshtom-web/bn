@@ -4,24 +4,19 @@
   width: 100%;
   max-width: 100%;
   overflow: hidden;
-  border-radius: 16px;
-  
-  /* Add padding outside the edges */
-  padding: 0 16px; /* 16px left/right padding, you can adjust */
-  box-sizing: border-box; /* ensures padding doesn't break width */
+  border-radius: 16px;      /* rounded corners for entire container */
+  padding: 0 16px;           /* horizontal padding from screen edges */
+  box-sizing: border-box;
+  background: #fff;          /* optional: background so edges match rounded corners */
 }
-
-/* Optional: vertical padding too */
-.hero-mobile-container {
-  padding: 16px; /* 16px on all sides, adjust as needed */
-}
-
 
 /* Top image 40% */
 .hero-mobile-top {
   flex: 0 0 40%;
   width: 100%;
   overflow: hidden;
+  border-top-left-radius: 16px;   /* match container corners */
+  border-top-right-radius: 16px;
 }
 
 .hero-mobile-top img {
@@ -36,14 +31,15 @@
   flex: 0 0 60%;
   position: relative;
   width: 100%;
-  background: transparent;
   overflow: hidden;
+  border-bottom-left-radius: 16px;  /* match container corners */
+  border-bottom-right-radius: 16px;
 }
 
-/* SVG as background */
+/* SVG as background starting from top */
 .hero-mobile-shape {
   position: absolute;
-  top: 0;
+  top: 0;             /* start from top of bottom container */
   left: 50%;
   transform: translateX(-50%);
   width: 120%;
