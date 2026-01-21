@@ -46,7 +46,7 @@
   padding: 20px;
   z-index: 3;
   text-align: center;
-  color: #1f4d3a; /* bubbles & text color */
+  color: #f6f1e8; /* bubbles & text color */
   box-sizing: border-box;
 }
 
@@ -85,7 +85,7 @@
 
 .hero-mobile-reviews-text {
   font-size: 12px;
-  color: #1f4d3a;
+  color: #f6f1e8;
 }
 
 /* Button */
