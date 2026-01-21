@@ -141,11 +141,20 @@
 <div id="features-placeholder"></div>
 
    
-  <!-- video-container -->
 <div class="video-container">
-  <video class="video-element" src="https://video.wixstatic.com/video/1799ca_6920cf619576435dbfc18aba407288ea/1080p/mp4/file.mp4" poster="poster.jpg"></video>
-  <button class="play-button">▶</button>
+  <video
+    class="video-element"
+    playsinline
+    muted
+    preload="metadata"
+    poster="poster.jpg"
+  >
+    <source src="https://video.wixstatic.com/video/1799ca_6920cf619576435dbfc18aba407288ea/1080p/mp4/file.mp4" type="video/mp4">
+  </video>
+
+  <button class="play-button" aria-label="Play video">▶</button>
 </div>
+
 
 
     <!-- reviews -->
@@ -331,6 +340,21 @@ document.addEventListener("DOMContentLoaded", () => {
       document.getElementById('bundle-placeholder').innerHTML = data;
     })
     .catch(err => console.error('Error loading bundle.html:', err));
+</script>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const video = document.querySelector(".video-element");
+    const playButton = document.querySelector(".play-button");
+
+    if (!video || !playButton) return;
+
+    playButton.addEventListener("click", () => {
+      video.muted = false;      // allow sound after interaction
+      video.play();
+      video.classList.add("playing");
+    });
+  });
 </script>
 
   
