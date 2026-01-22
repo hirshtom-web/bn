@@ -171,11 +171,27 @@ h1, h2, h3 {
   }
 }
 
-.product-link {
-  text-decoration: none;
-  color: inherit;
-  display: block;
+.product-card {
+  position: relative;
 }
+
+.card-link {
+  position: absolute;
+  inset: 0;
+  z-index: 999;        /* 🔥 force it on top */
+  background: transparent;
+}
+
+/* Make sure nothing blocks clicks */
+.product-card * {
+  pointer-events: none;
+}
+
+/* Allow link to receive clicks */
+.card-link {
+  pointer-events: auto;
+}
+
 
 
 /* ---------------- RESPONSIVE / MOBILE ---------------- */
