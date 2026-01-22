@@ -550,3 +550,29 @@ h1, h2, h3 {
     margin-bottom: 24px;
   }
 }
+
+.ornage-bubbles {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.orange-bubble {
+  background: rgba(31, 77, 58, 0.15);
+  padding: 6px 12px;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+.orange-bubbles {
+  justify-content: center;  /* horizontal centering */
+  width: 100%;              /* make it span full container if needed */
+  margin: 0 auto;           /* optional: center in parent container */
+}
+
+.orange-bubble {
+  text-align: center;       /* ensures text inside bubble is centered */
+}
