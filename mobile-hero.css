@@ -84,6 +84,10 @@
   line-height: 1.3;
   margin-bottom: 16px;
 }
+.hero-mobile-text {
+  transform: translateY(-40%);
+}
+
 
 /* Stars & reviews */
 .hero-mobile-stars {
