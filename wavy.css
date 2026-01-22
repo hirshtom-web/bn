@@ -52,20 +52,7 @@
 
 @media (max-width: 768px) {
   .wave-text-svg {
-    height: 160px;   /* give SVG more vertical space */
-    top: -8px;
-  }
-
-  .wave-text {
-    font-size: 24px;     /* smaller text */
-    letter-spacing: 2px;
-  }
-
-  .wave-top {
-    height: 160px;       /* keep wave + text aligned */
-  }
-
-  .orange-wave {
-    padding-top: 140px;  /* compensate for taller wave */
+    display: none;
   }
 }
+
