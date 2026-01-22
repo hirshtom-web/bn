@@ -5,6 +5,11 @@
   padding-top: 110px; /* more breathing room */
 }
 
+.orange-wave {
+  min-height: 500px; /* or height: 400px */
+}
+
+
 /* Wave cut */
 .wave-top {
   position: absolute;
