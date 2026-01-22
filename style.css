@@ -483,7 +483,6 @@ h1, h2, h3 {
 .about-container {
   background: #f47c20;
   color: #f6f1e8; /* applies text color to everything inside by default */
-  margin-bottom: 50px;
 }
 
 /* Ensure headings, paragraphs, icons, and emojis inherit the color */
@@ -511,6 +510,8 @@ h1, h2, h3 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 24px;
+  margin-bottom: 50px;
+
 }
 
 /* Individual card */
