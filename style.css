@@ -551,28 +551,22 @@ h1, h2, h3 {
   }
 }
 
-.ornage-bubbles {
+.orange-bubbles {
   display: flex;
-  align-items: center;
+  justify-content: center;  /* horizontal centering */
+  align-items: center;      /* vertical centering */
   gap: 8px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .orange-bubble {
-  background: rgba(31, 77, 58, 0.15);
-  padding: 6px 12px;
+  background: rgba(31, 77, 58, 0.15);  /* restored color */
+  padding: 6px 12px;                   /* restored padding */
   border-radius: 999px;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   font-size: 10px;
   white-space: nowrap;
-}
-
-.orange-bubbles {
-  justify-content: center;  /* horizontal centering */
-  width: 100%;              /* make it span full container if needed */
-  margin: 0 auto;           /* optional: center in parent container */
-}
-
-.orange-bubble {
-  text-align: center;       /* ensures text inside bubble is centered */
+  text-align: center;                  /* centers text/emoji inside bubble */
 }
