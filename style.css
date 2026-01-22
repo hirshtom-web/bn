@@ -553,20 +553,21 @@ h1, h2, h3 {
 
 .orange-bubbles {
   display: flex;
-  justify-content: center;  /* horizontal centering */
+  justify-content: center;  /* horizontal centering like hero */
   align-items: center;      /* vertical centering */
-  gap: 8px;
-  width: 100%;
-  margin: 0 auto;
+  gap: 8px;                 /* spacing between bubbles */
+  width: 100%;              /* optional, fills container */
+  margin: 0 auto;           /* center in parent */
 }
 
 .orange-bubble {
-  background: rgba(31, 77, 58, 0.15);  /* restored color */
-  padding: 6px 12px;                   /* restored padding */
-  border-radius: 999px;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  font-size: 10px;
-  white-space: nowrap;
-  text-align: center;                  /* centers text/emoji inside bubble */
+  background: rgba(31, 77, 58, 0.15);  /* same as hero bubble */
+  padding: 6px 12px;                   /* same padding */
+  border-radius: 999px;                /* fully rounded */
+  text-transform: uppercase;           /* text style */
+  letter-spacing: 0.08em;              /* spacing between letters */
+  font-size: 10px;                     /* same size */
+  white-space: nowrap;                  /* prevents wrapping */
+  text-align: center;                  /* centers emoji/text inside bubble */
+  color: #f6f1e8;                      /* ensures text/icons match hero color */
 }
