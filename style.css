@@ -481,25 +481,43 @@ h1, h2, h3 {
 /* ---------------- BENEFITS ---------------- */
 
 .about-container {
-  background: #f77f00;
+  background: #f47c20;
+  color: #f6f1e8; /* applies text color to everything inside by default */
 }
-  
+
+/* Ensure headings, paragraphs, icons, and emojis inherit the color */
+.about-container h2,
+.about-container h3,
+.about-container h4,
+.about-container p,
+.about-container li,
+.about-container span,
+.about-container i,
+.about-container img {
+  color: inherit;
+}
+
+/* Section heading */
 .about-benefits h2 {
   text-align: center;
   margin-bottom: 40px;
   font-size: 32px;
+  color: inherit; /* ensures it uses #f6f1e8 */
 }
 
+/* Benefits grid */
 .benefits-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 24px;
 }
 
+/* Individual card */
 .benefit-card {
   border-radius: 20px;
   padding: 24px;
   text-align: center;
+  color: inherit; /* ensures text/icons inherit the section color */
 }
 
 .benefit-card img {
@@ -516,10 +534,11 @@ h1, h2, h3 {
   line-height: 1.5;
 }
 
+/* Mobile adjustments */
 @media (max-width: 768px) {
   .benefits-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
-    gap: 16px; /* slightly tighter for mobile */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
   }
 
   .benefit-card {
@@ -531,5 +550,3 @@ h1, h2, h3 {
     margin-bottom: 24px;
   }
 }
-
-
