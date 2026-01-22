@@ -479,6 +479,11 @@ h1, h2, h3 {
 
 
 /* ---------------- BENEFITS ---------------- */
+
+.about-container {
+  background: #f77f00;
+}
+  
 .about-benefits h2 {
   text-align: center;
   margin-bottom: 40px;
