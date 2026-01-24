@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="footer.css" />
   <link rel="stylesheet" href="about.css" />
   <link rel="stylesheet" href="playtime-cta.css" />
+  <link rel="stylesheet" href="wave-section.css" />
 
 
   <!-- Google Material Symbols (line icons) -->
@@ -179,6 +180,9 @@
 </section>
 
 
+   <!-- WAVE-SECTION -->
+  <div id="wave-section-placeholder"></div>
+  
    <!-- FOOTER -->
   <div id="footer-placeholder"></div>
   
@@ -220,7 +224,15 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
   </script>
-  
+  <script>
+  fetch("wave-section.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer-placeholder").innerHTML = data;
+    })
+    .catch(error => console.error("Error loading wave section:", error));
+</script>
+
 
   <!-- Scripts -->
 <script src="header.js"></script>
