@@ -1,32 +1,32 @@
-/* Section with SVG background */
+/* Full-height section with SVG background */
 .custom-wave-section {
   position: relative;
-  background-image: url('https://static.wixstatic.com/shapes/1799ca_7d303bd21ab54ab0ba8058650033feea.svg');
+  height: 100vh; /* 100% of viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* title at top, slider at bottom */
+  background-image: url('https://static.wixstatic.com/shapes/1799ca_c444c4eb5e0a4d449b81f0c1a0057f12.svg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  /* Apply orange tint using filter or overlay */
-  /* Option 1: overlay */
   overflow: hidden;
-  padding: 6rem 1.5rem 4rem;
 }
 
-/* Optional: orange overlay to color SVG */
+/* Orange overlay */
 .custom-wave-section::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: orange; /* your desired orange */
-  opacity: 0.6; /* tweak for visibility */
+  background: orange;
+  opacity: 0.6;
   pointer-events: none;
-  mix-blend-mode: multiply; /* blends color with SVG */
+  mix-blend-mode: multiply;
 }
 
-/* Content on top of overlay */
+/* Content at top */
 .section-content {
   position: relative;
-  max-width: 900px;
-  margin: 0 auto 4rem;
+  margin: 2rem auto 0;
   text-align: center;
   z-index: 1;
 }
@@ -46,14 +46,16 @@
   margin: 0 auto;
 }
 
-/* Slider */
+/* Slider at bottom */
 .slider {
+  position: relative;
   display: flex;
   justify-content: center;
   gap: 1rem;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
-  padding-bottom: 1rem;
+  padding: 1rem;
+  z-index: 1;
 }
 
 .slide-card {
