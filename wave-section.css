@@ -1,6 +1,5 @@
 .wavy-section {
-  background: #f6f1e8; /* section color */
-  text-align: center;
+  background: #f6f1e8; /* beige ONLY for this section */
 }
 
 /* Waves */
@@ -11,23 +10,25 @@
 }
 
 .wave path {
-  fill: #f6f1e8; /* SAME as section */
+  fill: #f6f1e8; /* beige */
 }
 
-/* Content */
+/* Middle content */
 .wavy-content {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 4rem 1.5rem;
+  background: #111;
+  color: #fff;
+  text-align: center;
+  padding: 5rem 1.5rem;
 }
 
 .wavy-content h2 {
   font-size: clamp(2.5rem, 5vw, 4rem);
-  font-weight: 800;
   margin-bottom: 1rem;
 }
 
 .wavy-content p {
   font-size: 1.2rem;
-  color: #555;
+  color: #ccc;
+  max-width: 700px;
+  margin: 0 auto;
 }
