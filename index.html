@@ -149,76 +149,8 @@
 </section>
   
   
-
-  <!-- SMALL SLIDER -->
- <section class="container">
-  <h2>Meet the Characters</h2>
-  <div class="slider">
-
-    <div class="slide small">
-      <a href="product-page.html">
-        <img src="https://static.wixstatic.com/media/1799ca_b985cd285f99451a9ab69517c4aa970b~mv2.png" alt="Story Time">
-      </a>
-    </div>
-
-    <div class="slide small">
-      <a href="product-page.html">
-        <img src="https://static.wixstatic.com/media/1799ca_1bca390c90d44114b14f80e3c87e794f~mv2.jpg" alt="Bedtime">
-      </a>
-    </div>
-
-    <div class="slide small">
-      <a href="product-page.html">
-        <img src="https://static.wixstatic.com/media/1799ca_1bca390c90d44114b14f80e3c87e794f~mv2.jpg" alt="Role Play">
-      </a>
-    </div>
-
-    <div class="slide small">
-      <a href="product-page.html">
-        <img src="https://static.wixstatic.com/media/1799ca_2033839dd87d4f9c8f60edc3862d09bd~mv2.jpg" alt="Travel">
-      </a>
-    </div>
-
-    <div class="slide small">
-      <a href="product-page.html">
-        <img src="https://static.wixstatic.com/media/1799ca_b985cd285f99451a9ab69517c4aa970b~mv2.png" alt="Gift">
-      </a>
-    </div>
-
-    <!-- Repeat the same 5 images for a total of 10 slides -->
-    <div class="slide small">
-      <a href="product-page.html">
-        <img src="https://static.wixstatic.com/media/1799ca_b985cd285f99451a9ab69517c4aa970b~mv2.png" alt="Story Time">
-      </a>
-    </div>
-
-    <div class="slide small">
-      <a href="product-page.html">
-        <img src="https://static.wixstatic.com/media/1799ca_1bca390c90d44114b14f80e3c87e794f~mv2.jpg" alt="Bedtime">
-      </a>
-    </div>
-
-    <div class="slide small">
-      <a href="product-page.html">
-        <img src="https://static.wixstatic.com/media/1799ca_1bca390c90d44114b14f80e3c87e794f~mv2.jpg" alt="Role Play">
-      </a>
-    </div>
-
-    <div class="slide small">
-      <a href="product-page.html">
-        <img src="https://static.wixstatic.com/media/1799ca_2033839dd87d4f9c8f60edc3862d09bd~mv2.jpg" alt="Travel">
-      </a>
-    </div>
-
-    <div class="slide small">
-      <a href="product-page.html">
-        <img src="https://static.wixstatic.com/media/1799ca_b985cd285f99451a9ab69517c4aa970b~mv2.png" alt="Gift">
-      </a>
-    </div>
-
-  </div>
-</section>
-
+wave-section.html
+  
 
   
  <!-- PRODUCT SLIDER -->
@@ -663,6 +595,15 @@ document.querySelectorAll('.faq-item').forEach(item => {
 });
 </script>
 
+
+<script>
+  fetch("wave-section.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("wave-section-placeholder").innerHTML = data;
+    })
+    .catch(error => console.error("Error loading wave section:", error));
+</script>
 
   <script src="footer.js"></script>
   <script src="hero.js"></script>
