@@ -1,16 +1,15 @@
-/* Beige continuation */
-.beige-section {
+/* ONLY exists to give the wave something to connect to */
+.bg-beige {
+  height: 120px; /* same as wave height */
   background: #f6f1e8;
-  position: relative;
 }
 
-/* Dark center section */
+/* Dark wave section */
 .wave-section {
   position: relative;
   background: #111;
-  text-align: center;
-  overflow: hidden;
-  padding: 6rem 1.5rem;
+  padding: 8rem 1.5rem;
+  overflow: visible;
 }
 
 /* Waves */
@@ -20,19 +19,19 @@
   left: 0;
   width: 100%;
   height: 120px;
+  pointer-events: none;
 }
 
+.wave-top {
+  top: 0;
+  transform: translateY(-100%) rotate(180deg);
+}
 
 .wave-bottom {
   bottom: 0;
   transform: translateY(100%);
 }
 
-
-.wave-top {
-  top: 0;
-  transform: translateY(-100%) rotate(180deg);
-}
 
 
 .section-content {
