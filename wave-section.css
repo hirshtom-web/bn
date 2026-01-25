@@ -1,34 +1,71 @@
-.wavy-section {
-  background: #f6f1e8; /* beige ONLY for this section */
+/* Section with SVG background */
+.custom-wave-section {
+  position: relative;
+  background-image: url('https://static.wixstatic.com/shapes/1799ca_c444c4eb5e0a4d449b81f0c1a0057f12.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* Apply orange tint using filter or overlay */
+  /* Option 1: overlay */
+  overflow: hidden;
+  padding: 6rem 1.5rem 4rem;
 }
 
-/* Waves */
-.wave {
-  display: block;
-  width: 100%;
-  height: 120px;
+/* Optional: orange overlay to color SVG */
+.custom-wave-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: orange; /* your desired orange */
+  opacity: 0.6; /* tweak for visibility */
+  pointer-events: none;
+  mix-blend-mode: multiply; /* blends color with SVG */
 }
 
-.wave path {
-  fill: #f6f1e8; /* beige */
-}
-
-/* Middle content */
-.wavy-content {
-  background: #111;
-  color: #fff;
+/* Content on top of overlay */
+.section-content {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto 4rem;
   text-align: center;
-  padding: 5rem 1.5rem;
+  z-index: 1;
 }
 
-.wavy-content h2 {
+.section-title {
   font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
   margin-bottom: 1rem;
+  color: #fff;
 }
 
-.wavy-content p {
+.section-subtitle {
   font-size: 1.2rem;
-  color: #ccc;
+  line-height: 1.6;
+  color: #fff;
   max-width: 700px;
   margin: 0 auto;
+}
+
+/* Slider */
+.slider {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 1rem;
+}
+
+.slide-card {
+  flex: 0 0 250px;
+  height: 200px;
+  background: rgba(255,255,255,0.8);
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  scroll-snap-align: start;
+  font-weight: bold;
+  color: #111;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
