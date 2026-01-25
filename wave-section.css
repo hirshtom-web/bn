@@ -4,7 +4,7 @@
   height: 100vh;
   min-height: 600px;
   background-color: #f6f1e8; /* page background under SVG */
-  background-image: url('https://static.wixstatic.com/shapes/1799ca_b1df788839744025af75f876a77ed107.svg');
+  background-image: url('https://static.wixstatic.com/shapes/1799ca_715e89ec4b2f4ae7bff6212495860df5.svg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -27,14 +27,14 @@
   font-weight: 700;
   margin-bottom: 20px;
   margin-top: 20px;
-  color: #c60034;
+  color: #f6f1e8;
   line-height: 1.2;
 }
 
 .section-subtitle {
   font-size: 1.2rem;
   line-height: 1.6;
-  color: #c60034;
+  color: #f6f1e8;
   max-width: 700px;
   margin: 0 auto;
     margin-bottom: 70px;
@@ -65,18 +65,18 @@
 }
 
 .slide-card h4 {
-  color: #c60034; /* beige text */
+  color: #f6f1e8; /* beige text */
   font-weight: 700;
   margin: 0;
 }
 
 .slide-card span.material-symbols-outlined {
   font-size: 3rem; /* larger icon */
-  color: #c60034; /* same beige color */
+  color: #f6f1e8; /* same beige color */
 }
 
 .slide-card p {
-  color: #c60034; /* beige subtitle */
+  color: #f6f1e8; /* beige subtitle */
   font-weight: 400;
   margin: 0;
   line-height: 1.5;
