@@ -43,14 +43,14 @@
 
 .slider {
   display: flex;
-  gap: 20px; /* spacing between cards */
+  gap: 30px; /* spacing between cards */
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   padding-bottom: 1rem;
 }
 
 .slide-card {
-  flex: 0 0 220px; /* width of each slide */
+  flex: 0 0 280px; /* width of each slide */
   min-height: 250px;
   background: transparent; /* fully transparent */
   border-radius: 1rem;
