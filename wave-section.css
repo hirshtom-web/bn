@@ -1,30 +1,29 @@
-/* Full-height section with SVG background */
+/* Section with beige background and SVG wave */
 .custom-wave-section {
   position: relative;
-  height: 100vh; /* 100% of viewport height */
+  height: 100vh; /* full viewport height */
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* title at top, slider at bottom */
-  background-image: url('https://static.wixstatic.com/shapes/1799ca_c444c4eb5e0a4d449b81f0c1a0057f12.svg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  justify-content: space-between; /* title top, slider bottom */
+  background-color: #f6f1e8; /* page beige */
   overflow: hidden;
 }
 
-/* Orange overlay */
+/* Add SVG wave as pseudo-element for flexibility */
 .custom-wave-section::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: transperant;
-  pointer-events: none;
-  mix-blend-mode: multiply;
+  background-image: url('https://static.wixstatic.com/shapes/1799ca_c444c4eb5e0a4d449b81f0c1a0057f12.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 0; /* behind content */
 }
 
 /* Content at top */
 .section-content {
-  position: relative;
+  position: relative; /* above pseudo-element */
   margin: 2rem auto 0;
   text-align: center;
   z-index: 1;
@@ -34,13 +33,13 @@
   font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: 800;
   margin-bottom: 1rem;
-  color: #fff;
+  color: #111; /* dark text for contrast on beige */
 }
 
 .section-subtitle {
   font-size: 1.2rem;
   line-height: 1.6;
-  color: #fff;
+  color: #555; /* dark gray for readability */
   max-width: 700px;
   margin: 0 auto;
 }
