@@ -1,0 +1,2278 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+```
+<title>Little Things — Modern Parenting</title>
+
+<meta name="description" content="Thoughtful stories, practical ideas and honest conversations about modern parenting.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+
+<style>
+
+    /* =========================================================
+       RESET
+    ========================================================= */
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font-family: "DM Sans", sans-serif;
+        background: #f8f7f4;
+        color: #1c1c1c;
+        line-height: 1.5;
+    }
+
+    img {
+        width: 100%;
+        display: block;
+        object-fit: cover;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    button {
+        font: inherit;
+        border: 0;
+        cursor: pointer;
+    }
+
+
+    /* =========================================================
+       VARIABLES
+    ========================================================= */
+
+    :root {
+        --bg: #f8f7f4;
+        --white: #ffffff;
+        --text: #1c1c1c;
+        --muted: #77736c;
+
+        --sage: #dce5dc;
+        --blue: #dce7ed;
+        --peach: #f1ddd0;
+        --lavender: #e6e1ed;
+        --cream: #eee8dc;
+
+        --border: rgba(0,0,0,.08);
+
+        --radius-sm: 14px;
+        --radius-md: 22px;
+        --radius-lg: 30px;
+
+        --shadow:
+            0 12px 35px rgba(0,0,0,.055);
+    }
+
+
+    /* =========================================================
+       HEADER
+    ========================================================= */
+
+    .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+
+        height: 76px;
+
+        background: rgba(248,247,244,.88);
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+
+        border-bottom: 1px solid var(--border);
+    }
+
+    .header-inner {
+        width: min(1320px, calc(100% - 48px));
+        height: 100%;
+
+        margin: auto;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: -.6px;
+
+        white-space: nowrap;
+    }
+
+    .logo-mark {
+        width: 34px;
+        height: 34px;
+
+        display: grid;
+        place-items: center;
+
+        border-radius: 11px;
+
+        background: #1c1c1c;
+        color: white;
+
+        font-size: 15px;
+    }
+
+    .main-nav {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .main-nav a {
+        font-size: 14px;
+        color: #5f5b55;
+
+        transition: .2s ease;
+    }
+
+    .main-nav a:hover {
+        color: #111;
+    }
+
+    .header-actions {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .search-button,
+    .menu-button {
+        width: 40px;
+        height: 40px;
+
+        display: grid;
+        place-items: center;
+
+        background: var(--white);
+        border: 1px solid var(--border);
+
+        border-radius: 50%;
+
+        font-size: 16px;
+
+        transition: .2s ease;
+    }
+
+    .search-button:hover,
+    .menu-button:hover {
+        transform: translateY(-1px);
+        box-shadow: var(--shadow);
+    }
+
+    .subscribe-button {
+        padding: 11px 18px;
+
+        border-radius: 999px;
+
+        background: #1c1c1c;
+        color: white;
+
+        font-size: 13px;
+        font-weight: 600;
+    }
+
+
+    /* =========================================================
+       MOBILE NAV
+    ========================================================= */
+
+    .mobile-menu {
+        position: fixed;
+        inset: 76px 0 0;
+
+        background: rgba(248,247,244,.98);
+
+        padding: 30px 24px;
+
+        transform: translateY(-110%);
+        transition: .35s ease;
+
+        z-index: 999;
+    }
+
+    .mobile-menu.open {
+        transform: translateY(0);
+    }
+
+    .mobile-menu nav {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .mobile-menu a {
+        padding: 17px 4px;
+
+        font-size: 24px;
+        font-weight: 600;
+
+        border-bottom: 1px solid var(--border);
+    }
+
+
+    /* =========================================================
+       HERO
+    ========================================================= */
+
+    .hero {
+        width: min(1320px, calc(100% - 48px));
+
+        margin: auto;
+
+        padding: 70px 0 45px;
+    }
+
+    .hero-grid {
+        display: grid;
+        grid-template-columns: 1.05fr .95fr;
+
+        gap: 55px;
+
+        align-items: center;
+    }
+
+    .eyebrow {
+        display: inline-flex;
+        align-items: center;
+
+        gap: 8px;
+
+        margin-bottom: 20px;
+
+        font-size: 12px;
+        font-weight: 700;
+
+        letter-spacing: 1.2px;
+        text-transform: uppercase;
+
+        color: #77736c;
+    }
+
+    .eyebrow::before {
+        content: "";
+
+        width: 24px;
+        height: 1px;
+
+        background: #77736c;
+    }
+
+    .hero h1 {
+        max-width: 720px;
+
+        font-family: "Playfair Display", serif;
+
+        font-size: clamp(48px, 6vw, 82px);
+
+        line-height: .98;
+
+        letter-spacing: -3px;
+
+        font-weight: 500;
+    }
+
+    .hero h1 span {
+        color: #89877f;
+    }
+
+    .hero-description {
+        max-width: 540px;
+
+        margin-top: 26px;
+
+        font-size: 17px;
+
+        color: var(--muted);
+
+        line-height: 1.7;
+    }
+
+    .hero-image {
+        height: 570px;
+
+        border-radius: var(--radius-lg);
+
+        overflow: hidden;
+
+        background: var(--peach);
+    }
+
+    .hero-image img {
+        height: 100%;
+    }
+
+    .hero-meta {
+        margin-top: 25px;
+
+        display: flex;
+        align-items: center;
+        gap: 18px;
+
+        font-size: 13px;
+
+        color: var(--muted);
+    }
+
+    .author {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+    }
+
+    .avatar {
+        width: 28px;
+        height: 28px;
+
+        border-radius: 50%;
+
+        background: var(--sage);
+
+        display: grid;
+        place-items: center;
+
+        font-size: 11px;
+        font-weight: 700;
+    }
+
+
+    /* =========================================================
+       CATEGORY BAR
+    ========================================================= */
+
+    .category-section {
+        width: min(1320px, calc(100% - 48px));
+
+        margin: 35px auto 75px;
+    }
+
+    .category-bar {
+        display: flex;
+        align-items: center;
+
+        gap: 10px;
+
+        overflow-x: auto;
+
+        scrollbar-width: none;
+    }
+
+    .category-bar::-webkit-scrollbar {
+        display: none;
+    }
+
+    .category {
+        flex: 0 0 auto;
+
+        padding: 11px 18px;
+
+        border-radius: 999px;
+
+        background: white;
+
+        border: 1px solid var(--border);
+
+        color: #67635d;
+
+        font-size: 13px;
+
+        transition: .2s ease;
+    }
+
+    .category:hover,
+    .category.active {
+        background: #1c1c1c;
+        color: white;
+        border-color: #1c1c1c;
+    }
+
+
+    /* =========================================================
+       SECTION
+    ========================================================= */
+
+    .section {
+        width: min(1320px, calc(100% - 48px));
+
+        margin: 0 auto 100px;
+    }
+
+    .section-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+
+        margin-bottom: 30px;
+    }
+
+    .section-title {
+        font-family: "Playfair Display", serif;
+
+        font-size: 40px;
+
+        font-weight: 500;
+
+        letter-spacing: -1.3px;
+    }
+
+    .section-description {
+        max-width: 380px;
+
+        font-size: 14px;
+
+        color: var(--muted);
+
+        text-align: right;
+    }
+
+
+    /* =========================================================
+       FEATURED GRID
+    ========================================================= */
+
+    .featured-grid {
+        display: grid;
+
+        grid-template-columns: 1.4fr .8fr .8fr;
+
+        gap: 20px;
+    }
+
+    .story-card {
+        background: white;
+
+        border-radius: var(--radius-md);
+
+        overflow: hidden;
+
+        border: 1px solid var(--border);
+
+        transition: .3s ease;
+    }
+
+    .story-card:hover {
+        transform: translateY(-4px);
+
+        box-shadow: var(--shadow);
+    }
+
+    .story-image {
+        height: 280px;
+    }
+
+    .story-card.large .story-image {
+        height: 390px;
+    }
+
+    .story-content {
+        padding: 22px;
+    }
+
+    .story-category {
+        margin-bottom: 10px;
+
+        font-size: 11px;
+
+        text-transform: uppercase;
+
+        letter-spacing: 1px;
+
+        color: #88847d;
+
+        font-weight: 700;
+    }
+
+    .story-title {
+        font-family: "Playfair Display", serif;
+
+        font-size: 26px;
+
+        line-height: 1.12;
+
+        letter-spacing: -.6px;
+    }
+
+    .story-card.small .story-title {
+        font-size: 21px;
+    }
+
+    .story-excerpt {
+        margin-top: 12px;
+
+        color: var(--muted);
+
+        font-size: 14px;
+
+        line-height: 1.6;
+    }
+
+    .story-meta {
+        margin-top: 20px;
+
+        display: flex;
+        justify-content: space-between;
+
+        color: #8a867f;
+
+        font-size: 12px;
+    }
+
+
+    /* =========================================================
+       EDITORIAL SPLIT
+    ========================================================= */
+
+    .editorial {
+        display: grid;
+
+        grid-template-columns: .85fr 1.15fr;
+
+        gap: 30px;
+
+        align-items: stretch;
+    }
+
+    .editorial-copy {
+        padding: 55px;
+
+        border-radius: var(--radius-lg);
+
+        background: var(--sage);
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .editorial-copy h2 {
+        font-family: "Playfair Display", serif;
+
+        font-size: 46px;
+
+        line-height: 1.05;
+
+        letter-spacing: -1.4px;
+
+        font-weight: 500;
+    }
+
+    .editorial-copy p {
+        margin-top: 20px;
+
+        max-width: 450px;
+
+        color: #65685f;
+
+        line-height: 1.7;
+    }
+
+    .editorial-link {
+        margin-top: 30px;
+
+        font-size: 14px;
+
+        font-weight: 700;
+    }
+
+    .editorial-image {
+        min-height: 500px;
+
+        border-radius: var(--radius-lg);
+
+        overflow: hidden;
+    }
+
+    .editorial-image img {
+        height: 100%;
+    }
+
+
+    /* =========================================================
+       LATEST STORIES
+    ========================================================= */
+
+    .latest-layout {
+        display: grid;
+
+        grid-template-columns: 1fr 350px;
+
+        gap: 70px;
+    }
+
+    .latest-list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .latest-item {
+        display: grid;
+
+        grid-template-columns: 230px 1fr;
+
+        gap: 24px;
+
+        padding: 24px 0;
+
+        border-top: 1px solid var(--border);
+    }
+
+    .latest-item:last-child {
+        border-bottom: 1px solid var(--border);
+    }
+
+    .latest-image {
+        height: 160px;
+
+        border-radius: 18px;
+
+        overflow: hidden;
+    }
+
+    .latest-content {
+        display: flex;
+        flex-direction: column;
+
+        justify-content: center;
+    }
+
+    .latest-title {
+        margin-top: 5px;
+
+        font-family: "Playfair Display", serif;
+
+        font-size: 27px;
+
+        line-height: 1.15;
+
+        letter-spacing: -.7px;
+    }
+
+    .latest-excerpt {
+        margin-top: 10px;
+
+        font-size: 14px;
+
+        color: var(--muted);
+
+        max-width: 600px;
+    }
+
+
+    /* =========================================================
+       SIDEBAR
+    ========================================================= */
+
+    .sidebar {
+        display: flex;
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+    .newsletter {
+        padding: 30px;
+
+        border-radius: var(--radius-md);
+
+        background: var(--lavender);
+    }
+
+    .newsletter h3 {
+        font-family: "Playfair Display", serif;
+
+        font-size: 29px;
+
+        line-height: 1.1;
+    }
+
+    .newsletter p {
+        margin-top: 13px;
+
+        font-size: 14px;
+
+        color: #68636d;
+
+        line-height: 1.6;
+    }
+
+    .newsletter input {
+        width: 100%;
+
+        margin-top: 20px;
+
+        padding: 13px 15px;
+
+        border: 0;
+
+        border-radius: 12px;
+
+        outline: none;
+
+        background: rgba(255,255,255,.8);
+    }
+
+    .newsletter button {
+        width: 100%;
+
+        margin-top: 9px;
+
+        padding: 13px;
+
+        border-radius: 12px;
+
+        background: #1c1c1c;
+
+        color: white;
+
+        font-weight: 600;
+    }
+
+    .popular {
+        padding: 30px;
+
+        background: white;
+
+        border-radius: var(--radius-md);
+
+        border: 1px solid var(--border);
+    }
+
+    .popular h3 {
+        font-family: "Playfair Display", serif;
+
+        font-size: 26px;
+
+        margin-bottom: 12px;
+    }
+
+    .popular-item {
+        display: flex;
+
+        gap: 15px;
+
+        padding: 15px 0;
+
+        border-top: 1px solid var(--border);
+    }
+
+    .popular-number {
+        font-size: 13px;
+
+        color: #999;
+
+        padding-top: 3px;
+    }
+
+    .popular-title {
+        font-family: "Playfair Display", serif;
+
+        font-size: 18px;
+
+        line-height: 1.2;
+    }
+
+
+    /* =========================================================
+       QUOTE
+    ========================================================= */
+
+    .quote-section {
+        width: min(1000px, calc(100% - 48px));
+
+        margin: 0 auto 110px;
+
+        text-align: center;
+    }
+
+    .quote-section blockquote {
+        font-family: "Playfair Display", serif;
+
+        font-size: clamp(32px, 4vw, 54px);
+
+        line-height: 1.12;
+
+        letter-spacing: -1px;
+
+        color: #343431;
+    }
+
+    .quote-author {
+        margin-top: 20px;
+
+        color: var(--muted);
+
+        font-size: 13px;
+    }
+
+
+    /* =========================================================
+       AUTHORS
+    ========================================================= */
+
+    .authors-grid {
+        display: grid;
+
+        grid-template-columns: repeat(3, 1fr);
+
+        gap: 20px;
+    }
+
+    .author-card {
+        padding: 25px;
+
+        background: white;
+
+        border: 1px solid var(--border);
+
+        border-radius: var(--radius-md);
+
+        display: flex;
+
+        align-items: center;
+
+        gap: 18px;
+    }
+
+    .author-photo {
+        width: 70px;
+        height: 70px;
+
+        flex: 0 0 70px;
+
+        border-radius: 50%;
+
+        overflow: hidden;
+
+        background: var(--cream);
+    }
+
+    .author-photo img {
+        height: 100%;
+    }
+
+    .author-name {
+        font-family: "Playfair Display", serif;
+
+        font-size: 20px;
+    }
+
+    .author-role {
+        margin-top: 3px;
+
+        font-size: 12px;
+
+        color: var(--muted);
+    }
+
+
+    /* =========================================================
+       FOOTER
+    ========================================================= */
+
+    footer {
+        margin-top: 110px;
+
+        padding: 70px 0 30px;
+
+        background: #20201e;
+
+        color: white;
+    }
+
+    .footer-inner {
+        width: min(1320px, calc(100% - 48px));
+
+        margin: auto;
+    }
+
+    .footer-top {
+        display: flex;
+
+        justify-content: space-between;
+
+        gap: 40px;
+    }
+
+    .footer-brand {
+        max-width: 350px;
+    }
+
+    .footer-brand h2 {
+        font-family: "Playfair Display", serif;
+
+        font-size: 38px;
+
+        font-weight: 500;
+    }
+
+    .footer-brand p {
+        margin-top: 15px;
+
+        color: #aaa9a4;
+
+        font-size: 14px;
+
+        line-height: 1.7;
+    }
+
+    .footer-links {
+        display: flex;
+
+        gap: 70px;
+    }
+
+    .footer-column {
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 11px;
+    }
+
+    .footer-column strong {
+        margin-bottom: 5px;
+
+        font-size: 12px;
+
+        text-transform: uppercase;
+
+        letter-spacing: 1px;
+
+        color: #999;
+    }
+
+    .footer-column a {
+        font-size: 14px;
+
+        color: #ddd;
+
+        transition: .2s;
+    }
+
+    .footer-column a:hover {
+        color: white;
+    }
+
+    .footer-bottom {
+        margin-top: 60px;
+
+        padding-top: 22px;
+
+        border-top: 1px solid rgba(255,255,255,.12);
+
+        display: flex;
+
+        justify-content: space-between;
+
+        color: #8e8e89;
+
+        font-size: 12px;
+    }
+
+
+    /* =========================================================
+       MOBILE
+    ========================================================= */
+
+    @media (max-width: 950px) {
+
+        .main-nav,
+        .subscribe-button {
+            display: none;
+        }
+
+        .hero {
+            padding-top: 45px;
+        }
+
+        .hero-grid {
+            grid-template-columns: 1fr;
+
+            gap: 35px;
+        }
+
+        .hero-image {
+            height: 430px;
+        }
+
+        .featured-grid {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .story-card.large {
+            grid-column: 1 / -1;
+        }
+
+        .editorial {
+            grid-template-columns: 1fr;
+        }
+
+        .latest-layout {
+            grid-template-columns: 1fr;
+        }
+
+        .sidebar {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .authors-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+
+    @media (max-width: 650px) {
+
+        .header-inner,
+        .hero,
+        .category-section,
+        .section,
+        .footer-inner {
+            width: min(100% - 32px, 1320px);
+        }
+
+        .site-header {
+            height: 68px;
+        }
+
+        .mobile-menu {
+            inset: 68px 0 0;
+        }
+
+        .logo {
+            font-size: 18px;
+        }
+
+        .hero {
+            padding: 42px 0 35px;
+        }
+
+        .hero h1 {
+            font-size: 50px;
+
+            letter-spacing: -2px;
+        }
+
+        .hero-description {
+            font-size: 15px;
+        }
+
+        .hero-image {
+            height: 370px;
+
+            border-radius: 24px;
+        }
+
+        .category-section {
+            margin-bottom: 60px;
+        }
+
+        .section {
+            margin-bottom: 75px;
+        }
+
+        .section-header {
+            display: block;
+        }
+
+        .section-title {
+            font-size: 34px;
+        }
+
+        .section-description {
+            margin-top: 10px;
+
+            text-align: left;
+        }
+
+        .featured-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .story-card.large {
+            grid-column: auto;
+        }
+
+        .story-card.large .story-image,
+        .story-image {
+            height: 260px;
+        }
+
+        .editorial-copy {
+            padding: 35px 28px;
+        }
+
+        .editorial-copy h2 {
+            font-size: 38px;
+        }
+
+        .editorial-image {
+            min-height: 350px;
+        }
+
+        .latest-item {
+            grid-template-columns: 115px 1fr;
+
+            gap: 15px;
+        }
+
+        .latest-image {
+            height: 115px;
+
+            border-radius: 15px;
+        }
+
+        .latest-title {
+            font-size: 21px;
+        }
+
+        .latest-excerpt {
+            display: none;
+        }
+
+        .sidebar {
+            grid-template-columns: 1fr;
+        }
+
+        .quote-section {
+            width: calc(100% - 32px);
+
+            margin-bottom: 80px;
+        }
+
+        .quote-section blockquote {
+            font-size: 35px;
+        }
+
+        .authors-grid {
+            gap: 12px;
+        }
+
+        .footer-top {
+            flex-direction: column;
+        }
+
+        .footer-links {
+            gap: 40px;
+
+            flex-wrap: wrap;
+        }
+
+        .footer-bottom {
+            flex-direction: column;
+
+            gap: 10px;
+        }
+
+    }
+
+</style>
+```
+
+</head>
+
+<body>
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header class="site-header">
+
+```
+<div class="header-inner">
+
+    <a href="#" class="logo">
+
+        <span class="logo-mark">L</span>
+
+        Little Things
+
+    </a>
+
+
+    <nav class="main-nav">
+
+        <a href="#latest">Latest</a>
+
+        <a href="#parenting">Parenting</a>
+
+        <a href="#family">Family Life</a>
+
+        <a href="#wellbeing">Wellbeing</a>
+
+        <a href="#experts">Experts</a>
+
+    </nav>
+
+
+    <div class="header-actions">
+
+        <button class="search-button" aria-label="Search">
+            ⌕
+        </button>
+
+        <button class="subscribe-button">
+            Subscribe
+        </button>
+
+        <button class="menu-button" id="menuButton">
+            ☰
+        </button>
+
+    </div>
+
+</div>
+```
+
+</header>
+
+<!-- =========================================================
+     MOBILE MENU
+========================================================= -->
+
+<div class="mobile-menu" id="mobileMenu">
+
+```
+<nav>
+
+    <a href="#latest">Latest</a>
+
+    <a href="#parenting">Parenting</a>
+
+    <a href="#family">Family Life</a>
+
+    <a href="#wellbeing">Wellbeing</a>
+
+    <a href="#experts">Experts</a>
+
+    <a href="#newsletter">Newsletter</a>
+
+</nav>
+```
+
+</div>
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<main>
+
+<section class="hero">
+
+```
+<div class="hero-grid">
+
+    <div>
+
+        <div class="eyebrow">
+            Modern parenting
+        </div>
+
+        <h1>
+            Raising humans
+            <span>in the real world.</span>
+        </h1>
+
+        <p class="hero-description">
+            Honest stories, practical ideas and thoughtful conversations
+            for parents figuring it out as they go.
+        </p>
+
+        <div class="hero-meta">
+
+            <div class="author">
+
+                <span class="avatar">
+                    AS
+                </span>
+
+                <span>
+                    Anna Stone
+                </span>
+
+            </div>
+
+            <span>8 min read</span>
+
+            <span>Today</span>
+
+        </div>
+
+    </div>
+
+
+    <a href="#" class="hero-image">
+
+        <img
+            src="https://images.unsplash.com/photo-1491013516836-7db643ee125a?auto=format&fit=crop&w=1400&q=85"
+            alt="Parent and child together"
+        >
+
+    </a>
+
+</div>
+```
+
+</section>
+
+<!-- =========================================================
+     CATEGORIES
+========================================================= -->
+
+<section class="category-section">
+
+```
+<div class="category-bar">
+
+    <button class="category active" data-filter="all">
+        All stories
+    </button>
+
+    <button class="category" data-filter="parenting">
+        Parenting
+    </button>
+
+    <button class="category" data-filter="family">
+        Family life
+    </button>
+
+    <button class="category" data-filter="wellbeing">
+        Wellbeing
+    </button>
+
+    <button class="category" data-filter="education">
+        Education
+    </button>
+
+    <button class="category" data-filter="relationships">
+        Relationships
+    </button>
+
+    <button class="category" data-filter="food">
+        Food & home
+    </button>
+
+</div>
+```
+
+</section>
+
+<!-- =========================================================
+     FEATURED
+========================================================= -->
+
+<section class="section" id="parenting">
+
+```
+<div class="section-header">
+
+    <h2 class="section-title">
+        Worth your time
+    </h2>
+
+    <p class="section-description">
+        A few thoughtful reads selected by our editors this week.
+    </p>
+
+</div>
+
+
+<div class="featured-grid">
+
+
+    <article class="story-card large" data-category="parenting">
+
+        <a href="#">
+
+            <div class="story-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1472162072942-cd5147eb3902?auto=format&fit=crop&w=1200&q=85"
+                    alt="Parent playing with child"
+                >
+
+            </div>
+
+            <div class="story-content">
+
+                <div class="story-category">
+                    Parenting
+                </div>
+
+                <h3 class="story-title">
+                    The pressure to be a perfect parent is finally getting old
+                </h3>
+
+                <p class="story-excerpt">
+                    Maybe good parenting isn't about getting everything right.
+                    Maybe it's about being there when it matters.
+                </p>
+
+                <div class="story-meta">
+
+                    <span>Emma Williams</span>
+
+                    <span>9 min read</span>
+
+                </div>
+
+            </div>
+
+        </a>
+
+    </article>
+
+
+    <article class="story-card small" data-category="wellbeing">
+
+        <a href="#">
+
+            <div class="story-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1499209974431-9dddcece7f88?auto=format&fit=crop&w=900&q=85"
+                    alt="Parent relaxing at home"
+                >
+
+            </div>
+
+            <div class="story-content">
+
+                <div class="story-category">
+                    Wellbeing
+                </div>
+
+                <h3 class="story-title">
+                    Five tiny ways to make mornings feel less chaotic
+                </h3>
+
+                <div class="story-meta">
+
+                    <span>Dr. Maya Chen</span>
+
+                    <span>5 min</span>
+
+                </div>
+
+            </div>
+
+        </a>
+
+    </article>
+
+
+    <article class="story-card small" data-category="family">
+
+        <a href="#">
+
+            <div class="story-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1504159506876-f8338247a14a?auto=format&fit=crop&w=900&q=85"
+                    alt="Family at home"
+                >
+
+            </div>
+
+            <div class="story-content">
+
+                <div class="story-category">
+                    Family life
+                </div>
+
+                <h3 class="story-title">
+                    Why ordinary family dinners matter more than we think
+                </h3>
+
+                <div class="story-meta">
+
+                    <span>Lucas Martin</span>
+
+                    <span>6 min</span>
+
+                </div>
+
+            </div>
+
+        </a>
+
+    </article>
+
+
+</div>
+```
+
+</section>
+
+<!-- =========================================================
+     EDITORIAL
+========================================================= -->
+
+<section class="section" id="family">
+
+```
+<div class="editorial">
+
+    <div class="editorial-copy">
+
+        <div class="eyebrow">
+            The family issue
+        </div>
+
+        <h2>
+            Your family doesn't need to look like anyone else's.
+        </h2>
+
+        <p>
+            From screen time to family traditions, we're exploring the
+            small choices that shape the way our homes actually feel.
+        </p>
+
+        <a href="#" class="editorial-link">
+            Explore the collection →
+        </a>
+
+    </div>
+
+
+    <div class="editorial-image">
+
+        <img
+            src="https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=1500&q=85"
+            alt="Family spending time together"
+        >
+
+    </div>
+
+</div>
+```
+
+</section>
+
+<!-- =========================================================
+     LATEST
+========================================================= -->
+
+<section class="section" id="latest">
+
+```
+<div class="section-header">
+
+    <h2 class="section-title">
+        The latest
+    </h2>
+
+    <p class="section-description">
+        Fresh stories from our writers, experts and community.
+    </p>
+
+</div>
+
+
+<div class="latest-layout">
+
+
+    <div class="latest-list">
+
+
+        <article class="latest-item" data-category="wellbeing">
+
+            <a href="#" class="latest-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1474418397713-7ede21d49118?auto=format&fit=crop&w=800&q=85"
+                    alt="Mother and baby"
+                >
+
+            </a>
+
+            <div class="latest-content">
+
+                <div class="story-category">
+                    Wellbeing
+                </div>
+
+                <h3 class="latest-title">
+                    You are allowed to enjoy this stage of parenting
+                </h3>
+
+                <p class="latest-excerpt">
+                    A gentle reminder that you don't have to document,
+                    optimize or improve every moment.
+                </p>
+
+                <div class="story-meta">
+
+                    <span>Sarah Bennett</span>
+
+                    <span>7 min read</span>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <article class="latest-item" data-category="education">
+
+            <a href="#" class="latest-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=85"
+                    alt="Child learning"
+                >
+
+            </a>
+
+            <div class="latest-content">
+
+                <div class="story-category">
+                    Education
+                </div>
+
+                <h3 class="latest-title">
+                    What children actually need from homework
+                </h3>
+
+                <p class="latest-excerpt">
+                    Less pressure, more curiosity: educators explain
+                    what makes learning stick.
+                </p>
+
+                <div class="story-meta">
+
+                    <span>David Brooks</span>
+
+                    <span>8 min read</span>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <article class="latest-item" data-category="relationships">
+
+            <a href="#" class="latest-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1492725764893-90b379c2b6e7?auto=format&fit=crop&w=800&q=85"
+                    alt="Parents together"
+                >
+
+            </a>
+
+            <div class="latest-content">
+
+                <div class="story-category">
+                    Relationships
+                </div>
+
+                <h3 class="latest-title">
+                    How to stay connected when parenting takes everything
+                </h3>
+
+                <p class="latest-excerpt">
+                    Small rituals that help couples find their way back
+                    to each other.
+                </p>
+
+                <div class="story-meta">
+
+                    <span>Julia Reed</span>
+
+                    <span>10 min read</span>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <article class="latest-item" data-category="food">
+
+            <a href="#" class="latest-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=800&q=85"
+                    alt="Healthy family food"
+                >
+
+            </a>
+
+            <div class="latest-content">
+
+                <div class="story-category">
+                    Food & home
+                </div>
+
+                <h3 class="latest-title">
+                    The weeknight dinner formula that actually works
+                </h3>
+
+                <p class="latest-excerpt">
+                    Four simple ingredients, minimal cleanup and no
+                    complicated meal plans.
+                </p>
+
+                <div class="story-meta">
+
+                    <span>Nora Williams</span>
+
+                    <span>5 min read</span>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+    </div>
+
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+
+        <div class="newsletter" id="newsletter">
+
+            <h3>
+                A little note,
+                once a week.
+            </h3>
+
+            <p>
+                The best stories, practical ideas and things worth
+                knowing — delivered Sunday morning.
+            </p>
+
+            <form id="newsletterForm">
+
+                <input
+                    type="email"
+                    placeholder="Your email address"
+                    required
+                >
+
+                <button type="submit">
+                    Join the newsletter
+                </button>
+
+            </form>
+
+        </div>
+
+
+        <div class="popular">
+
+            <h3>
+                Most read
+            </h3>
+
+
+            <a href="#" class="popular-item">
+
+                <span class="popular-number">
+                    01
+                </span>
+
+                <span class="popular-title">
+                    The parenting advice we're ready to stop following
+                </span>
+
+            </a>
+
+
+            <a href="#" class="popular-item">
+
+                <span class="popular-number">
+                    02
+                </span>
+
+                <span class="popular-title">
+                    What calm parents do differently
+                </span>
+
+            </a>
+
+
+            <a href="#" class="popular-item">
+
+                <span class="popular-number">
+                    03
+                </span>
+
+                <span class="popular-title">
+                    The Sunday reset for busy families
+                </span>
+
+            </a>
+
+        </div>
+
+
+    </aside>
+
+</div>
+```
+
+</section>
+
+<!-- =========================================================
+     QUOTE
+========================================================= -->
+
+<section class="quote-section" id="wellbeing">
+
+```
+<blockquote>
+    “There is no such thing as getting parenting exactly right.
+    There is only being present enough to keep learning.”
+</blockquote>
+
+<div class="quote-author">
+    — Dr. Maya Chen, family psychologist
+</div>
+```
+
+</section>
+
+<!-- =========================================================
+     AUTHORS
+========================================================= -->
+
+<section class="section" id="experts">
+
+```
+<div class="section-header">
+
+    <h2 class="section-title">
+        Meet the people behind the stories
+    </h2>
+
+    <p class="section-description">
+        Writers, parents, educators and experts who bring different
+        perspectives to modern family life.
+    </p>
+
+</div>
+
+
+<div class="authors-grid">
+
+
+    <div class="author-card">
+
+        <div class="author-photo">
+
+            <img
+                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=300&q=85"
+                alt="Anna Stone"
+            >
+
+        </div>
+
+        <div>
+
+            <div class="author-name">
+                Anna Stone
+            </div>
+
+            <div class="author-role">
+                Editor & parent
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="author-card">
+
+        <div class="author-photo">
+
+            <img
+                src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=85"
+                alt="David Brooks"
+            >
+
+        </div>
+
+        <div>
+
+            <div class="author-name">
+                David Brooks
+            </div>
+
+            <div class="author-role">
+                Education writer
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="author-card">
+
+        <div class="author-photo">
+
+            <img
+                src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=300&q=85"
+                alt="Maya Chen"
+            >
+
+        </div>
+
+        <div>
+
+            <div class="author-name">
+                Dr. Maya Chen
+            </div>
+
+            <div class="author-role">
+                Family psychologist
+            </div>
+
+        </div>
+
+    </div>
+
+
+</div>
+```
+
+</section>
+
+</main>
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+```
+<div class="footer-inner">
+
+    <div class="footer-top">
+
+
+        <div class="footer-brand">
+
+            <h2>
+                Little Things.
+            </h2>
+
+            <p>
+                A modern parenting publication for the beautifully
+                imperfect business of raising a family.
+            </p>
+
+        </div>
+
+
+        <div class="footer-links">
+
+
+            <div class="footer-column">
+
+                <strong>
+                    Explore
+                </strong>
+
+                <a href="#latest">Latest</a>
+
+                <a href="#parenting">Parenting</a>
+
+                <a href="#family">Family Life</a>
+
+                <a href="#wellbeing">Wellbeing</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <strong>
+                    About
+                </strong>
+
+                <a href="#">Our Story</a>
+
+                <a href="#experts">Our Authors</a>
+
+                <a href="#">Contact</a>
+
+                <a href="#">Work With Us</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <strong>
+                    Follow
+                </strong>
+
+                <a href="#">Instagram</a>
+
+                <a href="#">Pinterest</a>
+
+                <a href="#">YouTube</a>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <span>
+            © 2026 Little Things
+        </span>
+
+        <span>
+            Made for real family life.
+        </span>
+
+    </div>
+
+</div>
+```
+
+</footer>
+
+<script>
+
+    /* =========================================================
+       MOBILE MENU
+    ========================================================= */
+
+    const menuButton = document.getElementById("menuButton");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    menuButton.addEventListener("click", () => {
+
+        mobileMenu.classList.toggle("open");
+
+        menuButton.textContent =
+            mobileMenu.classList.contains("open")
+                ? "✕"
+                : "☰";
+
+    });
+
+
+    document.querySelectorAll(".mobile-menu a").forEach(link => {
+
+        link.addEventListener("click", () => {
+
+            mobileMenu.classList.remove("open");
+
+            menuButton.textContent = "☰";
+
+        });
+
+    });
+
+
+    /* =========================================================
+       CATEGORY FILTER
+    ========================================================= */
+
+    const categoryButtons =
+        document.querySelectorAll(".category");
+
+    const storyItems =
+        document.querySelectorAll(
+            "[data-category]"
+        );
+
+
+    categoryButtons.forEach(button => {
+
+        button.addEventListener("click", () => {
+
+            categoryButtons.forEach(item => {
+
+                item.classList.remove("active");
+
+            });
+
+            button.classList.add("active");
+
+
+            const filter =
+                button.dataset.filter;
+
+
+            storyItems.forEach(item => {
+
+                if (
+                    filter === "all" ||
+                    item.dataset.category === filter
+                ) {
+
+                    item.style.display = "";
+
+                } else {
+
+                    item.style.display = "none";
+
+                }
+
+            });
+
+        });
+
+    });
+
+
+    /* =========================================================
+       NEWSLETTER
+    ========================================================= */
+
+    const newsletterForm =
+        document.getElementById("newsletterForm");
+
+
+    newsletterForm.addEventListener("submit", event => {
+
+        event.preventDefault();
+
+        const button =
+            newsletterForm.querySelector("button");
+
+        const input =
+            newsletterForm.querySelector("input");
+
+
+        button.textContent =
+            "You're on the list ✓";
+
+        input.value = "";
+
+        input.disabled = true;
+
+        button.disabled = true;
+
+    });
+
+
+    /* =========================================================
+       HEADER SHADOW
+    ========================================================= */
+
+    const header =
+        document.querySelector(".site-header");
+
+
+    window.addEventListener("scroll", () => {
+
+        if (window.scrollY > 10) {
+
+            header.style.boxShadow =
+                "0 8px 30px rgba(0,0,0,.045)";
+
+        } else {
+
+            header.style.boxShadow = "none";
+
+        }
+
+    });
+
+
+    /* =========================================================
+       SIMPLE REVEAL
+    ========================================================= */
+
+    const revealItems =
+        document.querySelectorAll(
+            ".story-card, .latest-item, .author-card"
+        );
+
+
+    const observer =
+        new IntersectionObserver(
+            entries => {
+
+                entries.forEach(entry => {
+
+                    if (entry.isIntersecting) {
+
+                        entry.target.style.opacity = "1";
+
+                        entry.target.style.transform =
+                            "translateY(0)";
+
+                        observer.unobserve(entry.target);
+
+                    }
+
+                });
+
+            },
+            {
+                threshold: .08
+            }
+        );
+
+
+    revealItems.forEach(item => {
+
+        item.style.opacity = "0";
+
+        item.style.transform = "translateY(18px)";
+
+        item.style.transition =
+            "opacity .6s ease, transform .6s ease";
+
+        observer.observe(item);
+
+    });
+
+</script>
+
+</body>
+</html>
