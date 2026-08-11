@@ -11,7 +11,7 @@
 
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet">
 
-j-style.css
+<link rel="stylesheet" href="j-style.css" />
 
    
 </head>
@@ -976,99 +976,6 @@ j-style.css
 </footer>
 
 
-<script>
-
-/* =========================================================
-   MOBILE NAV
-========================================================= */
-
-function toggleMobileNav() {
-
-    const nav = document.getElementById("mobileNav");
-
-    if (nav.style.display === "block") {
-        nav.style.display = "none";
-    } else {
-        nav.style.display = "block";
-    }
-}
-
-
-/* Close mobile navigation after clicking */
-
-document.querySelectorAll(".mobile-nav a").forEach(link => {
-
-    link.addEventListener("click", () => {
-
-        document.getElementById("mobileNav").style.display = "none";
-
-    });
-
-});
-
-
-/* =========================================================
-   NEWSLETTER
-========================================================= */
-
-function subscribe(event) {
-
-    event.preventDefault();
-
-    const email = event.target.querySelector("input").value;
-
-    if (!email) return;
-
-    alert(
-        "You're on the list. Welcome to Kindly."
-    );
-
-    event.target.reset();
-
-}
-
-
-/* =========================================================
-   ARTICLE NAVIGATION
-========================================================= */
-
-document.querySelectorAll('a[href="#article"]').forEach(link => {
-
-    link.addEventListener("click", event => {
-
-        event.preventDefault();
-
-        document.querySelector("#article").scrollIntoView({
-            behavior: "smooth"
-        });
-
-    });
-
-});
-
-
-/* =========================================================
-   HEADER SHADOW
-========================================================= */
-
-window.addEventListener("scroll", () => {
-
-    const header = document.querySelector(".site-header");
-
-    if (window.scrollY > 10) {
-
-        header.style.boxShadow =
-            "0 8px 30px rgba(25,30,25,.05)";
-
-    } else {
-
-        header.style.boxShadow = "none";
-
-    }
-
-});
-
-</script>
 
 </body>
 </html>
