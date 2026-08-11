@@ -1,0 +1,2145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Kindly — Modern Parenting</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet">
+
+<style>
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f8f7f3;
+    color: #20221f;
+    font-family: "DM Sans", sans-serif;
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font: inherit;
+}
+
+.container {
+    width: min(1180px, calc(100% - 48px));
+    margin: 0 auto;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    width: 100%;
+
+    background: rgba(248, 247, 243, .94);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border-bottom: 1px solid rgba(32, 34, 31, .08);
+}
+
+.header-inner {
+    min-height: 76px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.7px;
+    flex-shrink: 0;
+}
+
+.logo span {
+    color: #7b927d;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.main-nav a {
+    font-size: 14px;
+    color: #555952;
+    transition: color .2s ease;
+}
+
+.main-nav a:hover {
+    color: #20221f;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.subscribe-button {
+    border: 0;
+    background: #20221f;
+    color: white;
+
+    padding: 10px 17px;
+    border-radius: 999px;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.menu-button {
+    display: none;
+
+    width: 42px;
+    height: 42px;
+
+    border: 1px solid rgba(32,34,31,.12);
+    background: white;
+    border-radius: 50%;
+
+    cursor: pointer;
+}
+
+/* =========================================================
+   MOBILE NAV
+========================================================= */
+
+.mobile-nav {
+    display: none;
+
+    padding: 12px 0 20px;
+    border-top: 1px solid rgba(32,34,31,.06);
+}
+
+.mobile-nav a {
+    display: block;
+    padding: 12px 0;
+
+    font-size: 15px;
+    color: #4e524d;
+
+    border-bottom: 1px solid rgba(32,34,31,.06);
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+    padding: 76px 0 80px;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.05fr .95fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    color: #718576;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+
+    margin-bottom: 20px;
+}
+
+.eyebrow::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    background: #9caf9c;
+    border-radius: 50%;
+}
+
+.hero h1 {
+    max-width: 700px;
+
+    font-family: "Newsreader", serif;
+    font-size: clamp(52px, 6vw, 82px);
+    line-height: .98;
+    font-weight: 500;
+    letter-spacing: -3px;
+}
+
+.hero h1 em {
+    color: #718576;
+    font-style: normal;
+}
+
+.hero-description {
+    max-width: 570px;
+
+    margin-top: 28px;
+
+    color: #656962;
+    font-size: 17px;
+    line-height: 1.75;
+}
+
+.hero-meta {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    margin-top: 30px;
+}
+
+.hero-meta span {
+    font-size: 13px;
+    color: #777b75;
+}
+
+.hero-image {
+    height: 560px;
+    overflow: hidden;
+    border-radius: 24px;
+    background: #dfe5dd;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* =========================================================
+   SECTION
+========================================================= */
+
+.section {
+    padding: 80px 0;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+
+    margin-bottom: 34px;
+}
+
+.section-title {
+    font-family: "Newsreader", serif;
+    font-size: 42px;
+    line-height: 1;
+    font-weight: 500;
+    letter-spacing: -1.5px;
+}
+
+.section-link {
+    font-size: 13px;
+    color: #718576;
+}
+
+/* =========================================================
+   FEATURED ARTICLE
+========================================================= */
+
+.featured {
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+
+    background: #e9eee7;
+    border-radius: 24px;
+    overflow: hidden;
+}
+
+.featured-image {
+    min-height: 470px;
+}
+
+.featured-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.featured-content {
+    padding: 55px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.category {
+    color: #718576;
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+}
+
+.featured-content h2 {
+    margin-top: 17px;
+
+    font-family: "Newsreader", serif;
+    font-size: 48px;
+    line-height: 1.02;
+    font-weight: 500;
+    letter-spacing: -1.5px;
+}
+
+.featured-content p {
+    margin-top: 22px;
+
+    color: #60655e;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.article-meta {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    margin-top: 25px;
+
+    font-size: 12px;
+    color: #777c75;
+}
+
+.read-link {
+    display: inline-flex;
+    align-items: center;
+
+    margin-top: 28px;
+
+    width: fit-content;
+
+    padding: 11px 17px;
+
+    background: #20221f;
+    color: white;
+
+    border-radius: 999px;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* =========================================================
+   ARTICLE GRID
+========================================================= */
+
+.article-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+.article-card {
+    cursor: pointer;
+}
+
+.card-image {
+    height: 260px;
+
+    overflow: hidden;
+    border-radius: 20px;
+
+    background: #e4e6df;
+}
+
+.card-image img {
+    height: 100%;
+    object-fit: cover;
+
+    transition: transform .45s ease;
+}
+
+.article-card:hover .card-image img {
+    transform: scale(1.035);
+}
+
+.card-content {
+    padding: 18px 4px;
+}
+
+.card-content h3 {
+    margin-top: 9px;
+
+    font-family: "Newsreader", serif;
+    font-size: 29px;
+    line-height: 1.08;
+    font-weight: 500;
+    letter-spacing: -.7px;
+}
+
+.card-content p {
+    margin-top: 11px;
+
+    color: #696e67;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.card-meta {
+    display: flex;
+    gap: 12px;
+
+    margin-top: 14px;
+
+    color: #858981;
+    font-size: 11px;
+}
+
+/* =========================================================
+   TOPICS
+========================================================= */
+
+.topic-section {
+    background: #eeeee9;
+}
+
+.topic-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.topic {
+    min-height: 180px;
+
+    display: flex;
+    align-items: end;
+
+    padding: 24px;
+
+    border-radius: 20px;
+
+    background: white;
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease;
+}
+
+.topic:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(30,35,30,.07);
+}
+
+.topic h3 {
+    font-family: "Newsreader", serif;
+    font-size: 29px;
+    font-weight: 500;
+}
+
+/* =========================================================
+   AUTHOR STRIP
+========================================================= */
+
+.author-section {
+    padding: 80px 0;
+}
+
+.author-box {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+
+    align-items: center;
+    gap: 24px;
+
+    padding: 28px;
+
+    background: white;
+    border: 1px solid rgba(32,34,31,.07);
+
+    border-radius: 22px;
+}
+
+.author-avatar {
+    width: 62px;
+    height: 62px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+}
+
+.author-info strong {
+    display: block;
+
+    font-size: 15px;
+}
+
+.author-info span {
+    display: block;
+
+    margin-top: 4px;
+
+    color: #858981;
+    font-size: 12px;
+}
+
+.author-box p {
+    max-width: 450px;
+
+    color: #666b64;
+    font-size: 13px;
+}
+
+.author-button {
+    padding: 10px 16px;
+
+    border: 1px solid rgba(32,34,31,.12);
+    background: transparent;
+
+    border-radius: 999px;
+
+    font-size: 12px;
+}
+
+/* =========================================================
+   NEWSLETTER
+========================================================= */
+
+.newsletter {
+    padding: 90px 0;
+}
+
+.newsletter-box {
+    padding: 65px;
+
+    background: #dfe8de;
+
+    border-radius: 25px;
+
+    text-align: center;
+}
+
+.newsletter-box h2 {
+    font-family: "Newsreader", serif;
+    font-size: 48px;
+    line-height: 1;
+    font-weight: 500;
+}
+
+.newsletter-box p {
+    max-width: 520px;
+
+    margin: 17px auto 0;
+
+    color: #62685f;
+    font-size: 14px;
+}
+
+.newsletter-form {
+    max-width: 470px;
+
+    display: flex;
+    gap: 8px;
+
+    margin: 28px auto 0;
+}
+
+.newsletter-form input {
+    flex: 1;
+
+    min-width: 0;
+
+    border: 1px solid rgba(32,34,31,.12);
+
+    background: rgba(255,255,255,.75);
+
+    border-radius: 999px;
+
+    padding: 13px 18px;
+
+    outline: none;
+}
+
+.newsletter-form button {
+    border: 0;
+
+    padding: 0 20px;
+
+    background: #20221f;
+    color: white;
+
+    border-radius: 999px;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+    padding: 40px 0;
+
+    border-top: 1px solid rgba(32,34,31,.08);
+}
+
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-inner span {
+    color: #858981;
+    font-size: 12px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: #686d66;
+    font-size: 12px;
+}
+
+/* =========================================================
+   ARTICLE PAGE
+========================================================= */
+
+.article-page {
+    max-width: 860px;
+    margin: 0 auto;
+
+    padding: 80px 0 100px;
+}
+
+.article-header {
+    text-align: center;
+}
+
+.article-header h1 {
+    margin-top: 18px;
+
+    font-family: "Newsreader", serif;
+    font-size: clamp(48px, 7vw, 76px);
+    line-height: .98;
+    font-weight: 500;
+
+    letter-spacing: -2.5px;
+}
+
+.article-subtitle {
+    max-width: 680px;
+
+    margin: 24px auto 0;
+
+    color: #666b64;
+
+    font-size: 18px;
+    line-height: 1.75;
+}
+
+.article-byline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-top: 30px;
+}
+
+.article-byline img {
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.article-byline-text {
+    text-align: left;
+}
+
+.article-byline-text strong {
+    display: block;
+    font-size: 13px;
+}
+
+.article-byline-text span {
+    display: block;
+    color: #858981;
+    font-size: 11px;
+}
+
+.article-hero {
+    height: 520px;
+
+    margin-top: 55px;
+
+    overflow: hidden;
+
+    border-radius: 25px;
+}
+
+.article-hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.article-body {
+    max-width: 690px;
+    margin: 65px auto 0;
+}
+
+.article-body p {
+    margin-bottom: 27px;
+
+    font-size: 17px;
+    line-height: 1.9;
+
+    color: #3e423d;
+}
+
+.article-body h2 {
+    margin: 60px 0 22px;
+
+    font-family: "Newsreader", serif;
+    font-size: 39px;
+    line-height: 1.05;
+    font-weight: 500;
+}
+
+.article-body h3 {
+    margin: 38px 0 14px;
+
+    font-size: 19px;
+}
+
+.article-body ul {
+    margin: 22px 0 30px;
+    padding-left: 22px;
+}
+
+.article-body li {
+    margin: 10px 0;
+
+    font-size: 16px;
+    line-height: 1.75;
+}
+
+.pull-quote {
+    margin: 50px -50px;
+
+    padding: 35px 40px;
+
+    border-top: 1px solid #cfd4cd;
+    border-bottom: 1px solid #cfd4cd;
+
+    font-family: "Newsreader", serif;
+    font-size: 32px;
+    line-height: 1.25;
+
+    color: #647866;
+}
+
+.tip-box {
+    margin: 40px 0;
+
+    padding: 28px;
+
+    background: #edf1eb;
+
+    border-radius: 18px;
+}
+
+.tip-box strong {
+    display: block;
+
+    margin-bottom: 9px;
+
+    font-size: 13px;
+    color: #5f7562;
+
+    text-transform: uppercase;
+    letter-spacing: .08em;
+}
+
+.tip-box p {
+    margin: 0;
+
+    font-size: 15px;
+}
+
+.age-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+
+    margin: 28px 0 40px;
+}
+
+.age-card {
+    padding: 20px;
+
+    background: #f1f1ed;
+
+    border-radius: 17px;
+}
+
+.age-card strong {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.age-card p {
+    margin: 0;
+
+    font-size: 13px;
+    line-height: 1.65;
+}
+
+.article-end {
+    margin-top: 70px;
+    padding-top: 35px;
+
+    border-top: 1px solid #d7dad4;
+
+    color: #72776f;
+    font-size: 13px;
+}
+
+/* =========================================================
+   RELATED
+========================================================= */
+
+.related {
+    margin-top: 80px;
+    padding-top: 50px;
+
+    border-top: 1px solid rgba(32,34,31,.08);
+}
+
+.related h2 {
+    font-family: "Newsreader", serif;
+    font-size: 36px;
+    font-weight: 500;
+}
+
+.related-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+
+    margin-top: 25px;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .container {
+        width: min(100% - 32px, 700px);
+    }
+
+    .main-nav {
+        display: none;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    .hero {
+        padding: 55px 0;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .hero h1 {
+        letter-spacing: -2px;
+    }
+
+    .hero-image {
+        height: 420px;
+    }
+
+    .featured {
+        grid-template-columns: 1fr;
+    }
+
+    .featured-image {
+        min-height: 340px;
+    }
+
+    .featured-content {
+        padding: 35px;
+    }
+
+    .article-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .topic-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .author-box {
+        grid-template-columns: auto 1fr;
+    }
+
+    .author-button {
+        grid-column: 2;
+        width: fit-content;
+    }
+
+    .article-page {
+        width: min(100% - 32px, 700px);
+        padding-top: 55px;
+    }
+
+    .article-hero {
+        height: 400px;
+    }
+
+    .pull-quote {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .header-inner {
+        min-height: 68px;
+    }
+
+    .subscribe-button {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 53px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+    .hero-image {
+        height: 330px;
+        border-radius: 20px;
+    }
+
+    .section {
+        padding: 60px 0;
+    }
+
+    .section-title {
+        font-size: 36px;
+    }
+
+    .featured-content {
+        padding: 28px;
+    }
+
+    .featured-content h2 {
+        font-size: 39px;
+    }
+
+    .article-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card-image {
+        height: 280px;
+    }
+
+    .topic-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .topic {
+        min-height: 140px;
+    }
+
+    .author-box {
+        grid-template-columns: auto 1fr;
+    }
+
+    .author-box p {
+        grid-column: 1 / -1;
+    }
+
+    .newsletter-box {
+        padding: 40px 22px;
+    }
+
+    .newsletter-box h2 {
+        font-size: 39px;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+    }
+
+    .newsletter-form input,
+    .newsletter-form button {
+        min-height: 46px;
+    }
+
+    .footer-inner {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .article-header h1 {
+        font-size: 48px;
+        letter-spacing: -1.7px;
+    }
+
+    .article-subtitle {
+        font-size: 16px;
+    }
+
+    .article-hero {
+        height: 300px;
+        margin-top: 40px;
+        border-radius: 20px;
+    }
+
+    .article-body {
+        margin-top: 45px;
+    }
+
+    .article-body p {
+        font-size: 16px;
+    }
+
+    .article-body h2 {
+        font-size: 34px;
+        margin-top: 48px;
+    }
+
+    .pull-quote {
+        font-size: 27px;
+        padding: 28px 0;
+    }
+
+    .age-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .related-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="site-header">
+
+    <div class="container header-inner">
+
+        <a href="#" class="logo">
+            kindly<span>.</span>
+        </a>
+
+        <nav class="main-nav">
+            <a href="#latest">Latest</a>
+            <a href="#topics">Topics</a>
+            <a href="#family">Family</a>
+            <a href="#technology">Technology</a>
+            <a href="#wellbeing">Wellbeing</a>
+        </nav>
+
+        <div class="header-actions">
+
+            <button class="subscribe-button"
+                    onclick="document.querySelector('#newsletter').scrollIntoView({behavior:'smooth'})">
+                Subscribe
+            </button>
+
+            <button class="menu-button" onclick="toggleMobileNav()" aria-label="Open navigation">
+                ☰
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="mobile-nav" id="mobileNav">
+
+        <div class="container">
+            <a href="#latest">Latest</a>
+            <a href="#topics">Topics</a>
+            <a href="#family">Family</a>
+            <a href="#technology">Technology</a>
+            <a href="#wellbeing">Wellbeing</a>
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<main>
+
+<section class="hero">
+
+    <div class="container hero-grid">
+
+        <div>
+
+            <div class="eyebrow">
+                Modern parenting
+            </div>
+
+            <h1>
+                Raising good humans in a <em>complicated world.</em>
+            </h1>
+
+            <p class="hero-description">
+                Thoughtful ideas for parents navigating childhood,
+                technology, relationships and the small moments that
+                quietly shape who our children become.
+            </p>
+
+            <div class="hero-meta">
+                <span>Independent editorial</span>
+                <span>•</span>
+                <span>For curious parents</span>
+            </div>
+
+        </div>
+
+        <div class="hero-image">
+
+            <img
+                src="https://images.unsplash.com/photo-1491013516836-7db643ee125a?auto=format&fit=crop&w=1200&q=85"
+                alt="Parent spending time with child"
+            >
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FEATURED
+===================================================== -->
+
+<section class="section" id="latest">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <h2 class="section-title">
+                Editor's pick
+            </h2>
+
+            <a href="#" class="section-link">
+                View all stories →
+            </a>
+
+        </div>
+
+
+        <article class="featured">
+
+            <div class="featured-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1504159506876-f8338247a14a?auto=format&fit=crop&w=1200&q=85"
+                    alt="Parent and child"
+                >
+
+            </div>
+
+            <div class="featured-content">
+
+                <div class="category">
+                    Technology & Childhood
+                </div>
+
+                <h2>
+                    Raising Kids in the Age of AI:
+                    What Parents Actually Need to Teach
+                </h2>
+
+                <p>
+                    Artificial intelligence is changing the way children
+                    learn, create and communicate. The goal isn't to keep
+                    technology away from childhood. It's to help children
+                    understand how to use it without letting it do their
+                    thinking for them.
+                </p>
+
+                <div class="article-meta">
+                    <span>Emma Levin</span>
+                    <span>•</span>
+                    <span>9 min read</span>
+                    <span>•</span>
+                    <span>Aug 8, 2026</span>
+                </div>
+
+                <a href="#article" class="read-link">
+                    Read article →
+                </a>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     LATEST ARTICLES
+===================================================== -->
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <h2 class="section-title">
+                Latest stories
+            </h2>
+
+            <a href="#" class="section-link">
+                Explore →
+            </a>
+
+        </div>
+
+
+        <div class="article-grid">
+
+            <article class="article-card">
+
+                <div class="card-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1472162072942-cd5147eb3902?auto=format&fit=crop&w=900&q=80"
+                        alt=""
+                    >
+                </div>
+
+                <div class="card-content">
+
+                    <div class="category">
+                        Family
+                    </div>
+
+                    <h3>
+                        The quiet power of eating dinner together
+                    </h3>
+
+                    <p>
+                        Why ordinary family rituals often matter more
+                        than elaborate plans.
+                    </p>
+
+                    <div class="card-meta">
+                        <span>Daniel Cohen</span>
+                        <span>6 min read</span>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <article class="article-card">
+
+                <div class="card-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=900&q=80"
+                        alt=""
+                    >
+                </div>
+
+                <div class="card-content">
+
+                    <div class="category">
+                        Wellbeing
+                    </div>
+
+                    <h3>
+                        Your child doesn't need a perfect childhood
+                    </h3>
+
+                    <p>
+                        A healthier way to think about memories,
+                        mistakes and the pressure to get parenting right.
+                    </p>
+
+                    <div class="card-meta">
+                        <span>Maya Cohen</span>
+                        <span>5 min read</span>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <article class="article-card">
+
+                <div class="card-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1492725764893-90b379c2b6e7?auto=format&fit=crop&w=900&q=80"
+                        alt=""
+                    >
+                </div>
+
+                <div class="card-content">
+
+                    <div class="category">
+                        Technology
+                    </div>
+
+                    <h3>
+                        Should your child have their own AI assistant?
+                    </h3>
+
+                    <p>
+                        The questions worth asking before handing a
+                        chatbot the keys to your child's curiosity.
+                    </p>
+
+                    <div class="card-meta">
+                        <span>Emma Levin</span>
+                        <span>7 min read</span>
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     TOPICS
+===================================================== -->
+
+<section class="section topic-section" id="topics">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <h2 class="section-title">
+                Explore topics
+            </h2>
+
+        </div>
+
+        <div class="topic-grid">
+
+            <a href="#" class="topic" id="family">
+                <h3>Family life</h3>
+            </a>
+
+            <a href="#" class="topic" id="technology">
+                <h3>Kids & technology</h3>
+            </a>
+
+            <a href="#" class="topic" id="wellbeing">
+                <h3>Wellbeing</h3>
+            </a>
+
+            <a href="#" class="topic">
+                <h3>Education</h3>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     AUTHOR
+===================================================== -->
+
+<section class="author-section">
+
+    <div class="container">
+
+        <div class="author-box">
+
+            <img
+                class="author-avatar"
+                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80"
+                alt="Emma Levin"
+            >
+
+            <div class="author-info">
+
+                <strong>Emma Levin</strong>
+
+                <span>
+                    Parenting writer · New York
+                </span>
+
+            </div>
+
+            <p>
+                Emma writes about childhood, technology and the
+                everyday decisions that make family life a little
+                more thoughtful.
+            </p>
+
+            <button class="author-button">
+                About the author
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     NEWSLETTER
+===================================================== -->
+
+<section class="newsletter" id="newsletter">
+
+    <div class="container">
+
+        <div class="newsletter-box">
+
+            <h2>
+                A little perspective,
+                once a week.
+            </h2>
+
+            <p>
+                One thoughtful parenting idea, one useful conversation,
+                and a few things worth reading. No noise.
+            </p>
+
+            <form class="newsletter-form"
+                  onsubmit="subscribe(event)">
+
+                <input
+                    type="email"
+                    placeholder="Your email address"
+                    required
+                >
+
+                <button type="submit">
+                    Subscribe
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     ARTICLE
+===================================================== -->
+
+<section id="article">
+
+<div class="article-page">
+
+    <header class="article-header">
+
+        <div class="category">
+            Technology & Childhood
+        </div>
+
+        <h1>
+            Raising Kids in the Age of AI:
+            What Parents Actually Need to Teach
+        </h1>
+
+        <p class="article-subtitle">
+            AI is becoming part of childhood faster than most families
+            expected. Instead of asking how to keep children away from
+            it, perhaps the better question is what we should teach
+            them before they use it.
+        </p>
+
+
+        <div class="article-byline">
+
+            <img
+                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80"
+                alt="Emma Levin"
+            >
+
+            <div class="article-byline-text">
+
+                <strong>Emma Levin</strong>
+
+                <span>
+                    August 8, 2026 · 9 min read
+                </span>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <div class="article-hero">
+
+        <img
+            src="https://images.unsplash.com/photo-1504159506876-f8338247a14a?auto=format&fit=crop&w=1500&q=90"
+            alt="Parent and child"
+        >
+
+    </div>
+
+
+    <article class="article-body">
+
+        <p>
+            There is a strange moment happening in parenting right now.
+            Adults who grew up with televisions, desktop computers and
+            eventually smartphones are suddenly watching their children
+            interact with something that feels fundamentally different.
+        </p>
+
+        <p>
+            Artificial intelligence doesn't simply show children
+            information. It can answer questions, write stories,
+            explain homework, generate pictures, imitate personalities
+            and carry on conversations.
+        </p>
+
+        <p>
+            That makes the obvious question — <strong>“How much AI
+            should my child use?”</strong> — less useful than it first
+            appears.
+        </p>
+
+        <p>
+            A better question is:
+        </p>
+
+
+        <div class="pull-quote">
+            What kind of thinker do we want our child to become
+            when the answer is always one click away?
+        </div>
+
+
+        <h2>
+            The goal isn't to raise children who avoid technology
+        </h2>
+
+        <p>
+            Technology is going to be part of your child's world.
+            Avoiding it completely may feel reassuring, but it doesn't
+            prepare them for the world they'll actually enter.
+        </p>
+
+        <p>
+            The more important skill is learning how to use powerful
+            tools without surrendering judgment to them.
+        </p>
+
+        <p>
+            That distinction matters.
+        </p>
+
+        <p>
+            A child who asks AI to explain a difficult math problem
+            and then works through the explanation is using technology
+            as a learning tool.
+        </p>
+
+        <p>
+            A child who asks AI to complete the assignment and copies
+            the result is using technology as a replacement for
+            thinking.
+        </p>
+
+
+        <div class="tip-box">
+
+            <strong>Parenting principle</strong>
+
+            <p>
+                Don't ask only “Did AI help?” Ask “What did your child
+                understand after using it?”
+            </p>
+
+        </div>
+
+
+        <h2>
+            Teach curiosity before efficiency
+        </h2>
+
+        <p>
+            One of the most valuable things parents can protect is
+            the child's willingness to struggle with a question.
+        </p>
+
+        <p>
+            Before AI, a child might spend twenty minutes trying to
+            understand why the moon appears to change shape.
+            Today they can ask an assistant and receive an excellent
+            explanation in seconds.
+        </p>
+
+        <p>
+            That's wonderful — and potentially dangerous.
+        </p>
+
+        <p>
+            The struggle itself can be educational.
+        </p>
+
+        <p>
+            Children learn to form hypotheses, notice contradictions,
+            make mistakes and try again. Those invisible mental
+            processes are part of learning.
+        </p>
+
+
+        <h2>
+            The homework problem
+        </h2>
+
+        <p>
+            Homework may become one of the first places where families
+            notice the tension between AI and education.
+        </p>
+
+        <p>
+            If a child can produce a polished essay in thirty seconds,
+            the temptation is obvious.
+        </p>
+
+        <p>
+            But instead of making AI completely forbidden, parents can
+            establish a simple sequence:
+        </p>
+
+
+        <ul>
+
+            <li>
+                Think about the question independently.
+            </li>
+
+            <li>
+                Write down an initial answer.
+            </li>
+
+            <li>
+                Use AI to challenge or expand the thinking.
+            </li>
+
+            <li>
+                Check the information independently.
+            </li>
+
+            <li>
+                Rewrite the final answer in the child's own words.
+            </li>
+
+        </ul>
+
+
+        <p>
+            This turns AI from a shortcut into something closer to a
+            personal tutor.
+        </p>
+
+
+        <h2>
+            What should children never share with AI?
+        </h2>
+
+        <p>
+            Privacy deserves its own conversation.
+        </p>
+
+        <p>
+            Children often don't have an intuitive understanding of
+            what information is sensitive. Parents can make the rules
+            concrete rather than frightening.
+        </p>
+
+
+        <div class="tip-box">
+
+            <strong>Simple family rule</strong>
+
+            <p>
+                Never enter passwords, private addresses, financial
+                information, school records, private photographs or
+                deeply personal family information into an AI system.
+            </p>
+
+        </div>
+
+
+        <h2>
+            AI shouldn't become your child's best listener
+        </h2>
+
+        <p>
+            There is another issue that may prove even more important
+            than homework: emotional dependence.
+        </p>
+
+        <p>
+            AI can be endlessly patient. It doesn't get tired. It can
+            respond immediately and never roll its eyes when a child
+            asks the same question five times.
+        </p>
+
+        <p>
+            Those qualities are useful.
+        </p>
+
+        <p>
+            But children also need relationships that aren't optimized
+            for convenience.
+        </p>
+
+        <p>
+            Learning to repair an argument with a sibling, tell a
+            friend you are hurt, apologize, wait for someone to answer
+            and understand another person's feelings are human skills.
+        </p>
+
+
+        <div class="pull-quote">
+            The purpose of technology should be to expand a child's
+            world — not quietly replace the people inside it.
+        </div>
+
+
+        <h2>
+            An age-by-age approach
+        </h2>
+
+        <p>
+            There is no universal “right age” for AI. Children develop
+            at different speeds, and families have different needs.
+        </p>
+
+
+        <div class="age-grid">
+
+            <div class="age-card">
+
+                <strong>Younger children</strong>
+
+                <p>
+                    Explore AI together. Keep interactions supervised
+                    and focus on curiosity, questions and creativity.
+                </p>
+
+            </div>
+
+
+            <div class="age-card">
+
+                <strong>Middle school</strong>
+
+                <p>
+                    Introduce verification, privacy, source checking
+                    and the difference between assistance and cheating.
+                </p>
+
+            </div>
+
+
+            <div class="age-card">
+
+                <strong>Teenagers</strong>
+
+                <p>
+                    Focus on judgment, digital identity, critical
+                    thinking and responsible independent use.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <h2>
+            Create a family AI agreement
+        </h2>
+
+        <p>
+            Rules work better when children understand why they exist.
+        </p>
+
+        <p>
+            Rather than creating a giant list of restrictions, sit
+            down together and write five or six family principles.
+        </p>
+
+        <ul>
+
+            <li>
+                We use AI to help us think, not to avoid thinking.
+            </li>
+
+            <li>
+                We check important information.
+            </li>
+
+            <li>
+                We protect private information.
+            </li>
+
+            <li>
+                We don't use AI to impersonate or hurt someone.
+            </li>
+
+            <li>
+                We tell the truth about when AI helped with schoolwork.
+            </li>
+
+            <li>
+                People always come before technology.
+            </li>
+
+        </ul>
+
+
+        <h2>
+            The bigger lesson
+        </h2>
+
+        <p>
+            Parenting has never been about predicting exactly what
+            the future will look like.
+        </p>
+
+        <p>
+            It has always been about giving children enough confidence,
+            judgment and empathy to navigate a future we cannot fully
+            see.
+        </p>
+
+        <p>
+            AI changes the tools.
+        </p>
+
+        <p>
+            It doesn't change the fundamentals.
+        </p>
+
+        <p>
+            Children still need to learn how to wonder, question,
+            listen, disagree, apologize, persevere and care about
+            other people.
+        </p>
+
+        <p>
+            Perhaps the most useful thing parents can teach in the AI
+            era is also one of the oldest:
+        </p>
+
+
+        <div class="pull-quote">
+            You don't have to know every answer. You need to know how
+            to find your way toward a good one.
+        </div>
+
+
+        <div class="article-end">
+
+            <strong>Editor's note</strong>
+
+            <br><br>
+
+            Technology changes quickly. The principles of thoughtful
+            parenting usually change much more slowly.
+
+        </div>
+
+    </article>
+
+
+    <!-- RELATED -->
+
+    <div class="related">
+
+        <h2>
+            Keep reading
+        </h2>
+
+        <div class="related-grid">
+
+            <article class="article-card">
+
+                <div class="card-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=900&q=80"
+                        alt=""
+                    >
+                </div>
+
+                <div class="card-content">
+
+                    <div class="category">
+                        Wellbeing
+                    </div>
+
+                    <h3>
+                        Your child doesn't need a perfect childhood
+                    </h3>
+
+                    <div class="card-meta">
+                        <span>Maya Cohen</span>
+                        <span>5 min read</span>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <article class="article-card">
+
+                <div class="card-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1492725764893-90b379c2b6e7?auto=format&fit=crop&w=900&q=80"
+                        alt=""
+                    >
+                </div>
+
+                <div class="card-content">
+
+                    <div class="category">
+                        Technology
+                    </div>
+
+                    <h3>
+                        Should your child have their own AI assistant?
+                    </h3>
+
+                    <div class="card-meta">
+                        <span>Emma Levin</span>
+                        <span>7 min read</span>
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+</main>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <div class="container footer-inner">
+
+        <span>
+            © 2026 Kindly. Thoughtful parenting for modern families.
+        </span>
+
+        <div class="footer-links">
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <a href="#">Privacy</a>
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script>
+
+/* =========================================================
+   MOBILE NAV
+========================================================= */
+
+function toggleMobileNav() {
+
+    const nav = document.getElementById("mobileNav");
+
+    if (nav.style.display === "block") {
+        nav.style.display = "none";
+    } else {
+        nav.style.display = "block";
+    }
+}
+
+
+/* Close mobile navigation after clicking */
+
+document.querySelectorAll(".mobile-nav a").forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        document.getElementById("mobileNav").style.display = "none";
+
+    });
+
+});
+
+
+/* =========================================================
+   NEWSLETTER
+========================================================= */
+
+function subscribe(event) {
+
+    event.preventDefault();
+
+    const email = event.target.querySelector("input").value;
+
+    if (!email) return;
+
+    alert(
+        "You're on the list. Welcome to Kindly."
+    );
+
+    event.target.reset();
+
+}
+
+
+/* =========================================================
+   ARTICLE NAVIGATION
+========================================================= */
+
+document.querySelectorAll('a[href="#article"]').forEach(link => {
+
+    link.addEventListener("click", event => {
+
+        event.preventDefault();
+
+        document.querySelector("#article").scrollIntoView({
+            behavior: "smooth"
+        });
+
+    });
+
+});
+
+
+/* =========================================================
+   HEADER SHADOW
+========================================================= */
+
+window.addEventListener("scroll", () => {
+
+    const header = document.querySelector(".site-header");
+
+    if (window.scrollY > 10) {
+
+        header.style.boxShadow =
+            "0 8px 30px rgba(25,30,25,.05)";
+
+    } else {
+
+        header.style.boxShadow = "none";
+
+    }
+
+});
+
+</script>
+
+</body>
+</html>
